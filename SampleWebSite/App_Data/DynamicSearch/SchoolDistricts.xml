@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schooldistricts>
+  <schooldistrict name='Amery School District' address='543 Minneapolis Ave S, Amery WI  54001-1522' latitude='45.3028' longitude='-92.352' />
+  <schooldistrict name='Antigo School District' address='120 S Dorr St, Antigo WI  54409-1220' latitude='45.1333' longitude='-89.1588' />
+  <schooldistrict name='Athens School District' address='601 W Limits Rd, Athens WI  54411' latitude='44.9193' longitude='-89.9743' />
+  <schooldistrict name='Bangor School District' address='700 10th Ave S, Bangor WI  54614' latitude='43.8875' longitude='-90.9808' />
+  <schooldistrict name='Barron Area School District' address='100 W River Ave, Barron WI  54812-1052' latitude='45.4042' longitude='-91.8597' />
+  <schooldistrict name='Belmont Community School District' address='646 E Liberty St, Belmont WI  53510-9667' latitude='42.7405' longitude='-90.3292' />
+  <schooldistrict name='Beloit Turner School District' address='1237 Inman Pkwy, Beloit WI  53511-1723' latitude='42.5541' longitude='-89.0211' />
+  <schooldistrict name='Big Foot UHS School District' address='401 Devils Ln, Walworth WI  53184' latitude='42.5275' longitude='-88.5939' />
+  <schooldistrict name='Birchwood School District' address='300 S Wilson St, Birchwood WI  54817-8841' latitude='45.6546' longitude='-91.553' />
+  <schooldistrict name='Bonduel School District' address='400 W Green Bay St, Bonduel WI  54107-9268' latitude='44.7458' longitude='-88.4593' />
+  <schooldistrict name='Brighton #1 School District' address='1200 248th Ave, Kansasville WI  53139-9601' latitude='42.6261' longitude='-88.108' />
+  <schooldistrict name='Bruce School District' address='104 W Washington Ave, Bruce WI  54819-9641' latitude='45.459' longitude='-91.2737' />
+  <schooldistrict name='Burlington Area School District' address='100 N Kane St, Burlington WI  53105-1896' latitude='42.6762' longitude='-88.2766' />
+  <schooldistrict name='Campbellsport School District' address='114 W Sheboygan St, Campbellsport WI  53010-2791' latitude='43.6011' longitude='-88.287' />
+  <schooldistrict name='Chetek School District' address='1001 Knapp St, Chetek WI  54728-8925' latitude='45.3146' longitude='-91.6612' />
+  <schooldistrict name='Clear Lake School District' address='1101 3rd St SW, Clear Lake WI  54005-8511' latitude='45.2381' longitude='-92.2708' />
+  <schooldistrict name='Colby School District' address='505 W Spence St, Colby WI  54421' latitude='44.9097' longitude='-90.3096' />
+  <schooldistrict name='Colfax School District' address='601 University Ave, Colfax WI  54730-9773' latitude='44.9985' longitude='-91.7274' />
+  <schooldistrict name='Columbus School District' address='200 W School St, Columbus WI  53925-1453' latitude='43.3366' longitude='-89.0188' />
+  <schooldistrict name='Cuba City School District' address='101 N School St, Cuba City WI  53807-1297' latitude='42.6063' longitude='-90.4359' />
+  <schooldistrict name='De Pere School District' address='1700 Chicago St, De Pere WI  54115-3499' latitude='44.4421' longitude='-88.0434' />
+  <schooldistrict name='Dodgeland School District' address='401 S Western Ave, Juneau WI  53039-1013' latitude='43.4048' longitude='-88.7137' />
+  <schooldistrict name='Dodgeville School District' address='307 N Iowa St, Dodgeville WI  53533-1355' latitude='42.9598' longitude='-90.1305' />
+  <schooldistrict name='Dover #1 School District' address='4101 S Beaumont Ave, Kansasville WI  53139-9702' latitude='42.6849' longitude='-88.1104' />
+  <schooldistrict name='Durand School District' address='604 7th Ave E, Durand WI  54736-1371' latitude='44.6305' longitude='-91.9583' />
+  <schooldistrict name='East Troy Community School District' address='2043 Division St, East Troy WI  53120-1238' latitude='42.787' longitude='-88.4058' />
+  <schooldistrict name='Eau Claire Area School District' address='500 Main St, Eau Claire WI  54701-3770' latitude='44.8112' longitude='-91.4966' />
+  <schooldistrict name='Ellsworth Community School District' address='300 Hillcrest St, Ellsworth WI  54011' latitude='44.7268' longitude='-92.4831' />
+  <schooldistrict name='Elmbrook School District' address='13780 Hope St, Brookfield WI  53005-1700' latitude='43.0938' longitude='-88.086' />
+  <schooldistrict name='Fall River School District' address='150 Bradley St, Fall River WI  53932' latitude='43.3863' longitude='-89.0466' />
+  <schooldistrict name='Fennimore Community School District' address='1397 9th St, Fennimore WI  53809-1413' latitude='42.9836' longitude='-90.658' />
+  <schooldistrict name='Fort Atkinson School District' address='201 Park St, Fort Atkinson WI  53538-2155' latitude='42.9198' longitude='-88.8396' />
+  <schooldistrict name='Fox Point J2 School District' address='7300 N Lombardy Rd, Milwaukee WI  53217-3595' latitude='43.1503' longitude='-87.9061' />
+  <schooldistrict name='Glendale-River Hills School District' address='2600 W Mill Rd, Glendale WI  53209-3286' latitude='43.1339' longitude='-87.9446' />
+  <schooldistrict name='Grafton School District' address='1900 Washington St, Grafton WI  53024-2198' latitude='43.3201' longitude='-87.94' />
+  <schooldistrict name='Green Bay Area School District' address='200 S Broadway, Green Bay WI  54303' latitude='44.5153' longitude='-88.0225' />
+  <schooldistrict name='Green Lake School District' address='612 Mill St, Green Lake WI  54941' latitude='43.85' longitude='-88.9601' />
+  <schooldistrict name='Gresham School District' address='501 Schabow St, Gresham WI  54128-9505' latitude='44.8473' longitude='-88.7868' />
+  <schooldistrict name='Hartford UHS School District' address='805 Cedar St, Hartford WI  53027-2399' latitude='43.309' longitude='-88.3852' />
+  <schooldistrict name='Holmen School District' address='1019 McHugh Rd, Holmen WI  54636' latitude='43.97' longitude='-91.2691' />
+  <schooldistrict name='Howard-Suamico School District' address='2700 Lineville Rd, Green Bay WI  54313-7197' latitude='44.5908' longitude='-88.0989' />
+  <schooldistrict name='Ithaca School District' address='24615 State Highway 58, Richland Center WI  53581-6642' latitude='43.3417' longitude='-90.2818' />
+  <schooldistrict name='Janesville School District' address='527 S Franklin St, Janesville WI  53548-4779' latitude='42.6749' longitude='-89.0193' />
+  <schooldistrict name='Johnson Creek School District' address='111 South St, Johnson Creek WI  53038-9702' latitude='43.0754' longitude='-88.7717' />
+  <schooldistrict name='Kenosha School District' address='3600 52nd St, Kenosha WI  53144' latitude='42.5877' longitude='-87.8775' />
+  <schooldistrict name='Kewaskum School District' address='1455 School St, Kewaskum WI  53040-0037' latitude='43.6519' longitude='-87.8293' />
+  <schooldistrict name='Kimberly Area School District' address='217 E Kimberly Ave, Kimberly WI  54136-1404' latitude='44.2726' longitude='-88.3333' />
+  <schooldistrict name='Kohler School District' address='333 Upper Rd, Kohler WI  53044' latitude='43.7405' longitude='-87.7847' />
+  <schooldistrict name='Lancaster Community School District' address='925 W Maple St, Lancaster WI  53813-1521' latitude='42.8479' longitude='-90.7198' />
+  <schooldistrict name='Laona School District' address='5216 Forest Ave, Laona WI  54541' latitude='45.4384' longitude='-88.6615' />
+  <schooldistrict name='Lodi School District' address='115 School St, Lodi WI  53555-1046' latitude='43.318' longitude='-89.5251' />
+  <schooldistrict name='Lomira School District' address='1030 4th St, Lomira WI  53048-9558' latitude='43.5906' longitude='-88.4475' />
+  <schooldistrict name='Madison Metropolitan School District' address='545 W Dayton St, Madison WI  53703-1967' latitude='43.0709' longitude='-89.3947' />
+  <schooldistrict name='Marion School District' address='1001 N Main St, Marion WI  54950-8703' latitude='44.6784' longitude='-88.8892' />
+  <schooldistrict name='Marshfield School District' address='1010 E Fourth St, Marshfield WI  54449-4538' latitude='44.6675' longitude='-90.1886' />
+  <schooldistrict name='Mauston School District' address='510 Grayside Ave, Mauston WI  53948-1952' latitude='43.7977' longitude='-90.0673' />
+  <schooldistrict name='Mayville School District' address='234 N John St, Mayville WI  53050-1299' latitude='43.498' longitude='-88.5471' />
+  <schooldistrict name='Mellen School District' address='420 S Main St, Mellen WI  54546' latitude='46.3212' longitude='-90.6607' />
+  <schooldistrict name='Mercer School District' address='2690 W Margaret St, Mercer WI  54547' latitude='46.1697' longitude='-90.0639' />
+  <schooldistrict name='Merrill Area School District' address='1111 N Sales St, Merrill WI  54452-3198' latitude='45.1886' longitude='-89.6726' />
+  <schooldistrict name='Middleton-Cross Plains School District' address='7106 South Ave, Middleton WI  53562-3263' latitude='43.0933' longitude='-89.5035' />
+  <schooldistrict name='Milton School District' address='430 E High Street, Milton WI  53563-1502' latitude='42.7729' longitude='-88.9443' />
+  <schooldistrict name='Milwaukee School District' address='5225 W Vliet St, Milwaukee WI  53208' latitude='43.0493' longitude='-87.9796' />
+  <schooldistrict name='Mondovi School District' address='337 N Jackson St, Mondovi WI  54755-1197' latitude='44.5704' longitude='-91.6735' />
+  <schooldistrict name='Mosinee School District' address='591 West State Highway 153, Mosinee WI  54455-7499' latitude='44.7884' longitude='-89.7318' />
+  <schooldistrict name='Neenah School District' address='410 S Commercial St, Neenah WI  54956-2593' latitude='44.1842' longitude='-88.4638' />
+  <schooldistrict name='New Auburn School District' address='704 N East St, New Auburn WI  54757' latitude='45.2058' longitude='-91.5576' />
+  <schooldistrict name='New Berlin School District' address='4333 S Sunnyslope Rd, New Berlin WI  53151-6844' latitude='42.9655' longitude='-88.089' />
+  <schooldistrict name='New Lisbon School District' address='500 S Forest St, New Lisbon WI  53950-0205' latitude='43.8754' longitude='-90.1713' />
+  <schooldistrict name='New Richmond School District' address='701 E 11th St, New Richmond WI  54017-2355' latitude='45.1115' longitude='-92.5294' />
+  <schooldistrict name='Niagara School District' address='700 Jefferson Ave, Niagara WI  54151-1221' latitude='45.7821' longitude='-88.0048' />
+  <schooldistrict name='Northland Pines School District' address='1800 Pleasure Island Rd, Eagle River WI  54521-8980' latitude='45.939' longitude='-89.2537' />
+  <schooldistrict name='Onalaska School District' address='1821 E Main St, Onalaska WI  54650' latitude='43.8841' longitude='-91.2109' />
+  <schooldistrict name='Oostburg School District' address='410 New York Ave, Oostburg WI  53070-1229' latitude='43.624' longitude='-87.7864' />
+  <schooldistrict name='Oregon School District' address='123 E Grove St, Oregon WI  53575' latitude='42.9278' longitude='-89.3829' />
+  <schooldistrict name='Oshkosh Area School District' address='215 S Eagle St, Oshkosh WI  54902' latitude='44.0162' longitude='-88.573' />
+  <schooldistrict name='Owen-Withee School District' address='832 W 3rd St, Owen WI  54460' latitude='44.9469' longitude='-90.5506' />
+  <schooldistrict name='Pepin Area School District' address='510 Pine St, Pepin WI  54759' latitude='44.4435' longitude='-92.1483' />
+  <schooldistrict name='Peshtigo School District' address='341 N Emery Ave, Peshtigo WI  54157-1161' latitude='45.0565' longitude='-87.7511' />
+  <schooldistrict name='Pittsville School District' address='5459 Elementary Ave, Pittsville WI  54466' latitude='44.4448' longitude='-90.132' />
+  <schooldistrict name='Portage Community School District' address='904 De Witt St, Portage WI  53901-1726' latitude='43.5442' longitude='-89.4633' />
+  <schooldistrict name='Randall J1 School District' address='37101 - 87th St, Burlington WI  53105' latitude='42.5494' longitude='-88.2602' />
+  <schooldistrict name='Reedsville School District' address='340 Manitowoc St, Reedsville WI  54230' latitude='44.1533' longitude='-87.9534' />
+  <schooldistrict name='Rib Lake School District' address='1236 Kennedy St, Rib Lake WI  54470' latitude='45.3162' longitude='-90.2087' />
+  <schooldistrict name='Richfield J1 School District' address='3117 Holy Hill Road, Richfield WI  53076-9783' latitude='43.2507' longitude='-88.1917' />
+  <schooldistrict name='River Falls School District' address='852 E Division St, River Falls WI  54022-2599' latitude='44.8626' longitude='-92.6159' />
+  <schooldistrict name='River Valley School District' address='660 W Daley St, Spring Green WI  53588' latitude='43.1787' longitude='-90.0758' />
+  <schooldistrict name='Royall School District' address='1501 Academy St, Elroy WI  53929' latitude='43.7415' longitude='-90.273' />
+  <schooldistrict name='Saint Croix Central School District' address='1295 Vine St, Hammond WI  54015-0118' latitude='44.9734' longitude='-92.4374' />
+  <schooldistrict name='Seymour Community School District' address='10 Circle Dr, Seymour WI  54165-1678' latitude='42.6749' longitude='-90.1141' />
+  <schooldistrict name='Shawano School District' address='218 County Road B, Shawano WI  54166-7054' latitude='44.7614' longitude='-88.5934' />
+  <schooldistrict name='Sheboygan Area School District' address='830 Virginia Ave, Sheboygan WI  53081-4427' latitude='43.7476' longitude='-87.7133' />
+  <schooldistrict name='Shell Lake School District' address='271 Highway 63, Shell Lake WI  54871-8893' latitude='45.6561' longitude='-91.9933' />
+  <schooldistrict name='Shullsburg School District' address='444 N Judgement St, Shullsburg WI  53586-9414' latitude='42.5751' longitude='-90.231' />
+  <schooldistrict name='Silver Lake J1 School District' address='300 Prosser St, Silver Lake WI  53170' latitude='42.5521' longitude='-88.1681' />
+  <schooldistrict name='Siren School District' address='24022 4th Ave, Siren WI  54872' latitude='45.7855' longitude='-92.3782' />
+  <schooldistrict name='Slinger School District' address='207 Polk St, Slinger WI  53086' latitude='43.3329' longitude='-88.286' />
+  <schooldistrict name='Solon Springs School District' address='8993 E Baldwin Ave, Solon Springs WI  54873-8144' latitude='46.3454' longitude='-91.831' />
+  <schooldistrict name='Spencer School District' address='300 School St, Spencer WI  54479-9300' latitude='44.7593' longitude='-90.2942' />
+  <schooldistrict name='Spooner Area School District' address='500 College St, Spooner WI  54801-1298' latitude='45.828' longitude='-91.8954' />
+  <schooldistrict name='Stevens Point Area School District' address='1900 Polk St, Stevens Point WI  54481-5875' latitude='44.4971' longitude='-89.5694' />
+  <schooldistrict name='Superior School District' address='3025 Tower Ave, Superior WI  54880-5369' latitude='46.7353' longitude='-92.1033' />
+  <schooldistrict name='Three Lakes School District' address='6930 W School St, Three Lakes WI  54562-9010' latitude='45.795' longitude='-89.1681' />
+  <schooldistrict name='Trevor-Wilmot Consolidated School District' address='26325 Wilmot Rd, Trevor WI  53179-9701' latitude='42.5102' longitude='-88.1266' />
+  <schooldistrict name='Tri-County Area School District' address='409 S West St, Plainfield WI  54966' latitude='44.2106' longitude='-89.4937' />
+  <schooldistrict name='Twin Lakes #4 School District' address='1218 Wilmot Ave, Twin Lakes WI  53181-9419' latitude='42.5233' longitude='-88.2475' />
+  <schooldistrict name='Two Rivers School District' address='4521 Lincoln Ave, Two Rivers WI  54241' latitude='44.168' longitude='-87.5596' />
+  <schooldistrict name='Union Grove J1 School District' address='1745 Milldrum St, Union Grove WI  53182-1763' latitude='42.6787' longitude='-88.048' />
+  <schooldistrict name='Unity School District' address='1908 150th St - Highway 46 N, Balsam Lake WI  54810' latitude='45.4307' longitude='-92.4688' />
+  <schooldistrict name='Valders Area School District' address='138 Wilson St, Valders WI  54245-9645' latitude='44.0688' longitude='-87.8829' />
+  <schooldistrict name='Verona Area School District' address='700 N Main St, Verona WI  53593-1153' latitude='42.998' longitude='-89.5338' />
+  <schooldistrict name='Washington School District' address='888 Main Rd, Washington Island WI  54246' latitude='45.3551' longitude='-86.9301' />
+  <schooldistrict name='Waterford UHS School District' address='507 W Main St, Waterford WI  53185-4137' latitude='42.7647' longitude='-88.2182' />
+  <schooldistrict name='Waupaca School District' address='515 School St, Waupaca WI  54981-1658' latitude='44.355' longitude='-89.0798' />
+  <schooldistrict name='Wausau School District' address='650 S 7th Ave, Wausau WI  54401' latitude='44.9556' longitude='-89.6443' />
+  <schooldistrict name='Wauwatosa School District' address='12121 W North Ave, Wauwatosa WI  53226-2096' latitude='43.0599' longitude='-88.0644' />
+  <schooldistrict name='Webster School District' address='26428 Lakeland Ave S, Webster WI  54893-8316' latitude='45.875' longitude='-92.3647' />
+  <schooldistrict name='West Allis School District' address='9333 W Lincoln Ave, West Allis WI  53227-2395' latitude='43.0028' longitude='-88.0286' />
+  <schooldistrict name='Weyauwega-Fremont School District' address='410 E Ann St, Weyauwega WI  54983' latitude='44.323' longitude='-88.9275' />
+  <schooldistrict name='Wheatland J1 School District' address='6606 368th Ave, Burlington WI  53105-8583' latitude='42.5762' longitude='-88.2568' />
+  <schooldistrict name='Whitehall School District' address='19121 Hobson St, Whitehall WI  54773-0037' latitude='44.3644' longitude='-91.3323' />
+  <schooldistrict name='Whitewater School District' address='419 S Elizabeth St, Whitewater WI  53190-1632' latitude='42.8298' longitude='-88.7531' />
+  <schooldistrict name='Wild Rose School District' address='600 Park Ave, Wild Rose WI  54984' latitude='44.1767' longitude='-89.2472' />
+  <schooldistrict name='Williams Bay School District' address='500 W Geneva St, Williams Bay WI  53191' latitude='42.5788' longitude='-88.5259' />
+  <schooldistrict name='Winneconne Community School District' address='233 S 3rd Ave, Winneconne WI  54986' latitude='44.1098' longitude='-88.7057' />
+  <schooldistrict name='Wisconsin Dells School District' address='811 County Road H, Wisconsin Dells WI  53965-9636' latitude='43.5923' longitude='-89.9173' />
+  <schooldistrict name='Wittenberg-Birnamwood School District' address='400 W Grand Ave, Wittenberg WI  54499-9276' latitude='44.8268' longitude='-89.1707' />
+  <schooldistrict name='Wrightstown Community School District' address='351 High St, Wrightstown WI  54180' latitude='44.3258' longitude='-88.163' />
+  <schooldistrict name='Yorkville J2 School District' address='18621 Washington Ave, Union Grove WI  53182-9600' latitude='42.7423' longitude='-88.0409' />
+</schooldistricts>

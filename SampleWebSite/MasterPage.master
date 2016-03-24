@@ -1,0 +1,175 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        // The below JavaScript/jQuery code is just to power the expandable/collapsable
+        // navigation menu along the left of the page.
+        $(function() {
+            $(".menu > ul > li").click(function() {
+                var ul = $(this);
+                ul.toggleClass("plus").
+                    find(">ul").toggle();
+            });
+
+            $(".menu > ul > li").click();
+
+            var loc = window.location.href.toLowerCase();
+
+            if (loc.substring(loc.length - 1) === "/") {
+                $(".menu > ul > li:eq(0)").click();
+            } else {
+                $(".menu li a").each(function() {
+                    var elem = $(this);
+                    elem.parent().removeClass("highlight");
+                    
+                    var href = elem.attr("href").toLowerCase();
+                    if (loc.substring(loc.length - href.length) === href) {
+                        elem.parent().parent().parent().click();
+                        elem.parent().addClass("highlight");
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header">
+            <span class="header_title">Simplovation.Web.Maps.VE v4.00.00 Sample Web Site</span>
+        </div>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="left" valign="top" class="menu">
+                    <ul>
+                        <li>Map Basics
+                            <ul style="display: block;">
+                                <li class="highlight"><asp:HyperLink runat="server" ID="hlDefault" Text="Default Map" NavigateUrl="~/Default.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink11" Text="Server-Side" NavigateUrl="~/Basics/Default.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink12" Text="Client-Side" NavigateUrl="~/Basics/ClientSide.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink13" Text="JavaScript" NavigateUrl="~/Basics/JavaScript.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink38" Text="Bing Maps Key" NavigateUrl="~/Basics/BingMapsKey.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Find
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink21" Text="Basic Find" NavigateUrl="~/Find/Default.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink1" Text="Find Nearby" NavigateUrl="~/Find/Nearby.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink26" Text="Find Address" NavigateUrl="~/Find/Address.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink27" Text="Not Create Results" NavigateUrl="~/Find/NotCreateResults.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Reverse Geocode
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink24" Text="Basic FindLocations" NavigateUrl="~/FindLocations/Default.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Directions
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink7" Text="Get Directions" NavigateUrl="~/Additional/GetDirections.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>ImportShapeLayerData
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink29" Text="Add GeoRSS Layer" NavigateUrl="~/ImportShapeLayerData/GeoRSS.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink30" Text="Add Live Maps Collection" NavigateUrl="~/ImportShapeLayerData/LiveMapsCollection.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Additional Samples
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="hlDynamicSearch" Text="Dynamic Search" NavigateUrl="~/DynamicSearch/Default.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink8" Text="Multiple Maps" NavigateUrl="~/Additional/MultiMaps.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink9" Text="Full Page Map" NavigateUrl="~/Additional/FullPage.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink10" Text="Custom InfoBox" NavigateUrl="~/Additional/CustomInfoBoxStyles.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Map Events
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="hlOnClick" Text="OnClick" NavigateUrl="~/Events/OnClick.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="hlOnChangeMapStyle" Text="OnChangeMapStyle" NavigateUrl="~/Events/OnChangeMapStyle.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="hlOnChangeView" Text="OnChangeView" NavigateUrl="~/Events/OnChangeView.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="hlOnEndPan" Text="OnEndPan" NavigateUrl="~/Events/OnEndPan.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="hlOnEndZoom" Text="OnEndZoom" NavigateUrl="~/Events/OnEndZoom.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="hlOnInitMode" Text="OnInitMode" NavigateUrl="~/Events/OnInitMode.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="hlOnModeNotAvailable" Text="OnModeNotAvailable" NavigateUrl="~/Events/OnModeNotAvailable.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="hlOnObliqueEnterLeave" Text="OnObliqueEnter and OnObliqueLeave" NavigateUrl="~/Events/OnObliqueEnterLeave.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="hlOnMapLoaded" Text="OnMapLoaded" NavigateUrl="~/Events/OnMapLoaded.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Map Properties
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink25" Text="3D Mode" NavigateUrl="~/OtherProperties/3DMode.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink31" Text="BirdseyeOrientation" NavigateUrl="~/OtherProperties/BirdseyeOrientation.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink3" Text="DashboardSize" NavigateUrl="~/OtherProperties/DashboardSize.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink6" Text="DistanceUnit" NavigateUrl="~/OtherProperties/DistanceUnit.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink32" Text="EnableBirdseye" NavigateUrl="~/OtherProperties/EnableBirdseye.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink34" Text="EnableDashboardLabels" NavigateUrl="~/OtherProperties/EnableDashboardLabels.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink33" Text="LoadBaseTiles" NavigateUrl="~/OtherProperties/LoadBaseTiles.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink5" Text="Fixed" NavigateUrl="~/OtherProperties/Fixed.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink4" Text="Market" NavigateUrl="~/OtherProperties/Market.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink2" Text="ShowSwitch" NavigateUrl="~/OtherProperties/ShowSwitch.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink18" Text="ShowTraffic" NavigateUrl="~/OtherProperties/ShowTraffic.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink35" Text="UseVirtualEarthStagingUrl" NavigateUrl="~/OtherProperties/UseVirtualEarthStagingUrl.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Shape Properties
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink37" Text="Draggable Shapes" NavigateUrl="~/Additional/DraggablePushpins.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Extender Controls
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink19" Text="MiniMapExtender" NavigateUrl="~/Extender/MiniMap.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink28" Text="SimpleAnimationExtender" NavigateUrl="~/Extender/SimpleAnimationExtender/Default.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink20" Text="TileLayerExtender" NavigateUrl="~/Extender/TileLayer.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Other Controls
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink23" Text="LocationButton" NavigateUrl="~/OtherControls/LocationButton.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink22" Text="LocationLink" NavigateUrl="~/OtherControls/LocationLink.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li>Advanced JavaScript
+                            <ul>
+                                <li><asp:HyperLink runat="server" ID="HyperLink17" Text="OnClientMapLoaded" NavigateUrl="~/JavaScript/OnClientMapLoaded.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink36" Text="Add Control" NavigateUrl="~/JavaScript/AddControl.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink14" Text="Map Events" NavigateUrl="~/JavaScript/Events/Map.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink15" Text="Mouse Events" NavigateUrl="~/JavaScript/Events/Mouse.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink16" Text="Keyboard Events" NavigateUrl="~/JavaScript/Events/Keyboard.aspx"></asp:HyperLink></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br />
+                    <a href="http://webmapsve.codeplex.com">More Information</a><br />
+                </td>
+                <td align="left" valign="top">
+                    <div class="main">
+                        <table width="800px" style="text-align: left;">
+                            <tr>
+                                <td>
+                                    <div class="pagetitle">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageTitle" runat="server"></asp:ContentPlaceHolder>
+                                    </div>
+                                    <div class="pagedescription">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageDescription" runat="server"></asp:ContentPlaceHolder>
+                                    </div>
+                                    <asp:contentplaceholder id="ContentPlaceHolder_Main" runat="server">
+                                    </asp:contentplaceholder>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="footer">
+            <a href="http://webmapsve.codeplex.com">Web.Maps.VE</a> is Copyright &copy; 2014 <a href="http://simplovation.com">Simplovation LLC</a>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

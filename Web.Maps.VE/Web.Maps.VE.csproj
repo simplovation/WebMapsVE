@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1CE74690-9980-45B0-99C8-4C16DF732438}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Simplovation.Web.Maps.VE</RootNamespace>
+    <AssemblyName>Simplovation.Web.Maps.VE</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>sn.pfx</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Simplovation.Web.Maps.VE.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Simplovation.Web.Maps.VE.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AltitudeMode.cs" />
+    <Compile Include="AsyncMapData.cs" />
+    <Compile Include="AsyncMapDataEventArgs.cs" />
+    <Compile Include="Base\AsyncScriptControl.cs" />
+    <Compile Include="Base\ClientScriptResourceAttribute.cs" />
+    <Compile Include="Base\ExtenderControl.cs" />
+    <Compile Include="Base\ExtenderControlComponentPropertyAttribute.cs" />
+    <Compile Include="Base\ExtenderControlEventAttribute.cs" />
+    <Compile Include="Base\ExtenderControlPropertyAttribute.cs" />
+    <Compile Include="Base\ScriptControl.cs" />
+    <Compile Include="Base\ScriptControlEventAttribute.cs" />
+    <Compile Include="Base\ScriptControlPropertyAttribute.cs" />
+    <Compile Include="Collections\DirtyStateList.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="CustomIconSpecification.cs" />
+    <Compile Include="DashboardSize.cs" />
+    <Compile Include="DataType.cs" />
+    <Compile Include="DirectionsLoadedEventArgs.cs" />
+    <Compile Include="DistanceUnit.cs" />
+    <Compile Include="Extenders\MapActionExtenderDesigner.cs" />
+    <Compile Include="Extenders\MapActionExtender.cs" />
+    <Compile Include="Extenders\MapAction.cs" />
+    <Compile Include="Extenders\MiniMapExtenderDesigner.cs" />
+    <Compile Include="Extenders\MiniMapExtender.cs" />
+    <Compile Include="Extenders\MiniMapHorizontalAlignment.cs" />
+    <Compile Include="Extenders\MiniMapVerticalAlignment.cs" />
+    <Compile Include="Extenders\SimpleAnimationExtender.cs" />
+    <Compile Include="Extenders\SimpleAnimationExtenderDesigner.cs" />
+    <Compile Include="Extenders\SimpleAnimationPoint.cs" />
+    <Compile Include="Extenders\TileLayerExtenderDesigner.cs" />
+    <Compile Include="Extenders\TileLayerExtender.cs" />
+    <Compile Include="FindArguments.cs" />
+    <Compile Include="FindEventArgs.cs" />
+    <Compile Include="FindLocationsEventArgs.cs" />
+    <Compile Include="FindResult.cs" />
+    <Compile Include="FindType.cs" />
+    <Compile Include="GeocodeLocation.cs" />
+    <Compile Include="ImportShapeLayerDataEventArgs.cs" />
+    <Compile Include="Interfaces\IClientID.cs" />
+    <Compile Include="LocationPrecision.cs" />
+    <Compile Include="MapLoadedEventArgs.cs" />
+    <Compile Include="MatchCode.cs" />
+    <Compile Include="MatchConfidence.cs" />
+    <Compile Include="Orientation.cs" />
+    <Compile Include="Pixel.cs" />
+    <Compile Include="Place.cs" />
+    <Compile Include="RouteMode.cs" />
+    <Compile Include="ShapeLayer.cs" />
+    <Compile Include="ShapeSourceSpecification.cs" />
+    <Compile Include="TileSourceSpecification.cs" />
+    <Compile Include="UI\LocationButton.cs" />
+    <Compile Include="UI\LocationLink.cs" />
+    <Compile Include="Util\ControlHelper.cs" />
+    <Compile Include="Util\JSONHelper.cs" />
+    <Compile Include="LatLong.cs" />
+    <Compile Include="LatLongRectangle.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Design\MapDesigner.cs" />
+    <Compile Include="MapMode.cs" />
+    <Compile Include="MapStyle.cs" />
+    <Compile Include="Market.cs" />
+    <Compile Include="MiniMapSize.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Route.cs" />
+    <Compile Include="RouteDistanceUnit.cs" />
+    <Compile Include="RouteItinerary.cs" />
+    <Compile Include="RouteItineraryItem.cs" />
+    <Compile Include="RouteLeg.cs" />
+    <Compile Include="RouteOptimize.cs" />
+    <Compile Include="RouteOptions.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="ShapeType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Map.js" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sn.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Map.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extenders\MapActionExtender.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extenders\MiniMapExtender.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extenders\TileLayerExtender.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\AsyncScriptControl.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extenders\SimpleAnimationExtender.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Map.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\AsyncScriptControl.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

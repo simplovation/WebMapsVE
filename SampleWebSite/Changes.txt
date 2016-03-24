@@ -1,0 +1,96 @@
+﻿// Copyright (c) 2014 Simplovation LLC
+// All rights reserved.
+// For Web.Maps.VE licensing information, goto:
+// http://webmapsve.codeplex.com
+
+v4.00.00
+-------------------------
+- Web.Maps.VE is now Open Source!!
+
+- Removed licensing restrictions
+
+- Added "ShowPoweredBy" property that's a boolea that determines whether to show the "Powered by Web.Maps.VE" badge
+
+- Known Issue: Bing Maps v6.3 doesn't appear to work in Firefox. However it does work in Internet Explorer and Chrome.
+
+
+v3.01.00
+-------------------------
+- Updated to use v6.3 of the Bing Maps Ajax Control
+
+- Added "BingKey" property to enable Bing Maps Key authentication for the map service. Implements "SetCredentials" functionality.
+
+- Added "CustomMapScript" property to set the JavaScript file to include instead of the Microsoft Bing Maps JavaScript API. Only use if you have your own custom/hosted version of the script file.
+
+- Added client-side JavaScript API support for the new "Search" and "Geocode" methods of the Bing Maps Ajax Control. Not supported via server-side code.
+
+
+v3.00.00
+-------------------------
+- This version contains ALL the features that v2.00.04 had, plus...
+
+- A minified (via jsmin) version of the javascript files are used when running in Debug Mode ("debug=false" in the web.config). This helps reduce the size of the script files considerably, which will cause the page to load faster.
+
+- Loop iterators internally within the javascript code has been optimized to better improve the overall performance of the Web.Maps.VE control.
+
+- Microsoft Content Delivery Network (CDN) Support - The Microsoft CDN offers improved performance for loading the JavaScript API and Map Imagery by up to 82%. The CDN is compised of multiple worldwide datacenters that allow Microsoft to host Virtual Earth content closer to end users. More Info: http://msdn.microsoft.com/en-us/library/dd807493.aspx
+
+- Add a "Map.GetShapeByTag" and "ShapeLayer.GetShapeByTag" methods that allow you to easily retrieve the first Shape within All ShapeLayers or an individual ShapeLayer that has its Tag property set to a specific value.
+
+- Add "AddCustomLayer" and "RemoveCustomLayer" support
+---- Methods added to the Web.Maps.VE JavaScript Map object
+
+
+v2.00.04
+-------------------------
+
+
+v2.00.03
+-------------------------
+New Features:
+
+    * Map.EnableBirdseye Property - A Boolean value that specifies whether or not to enable the Birdseye map style in the map control. The default value is True.
+    * Map.EnableDashboardLabels Property - A Boolean value that specifies whether or not lables appear on the map when a user clicks the Aerial or Birdseye map style buttons on the map control dashboard. The default value is True.
+    * Map.LoadBaseTiles Property - A Boolean value indicating whether or not to load the base map tiles. The default value is True.
+    * Map.BirdseyeOrientation Property and Orientation Enumeration - A Orientation Enumeration value indicating the orientation of the bird's eye map. The default value is Orientation.North.
+    * Map.UseVirtualEarthStagingUrl Property - A Boolean value that specifies whether to use the MS Virtual Earth Staging Url for pulling in the Virtual Earth JavaScript API. The default value is False.
+
+Possible Breaking Changes:
+
+    * LatLong.Latitude and LatLong.Longitude properties have been changed to the Nullable Double type, from just a regular Double that they were in previous releases. Most code should work correctly with this change, but be aware of it in case it causes exceptions when upgrading to this update release. This change was made so that more compatible support for Birdseye Map Style could be implemented.
+
+
+
+
+Additions / Changes in v2.00.02
+-------------------------------
+- Added Map.GetShapeByTag method to JavaScript API
+- Added ShapeTag property to LocationLink and LocationButton controls to determine Lat/Long point 
+- Fixed Serialization issue involving LatLong object and the Map.GetDirections method.
+- Fixed OnClick Cast to Double Error when in BirdsEye Map Style
+- Fixed Deserialization Error when Deserializing AsyncMapData - The "value '51.5' cannot be parsed as type 'Int32'" error sometimes occured, so this fix uses the JavaScript parseInt method on the client-side prior to posting the data back to the server to prevent this error. This error applied to the AsyncMapData.EventArgs.mapX, AsyncMapData.EventArgs.mapY, AsyncMapData.EventArgs.clientX, and AsyncMapData.EventArgs.clientY properties. - link to info about it: http://simplovation.com/forums/thread.aspx?id=53f14ffe-48ec-4ede-a7ca-6e68e11757fc
+- Added example of Clicking on List Item to show that Shape's InfoBox to the Dynamic Search example in Sample Website
+
+
+- Add ImportShapeLayerData method and ShapeSourceSpecification object, Added DataType enumeration, Added ImportShapeLayerDataEventArgs object, Added Map.ImportShapeLayerDataLoaded Event
+
+
+
+TODO
+----
+- !!! Work on reducing overall .js script file size - utilize newer JavaScript language techniques
+- !!! Create a Minified version of the script (via jsmin) for use when Debug=False, use "standard" version when Debug=True
+- Add js "Map.GetShapeLayerByTag" method
+
+- Mouse OnClick Event doesn't fire with Middle Mouse Button (issue with VE itself), need to add support for this myself some how.
+
+- debug - Check ShapeLayer.Shapes.Clear removes shapes from display on map, and add more shapes on same asyncpostback and verify only those get displayed.
+
+!!!- Add a method of Specifying which Existing ShapeLayer to Import Shape Data to using the Map.ImportShapeLayerData method
+!!!- Add support for VEMap.SetMapView() functionality - http://simplovation.com/forums/t/01afa2ff-8bc2-4842-9cbb-a67586d00b6b.aspx
+- Add ability to show InfoBox using LocationLink and LocationButton controls
+
+
+- Add ShowMiniMap, MiniMapX, MiniMapY properties
+- Add "OnClient{1}" event handler properties to allow easy attaching to client-side events
+- Add TrafficLegend Offset X and Y properties -- http://msdn.microsoft.com/en-us/library/bb964370.aspx

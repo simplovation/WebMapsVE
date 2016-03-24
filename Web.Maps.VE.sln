@@ -1,0 +1,155 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Maps.VE", "Web.Maps.VE\Web.Maps.VE.csproj", "{1CE74690-9980-45B0-99C8-4C16DF732438}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SampleWebSite", "SampleWebSite", "{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{1CE74690-9980-45B0-99C8-4C16DF732438}|Simplovation.Web.Maps.VE.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/SampleWebSite"
+		Debug.AspNetCompiler.PhysicalPath = "SampleWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SampleWebSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SampleWebSite"
+		Release.AspNetCompiler.PhysicalPath = "SampleWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SampleWebSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4037"
+		SlnRelativePath = "SampleWebSite\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestWebsite", "TestWebsite", "{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{1CE74690-9980-45B0-99C8-4C16DF732438}|Simplovation.Web.Maps.VE.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/TestWebsite"
+		Debug.AspNetCompiler.PhysicalPath = "TestWebsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TestWebsite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/TestWebsite"
+		Release.AspNetCompiler.PhysicalPath = "TestWebsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\TestWebsite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "6593"
+		SlnRelativePath = "TestWebsite\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{56189E54-DC98-47FC-845A-2F31988FC1CD}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget\nuget.exe = Nuget\nuget.exe
+		Nuget\Web.Maps.VE.3.01.00.nupkg = Nuget\Web.Maps.VE.3.01.00.nupkg
+		Nuget\Web.Maps.VE.4.00.00.nupkg = Nuget\Web.Maps.VE.4.00.00.nupkg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package", "Package", "{6DCC258D-90DC-42BF-99FC-77022C655E4C}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget\Package\Web.Maps.VE.nuspec = Nuget\Package\Web.Maps.VE.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{333C177C-1B03-4670-B56C-8DDC5B4A9784}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget\Package\content\WebMapsVE_Readme.txt = Nuget\Package\content\WebMapsVE_Readme.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{BBBCF750-58C8-4D4D-B268-561545A76A2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net", "net", "{60BD51F8-2AD5-4E89-9252-E60B14E737C3}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget\Package\lib\net\Simplovation.Web.Maps.VE.dll = Nuget\Package\lib\net\Simplovation.Web.Maps.VE.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs01
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = SampleWebSite
+		SccProjectName1 = SampleWebSite
+		SccLocalPath1 = SampleWebSite
+		SccProjectEnlistmentChoice1 = 2
+		SccWebProject2 = true
+		SccProjectUniqueName2 = TestWebsite
+		SccProjectName2 = TestWebsite
+		SccLocalPath2 = TestWebsite
+		SccProjectEnlistmentChoice2 = 2
+		SccProjectUniqueName3 = Web.Maps.VE\\Web.Maps.VE.csproj
+		SccProjectName3 = Web.Maps.VE
+		SccLocalPath3 = Web.Maps.VE
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Release|.NET.ActiveCfg = Release|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1CE74690-9980-45B0-99C8-4C16DF732438}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6DCC258D-90DC-42BF-99FC-77022C655E4C} = {56189E54-DC98-47FC-845A-2F31988FC1CD}
+		{333C177C-1B03-4670-B56C-8DDC5B4A9784} = {6DCC258D-90DC-42BF-99FC-77022C655E4C}
+		{BBBCF750-58C8-4D4D-B268-561545A76A2A} = {6DCC258D-90DC-42BF-99FC-77022C655E4C}
+		{60BD51F8-2AD5-4E89-9252-E60B14E737C3} = {BBBCF750-58C8-4D4D-B268-561545A76A2A}
+	EndGlobalSection
+EndGlobal
