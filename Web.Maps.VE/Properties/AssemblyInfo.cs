@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Simplovation LLC")]
 [assembly: AssemblyProduct("Simplovation.Web.Maps.VE")]
-[assembly: AssemblyCopyright("Copyright © 2014 Simplovation LLC")]
+[assembly: AssemblyCopyright("Copyright © 2016 Simplovation LLC")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,5 +30,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("4.00.00.0")]
-[assembly: AssemblyFileVersion("4.00.00.0")]
+[assembly: AssemblyVersion("7.00.00.0")]
+[assembly: AssemblyFileVersion("7.00.00.0")]

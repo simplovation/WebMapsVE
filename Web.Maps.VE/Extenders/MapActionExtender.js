@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------------- */
-/* Copyright (C) Simplovation LLC (http://Simplovation.com) 2014. All rights reserved. */
+/* Copyright (C) Simplovation LLC (http://Simplovation.com) 2016. All rights reserved. */
 /* Licensing information available at http://webmapsve.codeplex.com                    */
 /* ----------------------------------------------------------------------------------- */
 /*MapActionExtender.js - Simplovation.Web.Maps.VE.Extenders*/

@@ -39,7 +39,7 @@
     <form id="form1" runat="server">
     <div>
         <div class="header">
-            <span class="header_title">Simplovation.Web.Maps.VE v4.00.00 Sample Web Site</span>
+            <span class="header_title">Simplovation.Web.Maps.VE v7.00.00 Sample Web Site</span>
         </div>
         <table cellpadding="0" cellspacing="0">
             <tr>
@@ -167,7 +167,7 @@
             </tr>
         </table>
         <div class="footer">
-            <a href="http://webmapsve.codeplex.com">Web.Maps.VE</a> is Copyright &copy; 2014 <a href="http://simplovation.com">Simplovation LLC</a>
+            <a href="http://webmapsve.codeplex.com">Web.Maps.VE</a> is Copyright &copy; 2016 <a href="http://simplovation.com">Simplovation LLC</a>
         </div>
     </div>
     </form>

@@ -1,5 +1,5 @@
-Web.Maps.VE v4.00.00
-Copyright (c) 2014 Simplovation LLC
+Web.Maps.VE v7.00.00
+Copyright (c) 2016 Simplovation LLC
 License Agreenment: http://webmapsve.codeplex.com
 
 -----------------------------------------------------

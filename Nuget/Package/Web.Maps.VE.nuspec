@@ -3,7 +3,7 @@
   <metadata>
     <id>Web.Maps.VE</id>
     <title>Simplovation Web.Maps.VE</title>
-    <version>4.00.00</version>
+    <version>7.00.00</version>
     <authors>Simplovation LLC</authors>
     <owners>Simplovation LLC</owners>
     <licenseUrl>https://webmapsve.codeplex.com</licenseUrl>
@@ -12,7 +12,7 @@
     <description>Web.Maps.VE is the first ASP.NET Ajax Bing Maps Server Control. Allowing you to integrate Bing Maps mapping functionality into your ASP.NET Web Forms applications.</description>
     <summary>Web.Maps.VE is the first ASP.NET Ajax Bing Maps Server Control. Allowing you to integrate Bing Maps mapping functionality into your ASP.NET Web Forms applications without requring you to write any JavaScript. Even though you are not required to write JavaScript, there is still a FULL JavaScript API exposed that allows you to customize the map any way you want.</summary>
     <releaseNotes>https://webmapsve.codeplex.com</releaseNotes>
-    <copyright>Copyright (c) 2014 Simplovation LLC</copyright>
-    <tags>asp.net ajax bing maps mapping javascript webmapsve v6.3 webforms</tags>
+    <copyright>Copyright (c) 2016 Simplovation LLC</copyright>
+    <tags>asp.net ajax bing maps mapping javascript webmapsve v7 webforms</tags>
   </metadata>
 </package>

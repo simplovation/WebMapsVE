@@ -1,7 +1,17 @@
-﻿// Copyright (c) 2014 Simplovation LLC
+﻿// Copyright (c) 2016 Simplovation LLC
 // All rights reserved.
 // For Web.Maps.VE licensing information, goto:
 // http://webmapsve.codeplex.com
+
+
+v7.00.00
+-------------------------
+- The Web.Maps.VE open source project was moved to GitHub
+
+- This version is not fully backwards compatible with the older versions of the control
+
+- Upgraded to use Bing Maps v7 Javascript control
+
 
 v4.00.00
 -------------------------
