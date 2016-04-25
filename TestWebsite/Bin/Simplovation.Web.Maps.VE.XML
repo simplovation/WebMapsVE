@@ -1,0 +1,2174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Simplovation.Web.Maps.VE</name>
+    </assembly>
+    <members>
+        <member name="T:Simplovation.Web.Maps.VE.AltitudeMode">
+            <summary>
+            Defines the altitude of a point on the globe
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.AltitudeMode.Default">
+            <summary>
+            The altitude is meters above ground level
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.AltitudeMode.Absolute">
+            <summary>
+            The altitude is meters above the WGS 84 ellipsoid
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.AltitudeMode.RelativeToGround">
+            <summary>
+            The altitude is meters above ground level
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.AsyncMapData">
+            <summary>
+            The AyncMapData object is used for passing Map data down to the client when an Asynchronous Postback occurrs.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapData.EventArgs">
+            <summary>
+            When an Asyncronous postback occurs this will contain all the Client-Side VEMap Event Object Properties so the event can be handled accordingly from Server-Side code.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.AsyncMapEventArgs">
+            <summary>
+            A Server-Side representation of the Client-Side VEMap Event Object
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.error">
+            <summary>
+            A String object containing the error message, if any.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.zoomLevel">
+            <summary>
+            The current map zoom level.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.mapStyle">
+            <summary>
+            The current map style as a String. Valid String results are a, r, h and o.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.birdseyeSceneID">
+            <summary>
+            If the map style is set to bird's eye (oblique), the unique identifier of the current bird's eye scene.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.birdseyeSceneOrientation">
+            <summary>
+            If the map style is set to bird's eye (oblique), the orientation of the current bird's eye scene.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.leftMouseButton">
+            <summary>
+            A boolean representing whether the left mouse button has been clicked.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.rightMouseButton">
+            <summary>
+            A boolean representing whether the right mouse button has been clicked.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.middleMouseButton">
+            <summary>
+            A boolean representing whether the middle mouse button (or mouse wheel) has been clicked.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.mouseWheelChange">
+            <summary>
+            The number of units that the mouse wheel has changed.
+            NOTE: This is not supported in 3D mode, and the value returned in Firefox 1.5 and 2.0 is incorrect.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.clientX">
+            <summary>
+            The x coordinate of the mouse cursor relative to the browser window.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.clientY">
+            <summary>
+            The y coordinate of the mouse cursor relative to the browser window.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.screenX">
+            <summary>
+            The x coordinate of the mouse cursor relative to the screen.
+            NOTE: This is not supported in 3D mode
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.screenY">
+            <summary>
+            The y coordinate of the mouse cursor relative to the screen.
+            NOTE: This is not supported in 3D mode
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.mapX">
+            <summary>
+            The x coordinate of the map relative to the screen.
+            NOTE: This is not supported in 3D mode
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.mapY">
+            <summary>
+            The y coordinate of the map relative to the screen.
+            NOTE: This is not supported in 3D mode
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.latlong">
+            <summary>
+            The latlong coordinates of the center of the map. During the OnClick event, this contains the coordinates of the clicked location.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.keyCode">
+            <summary>
+            The key code of the key that has been pressed.
+            NOTE: This is not supported in 3D mode.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.altKey">
+            <summary>
+            A boolean representing whether the ALT key was held when the key was pressed.
+            NOTE: This is not supported in 3D mode.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.ctrlKey">
+            <summary>
+            A boolean representing whether the CTRL key was held when the key was pressed.
+            NOTE: This is not supported in 3D mode.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.shiftKey">
+            <summary>
+            A boolean representing whether the Shift key was held when the key was pressed.
+            NOTE: This is not supported in 3D mode.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.eventName">
+            <summary>
+            A string representing the type of event that occurred.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.elementID">
+            <summary>
+            The client-side ID of the object associated with the event, usually a VEShape Class object or the base map.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.Shape">
+            <summary>
+            The Shape object associated with the event.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.MapView">
+            <summary>
+            The current map view.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Base.AsyncScriptControl.InternalUpdatePanel">
+            <summary>
+            Gets a reference to the UpdatePanel used internally to enable Asynchronous ScriptControl functionality.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Color">
+            <summary>
+            Specifies the color and transparency to use when drawing <see cref="T:Simplovation.Web.Maps.VE.Shape">Shape</see> objects on the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see>.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Color.#ctor">
+            <summary>
+            Instantiates a new Color object that is semi-transparent blue.
+            </summary>
+            <overloads>There are two overloads for the constructor</overloads>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Color.#ctor(System.Int32,System.Int32,System.Int32,System.Double)">
+            <summary>
+            Instantiates a new Color object
+            </summary>
+            <param name="r">The Red component value. Valid values range from 0 to 255.</param>
+            <param name="g">The Green component value. Valid values range from 0 to 255.</param>
+            <param name="b">The Blue component value. Valid values range from 0 to 255.</param>
+            <param name="a">The Alpha (transparency) component value. Valid values range from 0.0 to 1.0.</param>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Color.R">
+            <summary>
+            The Red component value, valid values are 0 to 255
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Color.G">
+            <summary>
+            The Green component value, valid values are 0 to 255
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Color.B">
+            <summary>
+            The Blue component value, valid values are 0 to 255
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Color.A">
+            <summary>
+            The Transparency (Alpha) component value, valid values are 0.0 to 1.0
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Color.Red">
+            <summary>
+            The color Red.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Color.Green">
+            <summary>
+            The color Green.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Color.Blue">
+            <summary>
+            The color Blue.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Color.FromHtml(System.String)">
+            <summary>
+            Translates an HTML color representation to a System.Web.Maps.VE.Color object.
+            </summary>
+            <param name="htmlColor">The string representation of the HTML color to translate.</param>
+            <returns>A Simplovation.Web.Maps.VE.Color object that represents the specified HTML color.</returns>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.CustomIconSpecification">
+            <summary>
+            Specifies the appearance of a Shape object's custom icon.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.CustomIconSpecification.#ctor">
+            <summary>
+            Initializes a new instance of the CustomIconSpecification class.
+            </summary>
+            <overloads>Initializes a new instance of the CustomIconSpecification class.</overloads>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.CustomIconSpecification.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the CustomIconSpecification class.
+            </summary>
+            <param name="customHTML">The Custom HTML representing the pin's appearance. This is used for 2D views only.</param>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.BackColor">
+            <summary>
+            Gets or sets a Color object representing the icon's background color and transparency
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.CustomHTML">
+            <summary>
+            Gets or sets Custom HTML representing the pin's appearance. This is used for 2D views only.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.ForeColor">
+            <summary>
+            Gets or sets a Color object representing the icon's text color and transparency
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.Image">
+            <summary>
+            Gets or sets a String representing the URL of an image file
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.ImageOffset">
+            <summary>
+            A Pixel object representing the image's offset from the icon's anchor
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.TextBold">
+            <summary>
+            Specifies whether the text for the icon should be bold
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.TextContent">
+            <summary>
+            Gets or sets the actual text to display for the icon
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.TextFont">
+            <summary>
+            Gets or sets a String containing the name of the font to use for the icon text
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.TextItalics">
+            <summary>
+            Specifies whether the text for the icon should be italic
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.TextOffset">
+            <summary>
+            A Pixel object representing the amount to offset text from the top left corner
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.TextSize">
+            <summary>
+            Specifies the size at which to display text, in points
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.CustomIconSpecification.TextUnderline">
+            <summary>
+            Specifies whether the text for the icon should be underlined
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.DashboardSize">
+            <summary>
+            An enumeration that represents the size and type of dashboard to be displayed on the map.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.DashboardSize.Normal">
+            <summary>
+            The default dashboard.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.DashboardSize.Small">
+            <summary>
+            A smaller dashboard that the default: only containing Zoom In(+) and Out(-) buttons and Road, Aerial and Hybrid buttons for changing the map style.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.DashboardSize.Tiny">
+            <summary>
+            The smallest dashboard option: only containing Zoom In(+) and Out(-) buttons.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.DataType">
+            <summary>
+            An enumeration of Shape Layer Data Types
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.DataType.GeoRSS">
+            <summary>
+            This represents a GeoRSS data import
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.DataType.VECollection">
+            <summary>
+            This represents a Live Search maps Collection import
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.DataType.ImportXML">
+            <summary>
+            This represents an XML data import
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.DirectionsLoadedEventArgs">
+            <summary>
+            The Event Arguments for the Map.DirectionLoaded Event.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.DirectionsLoadedEventArgs.Route">
+            <summary>
+            Contains the route and itinerary information for the generated route.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.DistanceUnit">
+            <summary>
+            An enumeration of distance units used for generating routes and itineraries.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.DistanceUnit.Miles">
+            <summary>
+            Generates route information in miles.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.DistanceUnit.Kilometers">
+            <summary>
+            Generates route information in kilometers.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Extenders.MapActionExtender">
+            <summary>
+            An extender control that allows you to easily attach a specific client-side event (usually Click event) of a Control to perform a specific <see cref="P:Simplovation.Web.Maps.VE.Extenders.MapActionExtender.MapAction">MapAction</see> to manipulate the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see>.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MapActionExtender.MapControlID">
+            <summary>
+            The ID of the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see> control to attach to.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MapActionExtender.MapAction">
+            <summary>
+            The specific <see cref="P:Simplovation.Web.Maps.VE.Extenders.MapActionExtender.MapAction">MapAction</see> to manipulate the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see> with.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MapActionExtender.EventName">
+            <summary>
+            The client-side event that will trigger the <see cref="P:Simplovation.Web.Maps.VE.Extenders.MapActionExtender.MapAction">MapAction</see> to be triggered. Default is the "click" event.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MapActionExtender.Value">
+            <summary>
+            A Value that is used by the specified <see cref="P:Simplovation.Web.Maps.VE.Extenders.MapActionExtender.MapAction">MapAction</see>.
+            </summary>
+            <remarks>
+            For example, when Panning the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see> using the MapAction.PanUp action, you can set the Value to 50 to Pan the Map Up by 50 pixels.
+            </remarks>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender">
+            <summary>
+            Allows a Mini Map to easily be added to the Virtual Earth Map. Allows the Mini Map to easily be aligned to any side/corner of the Virtual Earth Map.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender.ShowMiniMap">
+            <summary>
+            A boolean value determining whether the Mini Map is shown. Default is True.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender.MiniMapSize">
+            <summary>
+            The Size of the Mini Map to Show. Default is Small.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender.VerticalSide">
+            <summary>
+            Vertical side of the Map to align the Mini Map. Default is Top.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender.HorizontalSide">
+            <summary>
+            Horizontal side of the Map to align the Mini Map. Default is Right.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender.HorizontalOffset">
+            <summary>
+            Distance to the HorizontalSide edge of the Map in pixels from the same side of the Mini Map. Default is 0.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender.VerticalOffset">
+            <summary>
+            Distance to the VerticalSide edge of the Map in pixels from the same side of the Mini Map. Default is 0.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender">
+            <summary>
+            Adds the ability to automatically move the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see> through a series of <see cref="T:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint">SimpleAnimationPoint</see> objects on timed interval.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.Points">
+            <summary>
+            A List of <see cref="T:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint">SimpleAnimationPoint</see> objects to animate through.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.NextControlID">
+            <summary>
+            The ID of the Control that will move the animation to the next point with its OnClientClick event
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.PreviousControlID">
+            <summary>
+            The ID of the Control that will move the animation to the previous point with its OnClientClick event
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.FirstControlID">
+            <summary>
+            The ID of the Control that will move the animation to the first point with its OnClientClick event
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.LastControlID">
+            <summary>
+            The ID of the Control that will move the animation to the last point with its OnClientClick event
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.PlayControlID">
+            <summary>
+            The ID of the Control that will Start the animation with its OnClientClick event
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.StopControlID">
+            <summary>
+            The ID of the Control that will Stop the animation with its OnClientClick event
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.TitleControlID">
+            <summary>
+            The ID of the Control that will display the Title of the current SimpleAnimationPoint point being displayed
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.DescriptionControlID">
+            <summary>
+            The ID of the Control that will display the Description of the current SimpleAnimationPoint point being displayed
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender.AutoPlay">
+            <summary>
+            A boolean value that determines if the Animation should automatically start when the page loads. Default is False.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint">
+            <summary>
+            A specific Animation Point used by the <see cref="T:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationExtender">SimpleAnimationExtender</see>.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint">SimpleAnimationPoint</see> object.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint.Title">
+            <summary>
+            The Title of this animation point
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint.Description">
+            <summary>
+            The Description of this animation point
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint.LatLong">
+            <summary>
+            The LatLong point to move the center of the map to for this animation point
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint.ZoomLevel">
+            <summary>
+            The Zoom level to set the map to for this animation point
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.SimpleAnimationPoint.Duration">
+            <summary>
+            The number of Milliseconds to display this animation point before moving on to the next animation point (1,000 milliseconds = 1 second) Default is 3,000
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Extenders.TileLayerExtender">
+            <summary>
+            Allows a Custom Tile Layers to be added to the Virtual Earth Map.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Extenders.TileLayerExtender.TileSources">
+            <summary>
+            A List of TileSourceSpecification objects that define the Custom Tile Layers to be added to the Virtual Earth Map.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.MapAction">
+            <summary>
+            An Enumeration of Map Actions that are used by the <see cref="T:Simplovation.Web.Maps.VE.Extenders.MapActionExtender">MapActionExtender</see> control.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.ZoomIn">
+            <summary>
+            The action of Zooming In on the Map.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.ZoomOut">
+            <summary>
+            The action of Zooming Out on the Map.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.ShowDashboard">
+            <summary>
+            The action of making the Map Dashboard visible to the user.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.HideDashboard">
+            <summary>
+            The action of hiding the Map Dashboard from being visible to the user.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleRoad">
+            <summary>
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Road.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleAerial">
+            <summary>
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Aerial.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleHybrid">
+            <summary>
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Hybrid.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleBirdseye">
+            <summary>
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Birdseye.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleShaded">
+            <summary>
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Shaded.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapMode2D">
+            <summary>
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapMode">MapMode</see> to Mode2D.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapMode3D">
+            <summary>
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapMode">MapMode</see> to Mode3D.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.ClearAllShapes">
+            <summary>
+            The action of Clearing All Shapes currently being plotted on the Map.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.ShowTraffic">
+            <summary>
+            The action of Showing the Traffic Data overlay.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.ClearTraffic">
+            <summary>
+            The action of Hiding the Traffic Data overlay.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.ShowTrafficLegend">
+            <summary>
+            The action of Showing the Traffic Data Legend.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.HideTrafficLegend">
+            <summary>
+            The action of Hiding the Traffic Data Legend.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.PanUp">
+            <summary>
+            The action of Panning Up on the Map.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.PanDown">
+            <summary>
+            The action of Panning Down on the Map.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.PanLeft">
+            <summary>
+            The action of Panning Left on the Map.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.PanRight">
+            <summary>
+            The action of Panning Right on the Map.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.MiniMapHorizontalAlignment">
+            <summary>
+            The Horizontal Alignment to assign the Mini Map when displayed using the <see cref="T:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender">MiniMapExtender</see>.
+            </summary>
+            <seealso cref="T:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender"/>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MiniMapHorizontalAlignment.Left">
+            <summary>
+            Align the Mini Map to the Left side of the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see>.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MiniMapHorizontalAlignment.Center">
+            <summary>
+            Align the Mini Map to the Center of the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see>.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MiniMapHorizontalAlignment.Right">
+            <summary>
+            Align the Mini Map to the Right side of the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see>.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.MiniMapVerticalAlignment">
+            <summary>
+            The Vertical Alignment to assign the Mini Map when displayed using the <see cref="T:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender">MiniMapExtender</see>.
+            </summary>
+            <seealso cref="T:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender"/>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MiniMapVerticalAlignment.Top">
+            <summary>
+            Align the Mini Map to the Top of the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see>.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MiniMapVerticalAlignment.Middle">
+            <summary>
+            Align the Mini Map to the Middle of the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see>.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MiniMapVerticalAlignment.Bottom">
+            <summary>
+            Align the Mini Map to the Bottom of the <see cref="T:Simplovation.Web.Maps.VE.Map">Map</see>.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.FindArguments">
+            <summary>
+            The Arguments used to perform Find operations on the Map.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindArguments.What">
+            <summary>
+            The business name, category, or other item for which the search is conducted. This parameter must be specified for a pushpin to be included in the results.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindArguments.Where">
+            <summary>
+            The address or place name of the area for which the search is conducted.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindArguments.StartIndex">
+            <summary>
+            The beginning index of the results returned. Default is 0
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindArguments.NumberOfResults">
+            <summary>
+            The number of results to be returned, starting at StartIndex, minimum is 1 and maximum is 20. Defaults is 10
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindArguments.ShowResults">
+            <summary>
+            A boolean value specifying whether the resulting pushpins are visible. Default is True.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindArguments.CreateResults">
+            <summary>
+            A boolean value specifying whether pushpins are created when a 'what' parameter is supplied. Default is True
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindArguments.UseDefaultDisambiguation">
+            <summary>
+            A boolean value specifying whether the map control displays a disambiguation box when multiple location matches are possible. Default is True
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindArguments.SetBestMapView">
+            <summary>
+            A boolean value specifying whether the map control moves the view to the first location match. Default is True
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.FindEventArgs">
+            <summary>
+            The Event Arguments that contain the results of a Map.Find operation.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindEventArgs.Places">
+            <summary>
+            A List of <see cref="T:Simplovation.Web.Maps.VE.Place">Place</see> objects returned from the Map.Find operation.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindEventArgs.Results">
+            <summary>
+            A List of <see cref="T:Simplovation.Web.Maps.VE.FindResult">FindResult</see> objects returned from the Map.Find operation.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.FindLocationsEventArgs">
+            <summary>
+            The results returned from a Map.FindLocations operation.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindLocationsEventArgs.Location">
+            <summary>
+            The <see cref="T:Simplovation.Web.Maps.VE.LatLong">LatLong</see> object returned from the Map.FindLocations operation.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindLocationsEventArgs.Places">
+            <summary>
+            A List of <see cref="T:Simplovation.Web.Maps.VE.Place">Place</see> objects returned from the Map.FindLocations operation.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.FindResult">
+            <summary>
+            A single "what" result returned from a Map.Find method search
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindResult.Shape">
+            <summary>
+            A reference to the Shape class object corresponding to this FindResult object. The Shape object represents the result's pushpin displayed on the map
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindResult.Name">
+            <summary>
+            The name of the found result
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindResult.Description">
+            <summary>
+            The description of the found result
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindResult.FindType">
+            <summary>
+            The FindType enumeration representing the type of Find that was performed. This matches the FindType parameter specified in the Map.Find method call from which the result was generated
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindResult.IsSponsored">
+            <summary>
+            A boolean value indicating whether the found result is a paid advertisement
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindResult.LatLong">
+            <summary>
+            A LatLong class object that represents the location of the found result
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.FindResult.Phone">
+            <summary>
+            The telephone number of the found result
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.FindType">
+            <summary>
+            Enumeration of search types.
+            </summary>
+            <remarks>
+            <b>Businesses</b> is the only valid value.
+            </remarks>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.FindType.Businesses">
+            <summary>
+            Performs a business search
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.ImportShapeLayerDataEventArgs">
+            <summary>
+            The Event Arguments that contain the results of a Map.ImportShapeLayerData operation.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ImportShapeLayerDataEventArgs.ShapeLayer">
+            <summary>
+            The <see cref="P:Simplovation.Web.Maps.VE.ImportShapeLayerDataEventArgs.ShapeLayer">ShapeLayer</see> object that was added to the Map containing the imported data.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ImportShapeLayerDataEventArgs.ShapeSource">
+            <summary>
+            The <see cref="T:Simplovation.Web.Maps.VE.ShapeSourceSpecification">ShapeSourceSpecification</see> object that was used to import the data.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.MapLoadedEventArgs">
+            <summary>
+            The Event Arguments for the Map.MapLoaded event.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.MapLoadedEventArgs.MapView">
+            <summary>
+            The current map view.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.MapLoadedEventArgs.zoomLevel">
+            <summary>
+            The current map zoom level.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.MapLoadedEventArgs.mapStyle">
+            <summary>
+            The current map style as a String. Valid String results are a, r, h and o.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.MapLoadedEventArgs.latlong">
+            <summary>
+            The latlong coordinates of the center of the map. During the OnClick event, this contains the coordinates of the clicked location.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.MatchCode">
+            <summary>
+            A match code value as received from the geocoder.
+            </summary>
+            <seealso cref="P:Simplovation.Web.Maps.VE.Place.MatchCode"/>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MatchCode.None">
+            <summary>
+            No match was found
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MatchCode.Good">
+            <summary>
+            The match was good
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MatchCode.Ambiguous">
+            <summary>
+            The match was ambiguous
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MatchCode.UpHierarchy">
+            <summary>
+            The match was found by a broader search
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MatchCode.Modified">
+            <summary>
+            The match was found, but to a modified place
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Orientation">
+            <summary>
+            An enumeration of available directional views for a bird's eye image.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Orientation.North">
+            <summary>
+            The image was taken looking toward the north.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Orientation.South">
+            <summary>
+            The image was taken looking toward the south.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Orientation.East">
+            <summary>
+            The image was taken looking toward the east.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Orientation.West">
+            <summary>
+            The image was taken looking toward the west.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Pixel">
+            <summary>
+            Contains the information about a Map pixel.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Pixel.#ctor">
+            <summary>
+            Initializes a new instance of the Pixel object.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Pixel.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the Pixel object.
+            </summary>
+            <param name="XCoordinate">The Pixel's X coordinate</param>
+            <param name="YCoordinate">The Pixel's Y coordinate</param>
+            <seealso cref="P:Simplovation.Web.Maps.VE.Pixel.x"/>
+            <seealso cref="P:Simplovation.Web.Maps.VE.Pixel.y"/>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Pixel.x">
+            <summary>
+            Gets or sets the Pixel's X coordinate
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Pixel.y">
+            <summary>
+            Gets or sets the Pixel's Y coordinate
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Place">
+            <summary>
+            A found result returned from a location search.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Place.LatLong">
+            <summary>
+            Gets a LatLong object that represents the best location of the found result.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Place.Name">
+            <summary>
+            Gets the String object that represents the Virtual Earth unambiguous name for the location.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Place.MatchCode">
+            <summary>
+            A MarchCode Enumeration specifying the match code from the Virtual Earth geocoder. This value is only valid for where-only searchs.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Place.MatchConfidence">
+            <summary>
+            A Double value specifying the match confidence from the geocoder. This value is only valid from where-only searches.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.RouteMode">
+            <summary>
+            An enumeration of route modes
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.RouteMode.Driving">
+            <summary>
+            The returned route contains driving directions
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.RouteMode.Walking">
+            <summary>
+            The returned route contains walking directions
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.ShapeLayer">
+            <summary>
+            Contains information about a Shape Layer.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.ShapeLayer.#ctor">
+            <summary>
+            Initializes a new instance of the ShapeLayer object.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ShapeLayer.Shapes">
+            <summary>
+            The default collection of Shapes to be plotted on the map.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ShapeLayer.Description">
+            <summary>
+            The Description of the ShapeLayer
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ShapeLayer.Title">
+            <summary>
+            The Title of the ShapeLayer
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ShapeLayer.Visible">
+            <summary>
+            Gets or sets the value determining whether the ShapeLayer is visible on the Map
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ShapeLayer.Tag">
+            <summary>
+             Gets or sets string that contains data about the ShapeLayer
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.ShapeLayer.GetShapeByTag(System.String)">
+            <summary>
+            Return the first Shape that has its Tag property set to the passed in value.
+            </summary>
+            <param name="tag">The Shape.Tag value to search for.</param>
+            <returns>The Shape with the Tag property that matches the "tag" passed in.</returns>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.ShapeSourceSpecification">
+            <summary>
+            Defines the specification for importing Shape objects to the Map.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.ShapeSourceSpecification.#ctor(Simplovation.Web.Maps.VE.DataType,System.String)">
+            <summary>
+            Initializes a new instance of the ShapeSourceSpecification object.
+            </summary>
+            <param name="type">A DataType enumeration specifying the type of data to be imported into the Shape Layer</param>
+            <param name="layerSource">A string specifying the Shape Layer Source</param>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ShapeSourceSpecification.LayerSource">
+            <summary>
+            A string specifying the Shape Layer Source
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.ShapeSourceSpecification.Type">
+            <summary>
+            A DataType enumeration specifying the type of data to be imported into the Shape Layer
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.TileSourceSpecification">
+            <summary>
+            Information about a Custom Map Tile Source
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.Bounds">
+            <summary>
+            A collection of LatLongRectangle objects that specify the layers approximate coverage area.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.GetTilePath">
+            <summary>
+            When the map is in 2D mode, this property specifies the client-side JavaScript function that determines the correct file names for your tiles. When a GetTilePath value is specified, the NumServers and TileSource properties are ignored.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.ID">
+            <summary>
+            The unique identifier for the layer. Required.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.MaxZoom">
+            <summary>
+            The Maximum Zoom Level to display the custom tile source.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.MinZoom">
+            <summary>
+            The Minimum Zoom Level to display the custom tile source.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.NumServers">
+            <summary>
+            The number of servers on which tiles are hosted. Use this property if your tile source uses more than one server. Default is 1.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.Opacity">
+            <summary>
+            The Opacity level of the tiles when displayed over the map. Default is 1.0 (100%)
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.TileSource">
+            <summary>
+            The location of the tiles. Required.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.ZIndex">
+            <summary>
+            The Z-Index value for the tiles. Optional.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.TileSourceSpecification.VisibleOnLoad">
+            <summary>
+            Determines whether the Layer is shown when added to the Map. Default is True.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.LocationButton">
+            <summary>
+            A HtmlButton control with Location specific propertyies (Latitude, Longitude, ZoomLevel, Shape) that specify where the Target Map control is repositioned to when clicked.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationButton.TargetMapID">
+            <summary>
+            The ID of the Map this link targets.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationButton.TargetContentPlaceHolderID">
+            <summary>
+            The ID of the MasterPage ContentPlaceHolder the Target Map control is located within.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationButton.Latitude">
+            <summary>
+            Sets the Latitude to set the map's location to.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationButton.Longitude">
+            <summary>
+            Sets the Longitude to set the map's location to.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationButton.ZoomLevel">
+            <summary>
+            Sets the zoom level this link will change the map to. Default is -1, which doesn't change the map's zoom level.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationButton.ShapeClientID">
+            <summary>
+            The ClientID of the VEShape object to center the Map to. This property is used instead of the Latitude and Longitude properties when set.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationButton.ShapeTag">
+            <summary>
+            The Tag of the Shape object to center the Map to. This property is used instead of the Latitude and Longitude properties when set.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.LocationLink">
+            <summary>
+            A HyperLink control with Location specific propertyies (Latitude, Longitude, ZoomLevel, Shape) that specify where the Target Map control is repositioned to when clicked.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationLink.TargetMapID">
+            <summary>
+            The ID of the Map this link targets.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationLink.TargetContentPlaceHolderID">
+            <summary>
+            The ID of the MasterPage ContentPlaceHolder the Target Map control is located within.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationLink.Latitude">
+            <summary>
+            Sets the Latitude to set the map's location to.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationLink.Longitude">
+            <summary>
+            Sets the Longitude to set the map's location to.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationLink.ZoomLevel">
+            <summary>
+            Sets the zoom level this link will change the map to. Default is -1, which doesn't change the map's zoom level.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationLink.ShapeClientID">
+            <summary>
+            The ClientID of the VEShape object to center the Map to. This property is used instead of the Latitude and Longitude properties when set.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LocationLink.ShapeTag">
+            <summary>
+            The Tag of the Shape object to center the Map to. This property is used instead of the Latitude and Longitude properties when set.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.LatLong">
+            <summary>
+            Contains the Latitude and Longitude of a single point on the globe.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.LatLong.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simplovation.Web.Maps.VE.LatLong">LatLong</see> object.
+            </summary>
+            <overloads>Initializes a new instance of the <see cref="T:Simplovation.Web.Maps.VE.LatLong">LatLong</see> object.</overloads>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.LatLong.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simplovation.Web.Maps.VE.LatLong">LatLong</see> object.
+            </summary>
+            <param name="latitude">Specifies the latitude of a single point on the globe.</param>
+            <param name="longitude">Specifies the longitude of a single point on the globe.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.LatLong.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simplovation.Web.Maps.VE.LatLong">LatLong</see> object.
+            </summary>
+            <param name="latitude">Specifies the latitude of a single point on the globe.</param>
+            <param name="longitude">Specifies the longitude of a single point on the globe.</param>
+            <param name="altitude">Specifies the altitude of a single point on the globe.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.LatLong.#ctor(System.Double,System.Double,System.Double,Simplovation.Web.Maps.VE.AltitudeMode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simplovation.Web.Maps.VE.LatLong">LatLong</see> object.
+            </summary>
+            <param name="latitude">Specifies the latitude of a single point on the globe.</param>
+            <param name="longitude">Specifies the longitude of a single point on the globe.</param>
+            <param name="altitude">Specifies the altitude of a single point on the globe.</param>
+            <param name="altitudeMode">Specifies the mode in which an altitude is represented.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.LatLong.ToString">
+            <summary>
+            Returns a String representation of the <see cref="T:Simplovation.Web.Maps.VE.LatLong">LatLong</see> object.
+            </summary>
+            <returns>A string containing only the Latitude and Longitude of the LatLong object seperated by a comma and space (Example: "75.55, -75.55")</returns>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLong.Latitude">
+            <summary>
+            Specifies the latitude of a single point on the globe.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLong.Longitude">
+            <summary>
+            Specifies the longitude of a single point on the globe.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLong.Altitude">
+            <summary>
+            Specifies the altitude of a single point on the globe.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLong.AltitudeMode">
+            <summary>
+            Specifies the mode in which an altitude is represented.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.LatLongRectangle">
+            <summary>
+            Contains the LatLong objects that define the boundaries of the current map view.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLongRectangle.TopLeftLatLong">
+            <summary>
+            The LatLong object that represnets the upper-left corner of the map view.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLongRectangle.BottomRightLatLong">
+            <summary>
+            The LatLong object that represents the lower-right corner of the map view.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLongRectangle.TopRightLatLong">
+            <summary>
+            The LatLong object that represents the upper-right corner of the map view. Only available in 3D Mode.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLongRectangle.BottomLeftLatLong">
+            <summary>
+            The LatLong object that represents the lower-left corner of the map view. Only available in 3D Mode.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLongRectangle.MinLatitude">
+            <summary>
+            Gets the Minimum Latitude value based on comparing the BottomRightLatLong and TopLeftLatLong properties
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLongRectangle.MaxLatitude">
+            <summary>
+            Gets the Maximum Latitude value based on comparing the BottomRightLatLong and TopLeftLatLong properties
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLongRectangle.MinLongitude">
+            <summary>
+            Gets the Minimum Longitude value based on comparing the BottomRightLatLong and TopLeftLatLong properties
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.LatLongRectangle.MaxLongitude">
+            <summary>
+            Gets the Maximum Longitude value based on comparing the BottomRightLatLong and TopLeftLatLong properties
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Map">
+            <summary>
+            An ASP.NET AJAX Bing Maps Mapping Server Control
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.#ctor">
+            <summary>
+            Instantiates a new Map object.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.Dispose">
+            <summary>
+            The Dispose method.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.OnLoad(System.EventArgs)">
+            <summary>
+            OnLoad
+            </summary>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.TagKey">
+            <summary>
+            TagKey
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.GetScriptDescriptors">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.CreateChildControls">
+            <summary>
+            The CreateChileControls method.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.OnPreRender(System.EventArgs)">
+            <summary>
+            OnPreRender
+            </summary>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.UseVirtualEarthStagingUrl">
+            <summary>
+            A Boolean value that specifies whether to use the MS Bing Maps Staging Url for pulling in the Bing Maps JavaScript API. The default value is False.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.ShowPoweredBy">
+            <summary>
+            A boolean that determines whether to show the "Powered by Web.Maps.VE" badge.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.MapView">
+            <summary>
+            The current MapView being shown to the user during an Async Postback.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.DistanceUnit">
+            <summary>
+            The distance unit for the map scale. Miles or Kilometers. Default is Miles.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Layers">
+            <summary>
+            The Maps Shape Layers.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.AsyncPostbackPassShapes">
+            <summary>
+            This defines whether the Shapes plotted on the map will be posted back to the server during an Asynchronous Postback. This is to help improve the performance of "Dynamic Search" style maps. The Default is True.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Market">
+            <summary>
+            The Bing Maps API supported international market to use. Default is English.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.LatLong">
+            <summary>
+            A LatLong object that represents the center of the map.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Latitude">
+            <summary>
+            The Latitude of the Map.LatLong property.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Longitude">
+            <summary>
+            The Longitude of the Map.LatLong property.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Pitch">
+            <summary>
+            In 3D mode, represents the pitch of the current map view
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Heading">
+            <summary>
+            In 3D mode, represents the compass heading of the current map view
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Altitude">
+            <summary>
+            In 3D mode, represents the altitude (in meters) above the geoid
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Zoom">
+            <summary>
+            The zoom level to display. Valid values range from 1 through 19. Default is 4.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.MapStyle">
+            <summary>
+            The style of the map; Road, Aerial, Hybrid or Oblique (Bird's eye).
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Fixed">
+            <summary>
+            A Boolean value that specifies whether the map view is displayed as a fixed map that the user cannot change. Default is false.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.MapMode">
+            <summary>
+            A MapMode enumerator that specifies whether to load the map in 2D or 3D mode. Default is MapMode.Mode2D.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.ShowDashboard">
+            <summary>
+            Gets or sets a Boolean value that determines if the Map Dashboard is shown. Default is True.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.ShowSwitch">
+            <summary>
+            Specifies whether to show the map mode switch on the dashboard control. Default is true.
+            This property cannot be changed during an Asynchronous Postback.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.DashboardSize">
+            <summary>
+            The maps dashboard size and type.
+            This property cannot be changed during an Asynchronous Postback.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.TileBuffer">
+            <summary>
+            An integer value greater than or equal to 0 that indicates the number of rings of additional tiles that should be loaded. The default is 0, and the maximum is 3.
+            This property is used for enabling Tile Overfetching.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.EnableBirdseye">
+            <summary>
+            A Boolean value that specifies whether or not to enable the Birdseye map style in the map control. The default value is True.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.EnableDashboardLabels">
+            <summary>
+            A Boolean value that specifies whether or not labels appear on the map when a user clicks the Aerial or Birdseye map style buttons on the map control dashboard. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.LoadBaseTiles">
+            <summary>
+            A Boolean value indicating whether or not to load the base map tiles. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.BirdseyeOrientation">
+            <summary>
+            A Orientation Enumeration value indicating the orientation of the bird's eye map. The default value is Orientation.North.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.CustomInfoBoxStylesEnabled">
+            <summary>
+            When set to True, allows custom CSS to be used to style the InfoBox popup. Default is False, uses the Default InfoBox styles.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.OnClientMapLoaded">
+            <summary>
+            The JavaScript Method that is called on the client-side when the Map has finished loading.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.ShowTraffic">
+            <summary>
+            When set to True, displays Traffic data layer on top of map.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.ShowTrafficLegend">
+            <summary>
+            When set to True, displays the Traffic legend.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.TrafficLegendText">
+            <summary>
+            Specifies test that is shown with the Traffic Legend when ShowTrafficLegend is set to True.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.ClientToken">
+            <summary>
+            The MS Bing Maps Platform Service Client Token that was retrieved from the MS Bing Maps Platform Service.
+            This property allows the integration of Bing Maps Platform Customer Identification into a commercial application.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.BingKey">
+            <summary>
+            The Bing Maps Key used to authenticate map service requests.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.CustomMapScript">
+            <summary>
+            Sets the JavaScript file to include instead of the Microsoft Bing Maps JavaScript API. Only use if you have your own custom/hosted version of the script file.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.AddShape(Simplovation.Web.Maps.VE.Shape)">
+            <summary>
+            Adds a <see cref="T:Simplovation.Web.Maps.VE.Shape">Shape</see> object to the default "base" Shape Layer.
+            </summary>
+            <param name="shape">The Shape to add to the Map's Defaut Shape Layer.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.DeleteShape(Simplovation.Web.Maps.VE.Shape)">
+            <summary>
+            Deletes a <see cref="T:Simplovation.Web.Maps.VE.Shape">Shape</see> object from any Shape Layer on the Map.
+            </summary>
+            <param name="shape">The Shape to Deleve from the Map.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.GetShapeByTag(System.String)">
+            <summary>
+            Search all ShapeLayers and Return the first Shape that has its Tag property set to the passed in value.
+            </summary>
+            <param name="tag">The Shape.Tag value to search for.</param>
+            <returns>The Shape with the Tag property that matches the "tag" passed in.</returns>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.ImportShapeLayerData(Simplovation.Web.Maps.VE.ShapeSourceSpecification,System.Boolean)">
+            <summary>
+            Imports data from a GeoRSS feed, Live Search Maps Collection or KML URL
+            </summary>
+            <param name="shapeSource">A ShapeSourceSpecification object specifying the source of the Shape Layer data to import</param>
+            /// <param name="setBestView">A boolean value specifying whether the map view is changed to the best view for the layer</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.GetDirections(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Draws a multi-point route on the map.
+            </summary>
+            <overloads>Draws a multi-point route on the Map.</overloads>
+            <param name="locations">The Array of Locations (can be either String or LatLong objects) to get the multi-point route for.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.GetDirections(System.Collections.Generic.List{System.Object},Simplovation.Web.Maps.VE.RouteOptions)">
+            <summary>
+            Draws a multi-point route on the map.
+            </summary>
+            <param name="locations">The Array of Locations (can be either String or LatLong objects) to get the multi-point route for.</param>
+            <param name="routeOptions">The RouteOptions attributes for getting a multi-point route.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.ClearDirections">
+            <summary>
+            Clears the currently plotted Route from the map.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.Find(Simplovation.Web.Maps.VE.FindArguments)">
+            <summary>
+            Performs a what (business) search or a where (location) search
+            </summary>
+            <param name="findArguments">The FindArguments used to perform the Find operation.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.FindLocations(Simplovation.Web.Maps.VE.LatLong)">
+            <summary>
+            Performs a search for locations that match a LatLong coordinate input
+            </summary>
+            <param name="latlong">A LatLong class that specifies what map location to match</param>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Map.AsyncMapEventHandler">
+            <summary>
+            Delegate for Asynchronous Postback based Map Events
+            </summary>
+            <param name="sender">The Object that fired the event.</param>
+            <param name="e">A <see cref="T:Simplovation.Web.Maps.VE.AsyncMapEventArgs">AsyncMapEventArgs</see> object containing the event arguments for the event that was fired.</param>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Map.DirectionsLoadedEventHandler">
+            <summary>
+            The Delegate for the Map.DirectionsLoaded event.
+            </summary>
+            <param name="sender">The Object that fired the event.</param>
+            <param name="e">The Event Arguments for the Map.DirectionsLoaded event.</param>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Map.FindLoadedEventHandler">
+            <summary>
+            The Delegate for the Map.FindLoaded event.
+            </summary>
+            <param name="sender">The Object that fired the event.</param>
+            <param name="e">The results returned from the Map.Find operation.</param>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Map.FindLocationsLoadedEventHandler">
+            <summary>
+            The Delegate for the Map.FindLocationsLoaded event.
+            </summary>
+            <param name="sender">The Object that fired the event.</param>
+            <param name="e">The results returned from the Map.FindLocations operation.</param>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Map.MapLoadedEventHandler">
+            <summary>
+            The Delegate for the Map.MapLoaded event.
+            </summary>
+            <param name="sender">The Object that fired the event.</param>
+            <param name="e">The Event Arguments for the Map.MapLoaded event.</param>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Map.ImportShapeLayerDataLoadedEventHandler">
+            <summary>
+            The Delegate for the Map.ImportShapeLayerDataLoaded event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.DirectionsLoaded">
+            <summary>
+            Occurs when Directions are loaded on the Map after calling the Map.GetDirections method.
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.FindLoaded">
+            <summary>
+            Occurs when a Find operation is completed after calling the Map.Find method.
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.FindLocationsLoaded">
+            <summary>
+            Occurs when a FindLocations operation is completed after calling the Map.FindLocations method.
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.ImportShapeLayerDataLoaded">
+            <summary>
+            Occurs when ShapeLayer Data has been loaded on the Map after calling the Map.ImportShapeLayerData method.
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.MapLoaded">
+            <summary>
+            This event is fired when the Map is first loaded on the client.
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.ChangeMapStyle">
+            <summary>
+            Occurs when the map style chanages
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.ChangeView">
+            <summary>
+            Occurs whenever the map view changes
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.EndPan">
+            <summary>
+            Occurs when a pan of the map ends
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.EndZoom">
+            <summary>
+            Occurs when the map zoom ends
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.InitMode">
+            <summary>
+            Occurs after the map mode changes and the map has reloaded
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.ModeNotAvailable">
+            <summary>
+            Occurs when the map mode fails to change to 3D mode
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.ObliqueEnter">
+            <summary>
+            Occurs when birdseye images are available at the center of the current map
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.ObliqueLeave">
+            <summary>
+            Occurs when birdseye images are no longer available at the center of the current map
+            </summary>
+        </member>
+        <member name="E:Simplovation.Web.Maps.VE.Map.Click">
+            <summary>
+            The Click event is fired when the user clicks on the Map within the Web Browser (on the client-side) and is raised on the Server-Side via an Asynchronous Postback to the server.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.MapMode">
+            <summary>
+            An enumeration of Map Modes.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapMode.Mode2D">
+            <summary>
+            Displays the Map in the traditional two dimensions.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapMode.Mode3D">
+            <summary>
+            Loads the Virtual Earth 3D control, displays the map in three dimensions, and displays the 3D navigation control.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.MapStyle">
+            <summary>
+            An enumeration of map styles.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Road">
+            <summary>
+            The road map style
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Aerial">
+            <summary>
+            The aerial map style
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Hybrid">
+            <summary>
+            The hybrid map style, which is an aerial map with a label overlay
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Birdseye">
+            <summary>
+            The bird's eye (oblique-angle) imagery map style
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Shaded">
+            <summary>
+            The shaded map style; a road map with shaded contours.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Market">
+            <summary>
+            An enumeration of the International Markets supported by the Virtual Earth API.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.English">
+            <summary>
+            English - United States (en-us)
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.Japanese">
+            <summary>
+            Japanese - Japan (ja-jp)
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.en_ca">
+            <summary>
+            English - Canada (en-ca) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.en_gb">
+            <summary>
+            English - United Kingdom (en-gb) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.ja_jp">
+            <summary>
+            Japanese - Japan (ja-jp)
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.cs_cz">
+            <summary>
+            Czech - Czech Republic (cs-cz) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.da_dk">
+            <summary>
+            Danish - Denmark (da-dk) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.nl_nl">
+            <summary>
+            Dutch - The Netherlands (nl-nl) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.fi_fi">
+            <summary>
+            Finnish - Finland (fi-fi) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.fr_fr">
+            <summary>
+            French - France (fr-fr) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.de_de">
+            <summary>
+            German - Germany (de-de) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.it_it">
+            <summary>
+            Italian - Italy (it-it) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.nb_no">
+            <summary>
+            Norwegian - Norway (nb-no) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.pt_pt">
+            <summary>
+            Portuguese - Portugal (pt-pt) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.es_es">
+            <summary>
+            Spanish - Spain (es-es) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.Market.sv_se">
+            <summary>
+            Swedish - Sweden (sv-se) - MS Virtual Earth may not support this localization option yet.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.MiniMapSize">
+            <summary>
+            Enumeration representing the size of the mini map.
+            </summary>
+            <seealso cref="P:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender.MiniMapSize"/>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MiniMapSize.Small">
+            <summary>
+            Small mini map
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MiniMapSize.Large">
+            <summary>
+            Large mini map
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Properties.Resources.K1">
+            <summary>
+              Looks up a localized string similar to jFg3.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Properties.Resources.K2">
+            <summary>
+              Looks up a localized string similar to !4ks.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Properties.Resources.K3">
+            <summary>
+              Looks up a localized string similar to d5K$.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Properties.Resources.K4">
+            <summary>
+              Looks up a localized string similar to 34o4.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Route">
+            <summary>
+            Contains the route and itinerary information for a generated route.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Route.#ctor">
+            <summary>
+            Initializes a new instance of the Route object.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Route.Distance">
+            <summary>
+            Specifies the total length of the route.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Route.RouteLegs">
+            <summary>
+            A collection of RouteLeg objects that specify the intermediate legs of the route.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Route.Time">
+            <summary>
+            An integer specifying the total elapsed time, in seconds, to traverse the route.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.RouteDistanceUnit">
+            <summary>
+            An enumeration specifying the units used for the route.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.RouteDistanceUnit.Miles">
+            <summary>
+            The route is shown in units of Miles.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.RouteDistanceUnit.Kilometers">
+            <summary>
+            The route is shown in units of Kilometers.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.RouteItinerary">
+            <summary>
+            Contains a collection of RouteItineraryItems that specify the step-by-step directions for a Route object.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteItinerary.Items">
+            <summary>
+            A List of <see cref="T:Simplovation.Web.Maps.VE.RouteItineraryItem">RouteItineraryItem</see> objects specifying the step-by-step directions for the route.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.RouteItineraryItem">
+            <summary>
+            Specifies a step in the step-by-step directions of a Route.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteItineraryItem.Distance">
+            <summary>
+            Specifies the distance of the step.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteItineraryItem.LatLong">
+            <summary>
+            Specifies the LatLong position of the step.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteItineraryItem.Text">
+            <summary>
+            The description of the step.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteItineraryItem.Time">
+            <summary>
+            An integer specifying the total elapsed time, in seconds, to traverse the route itinerary step.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.RouteLeg">
+            <summary>
+            Specifies the intermediate legs of a Route.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.RouteLeg.#ctor">
+            <summary>
+            Initializes a new instance of the RouteLeg object.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteLeg.Distance">
+            <summary>
+            Specifies the length of the RouteLeg
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteLeg.Itinerary">
+            <summary>
+            Specifies the itinerary of the RouteLeg
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.RouteOptimize">
+            <summary>
+            An enumeration specifying how a route is optimized.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.RouteOptimize.Default">
+            <summary>
+            No optimization is done. The route is calculated in order of how the locations are specified.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.RouteOptimize.MinimizeTime">
+            <summary>
+            The route is optimized for time.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.RouteOptimize.MinimizeDistance">
+            <summary>
+            The route is optimized for distance.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.RouteOptions">
+            <summary>
+            Attributes for a multi-point route.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.RouteOptions.#ctor">
+            <summary>
+            Initializes a new instance of the RouteOptions object.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.DistanceUnit">
+            <summary>
+            Specifies the RouteDistanceUnit used for the Route. Default is Miles.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.DrawRoute">
+            <summary>
+            Specifies whether the route is drawn on the map. Default is True.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.RouteColor">
+            <summary>
+            Specifies the color of the Route line to be drawn on the map. Default is ? or Color(0, 169, 235, 0.7)
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.RouteMode">
+            <summary>
+            A RouteMode enumeration value specifying the mode of route to return.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.RouteOptimize">
+            <summary>
+            Specifies how the route is optimized. Default is RouteOptimize.Default, which specifies the route is calculated in order of how the locations are specified.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.RouteWeight">
+            <summary>
+            The thickness, in pixels, of the route line. Default is 6 pixels.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.RouteZIndex">
+            <summary>
+            The z-index of the route line. Default is 4.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.SetBestMapView">
+            <summary>
+            Specifies whether the map view is set to the best view of the route after it is drawn. Default is True.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.ShowDisambiguation">
+            <summary>
+            Specifies whether a disambiguation dialog box is shown. Default is True, which means the disambiguation dialog box is shown. If False, no disambiguation dialogs are displayed and the route uses the first geocoded response for each location.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.RouteOptions.ShowErrorMessages">
+            <summary>
+            Specifies whether to show any error messages. Default is True.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.Shape">
+             <summary>
+             The Shape object provides Polygon, Polyline and Pushpin functionality combined within a single common object type.
+             </summary>
+            [TypeConverter(typeof(GenericConverter)),
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Shape.#ctor">
+            <summary>
+            Initializes a new instance of the Shape object of type Pushpin.
+            </summary>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Shape.#ctor(Simplovation.Web.Maps.VE.LatLong)">
+            <summary>
+            Initializes a new instance of the Shape object of type Pushpin.
+            </summary>
+            <param name="point">The location of the Pushpin</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Shape.#ctor(Simplovation.Web.Maps.VE.ShapeType,Simplovation.Web.Maps.VE.LatLong[])">
+            <summary>
+            Initializes a new instance of the Shape object.
+            </summary>
+            <param name="type">The type of shape.</param>
+            <param name="points">An array of LatLong objects representing the points that make up the pushpin, polyline or polygon. If shape is of type Pushpin, a single LatLong is required. If shape is of type polyline, at least two points are required. If shape is of type polygon, at least three points are required.</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Shape.#ctor(Simplovation.Web.Maps.VE.ShapeType,System.Collections.Generic.List{Simplovation.Web.Maps.VE.LatLong})">
+            <summary>
+            Initializes a new instance of the Shape object.
+            </summary>
+            <param name="type">The type of shape.</param>
+            <param name="points">An array of LatLong objects representing the points that make up the pushpin, polyline or polygon. If shape is of type Pushpin, a single LatLong is required. If shape is of type polyline, at least two points are required. If shape is of type polygon, at least three points are required.</param>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.ClientID">
+            <summary>
+            This is the unique ID that identifies this Shape on the client. Any value this property is set to from Server-Side code, will be ignored.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.ShowIcon">
+            <summary>
+            Determines whether to show/hide the icon associated with a Polyline or Polygon. This is ignored for Pushpins.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.CustomIcon">
+            <summary>
+            The Shapes custom icon.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.Description">
+            <summary>
+            The description of the Shape.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.FillColor">
+            <summary>
+            The fill color and transparency for a polygon.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.IconAnchor">
+            <summary>
+            A LatLong object representing the Shape's custom icon anchor point.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.LineColor">
+            <summary>
+            The line color or transparency for a polyline or polygon.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.LineWidth">
+            <summary>
+            The line width of a polyline or polygon.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.MoreInfoURL">
+            <summary>
+            The Shape's "more info" URL.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.PhotoURL">
+            <summary>
+            The Shape's "photo" URL.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.Points">
+            <summary>
+            An array of LatLong objects representing the points that make up the pushpin, polyline or polygon.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.LatLong">
+            <summary>
+            Returns the First LatLong Point in the Shapes Points collection. Read-Only
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.Title">
+            <summary>
+            The title of the Shape object.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.Type">
+            <summary>
+            The type of Shape object.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.ZIndex">
+            <summary>
+            The z-index of a pushpin shape or pushpin attached to a polyline or polygon.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.Tag">
+            <summary>
+            Gets or sets string that contains data about the Shape
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.Altitude">
+            <summary>
+            The altitude for the Shape
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.AltitudeMode">
+            <summary>
+            Specifies the mode in which the Shapes Altitude is represented
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Shape.Draggable">
+            <summary>
+            A boolean value indicating whether the Shape is is draggable on the Map by using the mouse. Default is False.
+            </summary>
+        </member>
+        <member name="T:Simplovation.Web.Maps.VE.ShapeType">
+            <summary>
+            This enumeration represents the Shape Type for a <see cref="T:Simplovation.Web.Maps.VE.Shape"/> object.
+            </summary>
+            <example language="C#">ShapeType st = ShapeType.Pushpin;</example>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.ShapeType.Pushpin">
+            <summary>
+            This represents a <see cref="T:Simplovation.Web.Maps.VE.Shape"/> object that is a pushpin.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.ShapeType.Polyline">
+            <summary>
+            This represents a <see cref="T:Simplovation.Web.Maps.VE.Shape"/> object that is a polyline.
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.ShapeType.Polygon">
+            <summary>
+            This represents a <see cref="T:Simplovation.Web.Maps.VE.Shape"/> object that is a polygon.
+            </summary>
+        </member>
+    </members>
+</doc>

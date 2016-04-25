@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Maps.VE", "Web.Maps.VE\Web.Maps.VE.csproj", "{1CE74690-9980-45B0-99C8-4C16DF732438}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SampleWebSite", "SampleWebSite", "{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SampleWebSite", "SampleWebSite\", "{C09FA6E5-1A6D-4A63-AFAC-64A9CA5974BE}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "SAK"
 		SccAuxPath = "SAK"
 		SccLocalPath = "SAK"
 		SccProvider = "SAK"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		ProjectReferences = "{1CE74690-9980-45B0-99C8-4C16DF732438}|Simplovation.Web.Maps.VE.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/SampleWebSite"
 		Debug.AspNetCompiler.PhysicalPath = "SampleWebSite\"
@@ -32,13 +32,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SampleWebSite", "SampleWebS
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestWebsite", "TestWebsite", "{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestWebsite", "TestWebsite\", "{B507DFB8-B0F0-4E7E-AFDD-3490F565FDF1}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "SAK"
 		SccAuxPath = "SAK"
 		SccLocalPath = "SAK"
 		SccProvider = "SAK"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		ProjectReferences = "{1CE74690-9980-45B0-99C8-4C16DF732438}|Simplovation.Web.Maps.VE.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/TestWebsite"
 		Debug.AspNetCompiler.PhysicalPath = "TestWebsite\"
@@ -84,25 +84,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net", "net", "{60BD51F8-2AD
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs01
-		SccLocalPath0 = .
-		SccWebProject1 = true
-		SccProjectUniqueName1 = SampleWebSite
-		SccProjectName1 = SampleWebSite
-		SccLocalPath1 = SampleWebSite
-		SccProjectEnlistmentChoice1 = 2
-		SccWebProject2 = true
-		SccProjectUniqueName2 = TestWebsite
-		SccProjectName2 = TestWebsite
-		SccLocalPath2 = TestWebsite
-		SccProjectEnlistmentChoice2 = 2
-		SccProjectUniqueName3 = Web.Maps.VE\\Web.Maps.VE.csproj
-		SccProjectName3 = Web.Maps.VE
-		SccLocalPath3 = Web.Maps.VE
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
 		Debug|Any CPU = Debug|Any CPU

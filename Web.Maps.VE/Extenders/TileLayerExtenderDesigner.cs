@@ -5,6 +5,7 @@
 using System.Web.UI.Design;
 namespace Simplovation.Web.Maps.VE.Extenders
 {
+    [System.Security.SecurityCritical]
     class TileLayerExtenderDesigner : ExtenderControlDesigner
     {
     }

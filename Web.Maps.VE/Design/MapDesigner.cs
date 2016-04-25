@@ -10,8 +10,10 @@ using System.Diagnostics;
 
 namespace Simplovation.Web.Maps.VE.Design
 {
+    [System.Security.SecurityCritical]
     public class MapDesigner : ControlDesigner
     {
+        [System.Security.SecurityCritical]
         public override string GetDesignTimeHtml()
         {
             Map myMap = this.Component as Map;
@@ -19,12 +21,16 @@ namespace Simplovation.Web.Maps.VE.Design
                 myMap.Width, myMap.Height, this.ID);
         }
 
-        public override bool AllowResize { get { return true; } }
+        public override bool AllowResize {
+            [System.Security.SecurityCritical]
+            get { return true; }
+        }
 
         private DesignerActionListCollection _ActionList = null;
 
         public override DesignerActionListCollection ActionLists
         {
+            [System.Security.SecurityCritical]
             get
             {
                 if (_ActionList == null)
