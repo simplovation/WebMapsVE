@@ -13,7 +13,7 @@ The current work beind done on this project under the Github repository is to up
 Here's a list of some of the changes coming to the next version of Web.Maps.VE:
 
 - Support for Bing Maps v8 JavaScript control
-- Upgrading to support ASP.NET 4.5.2
+- Upgrading to support ASP.NET 4.5 and newer
 
 There will be some breaking changes in the future release of Web.Maps.VE. All breaking changes will be noted in the release notes.
 
