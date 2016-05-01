@@ -4,6 +4,13 @@ version vNext - Coming Soon
 
 - Refactored to support Bing Maps v8 JavaScript Control
 - Requires .NET 4.5 or newer
+- Breaking Changes:
+    - Removed
+        - Map.MapMode property
+        - Map.OnInitMode event
+        - Map.OnModeNotAvailable event
+        - Map.UseVirtualEarthStagingUrl property
+
 
 version 4.0 - Released Apr 25, 2014
 

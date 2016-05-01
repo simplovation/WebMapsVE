@@ -590,16 +590,6 @@
             The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Shaded.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapMode2D">
-            <summary>
-            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapMode">MapMode</see> to Mode2D.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapMode3D">
-            <summary>
-            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapMode">MapMode</see> to Mode3D.
-            </summary>
-        </member>
         <member name="F:Simplovation.Web.Maps.VE.MapAction.ClearAllShapes">
             <summary>
             The action of Clearing All Shapes currently being plotted on the Map.
@@ -1328,11 +1318,6 @@
             </summary>
             <param name="e">EventArgs</param>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.UseVirtualEarthStagingUrl">
-            <summary>
-            A Boolean value that specifies whether to use the MS Bing Maps Staging Url for pulling in the Bing Maps JavaScript API. The default value is False.
-            </summary>
-        </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.ShowPoweredBy">
             <summary>
             A boolean that determines whether to show the "Powered by Web.Maps.VE" badge.
@@ -1406,11 +1391,6 @@
         <member name="P:Simplovation.Web.Maps.VE.Map.Fixed">
             <summary>
             A Boolean value that specifies whether the map view is displayed as a fixed map that the user cannot change. Default is false.
-            </summary>
-        </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.MapMode">
-            <summary>
-            A MapMode enumerator that specifies whether to load the map in 2D or 3D mode. Default is MapMode.Mode2D.
             </summary>
         </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.ShowDashboard">
@@ -1639,16 +1619,6 @@
         <member name="E:Simplovation.Web.Maps.VE.Map.EndZoom">
             <summary>
             Occurs when the map zoom ends
-            </summary>
-        </member>
-        <member name="E:Simplovation.Web.Maps.VE.Map.InitMode">
-            <summary>
-            Occurs after the map mode changes and the map has reloaded
-            </summary>
-        </member>
-        <member name="E:Simplovation.Web.Maps.VE.Map.ModeNotAvailable">
-            <summary>
-            Occurs when the map mode fails to change to 3D mode
             </summary>
         </member>
         <member name="E:Simplovation.Web.Maps.VE.Map.ObliqueEnter">

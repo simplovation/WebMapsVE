@@ -116,23 +116,7 @@ namespace Simplovation.Web.Maps.VE.Design
             get { return _map.Fixed; }
             set { GetPropertyByName("Fixed").SetValue(_map, value); }
         }
-
-        public MapMode MapMode
-        {
-            get { return _map.MapMode; }
-            set
-            {
-                try
-                {
-                    GetPropertyByName("MapMode").SetValue(_map, value);
-                }
-                catch (Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.Source + "\n" + ex.Message + "\n\n" + ex.StackTrace);
-                }
-            }
-        }
-        
+       
         public DashboardSize DashboardSize
         {
             get { return _map.DashboardSize; }

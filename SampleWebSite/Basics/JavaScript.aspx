@@ -66,23 +66,6 @@ This example demonstrates the basics of manipulating the map from within client-
                 </script>
             </asp:Panel>
 
-            <asp:Panel runat="server" ID="pnlMapMode" GroupingText="Map Mode">
-                <a href="javascript:void(0);" onclick="SetMap2D();">2D</a><br />
-                <a href="javascript:void(0);" onclick="SetMap3D();">3D</a><br />
-                <script type="text/javascript">
-                    function SetMap2D()
-                    {
-                        var map = $find("<%=Map1.ClientID%>");
-                        map.SetMapMode(VEMapMode.Mode2D);
-                    }
-                    function SetMap3D()
-                    {
-                        var map = $find("<%=Map1.ClientID%>");
-                        map.SetMapMode(VEMapMode.Mode3D);
-                    }
-                </script>
-            </asp:Panel>
-
             <asp:Panel runat="server" ID="pnlMapNav" GroupingText="Nav Control">
                 <nobr>
                 <a href="javascript:void(0);" onclick="ShowDashboard();">Show Dashboard</a><br />

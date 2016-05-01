@@ -33,11 +33,6 @@ This example demonstrates how to manipulate the map from server-side code. Absol
                                     <asp:LinkButton ID="lbMapViewShaded" runat="server" Text="Shaded" OnClick="lbMapViewShaded_Click"></asp:LinkButton>
                                 </asp:Panel>
                                 
-                                <asp:Panel runat="server" ID="pnlMapMode" GroupingText="Map Mode">
-                                    <asp:LinkButton ID="lbMapMode2D" runat="server" Text="2D" OnClick="lbMapMode2D_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton ID="lbMapMode3D" runat="server" Text="3D" OnClick="lbMapMode3D_Click"></asp:LinkButton>
-                                </asp:Panel>
-
                                 <asp:Panel runat="server" ID="pnlMapNav" GroupingText="Nav Control">
                                     <asp:LinkButton ID="lbMapNavToggle" runat="server" Text="Toggle Dashboard" OnClick="lbMapNavToggle_Click"></asp:LinkButton>
                                 </asp:Panel>

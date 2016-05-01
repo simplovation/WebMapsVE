@@ -43,16 +43,6 @@ public partial class Basics_Default : System.Web.UI.Page
         Map1.MapStyle = Simplovation.Web.Maps.VE.MapStyle.Shaded;
     }
 
-    protected void lbMapMode2D_Click(object sender, EventArgs e)
-    {
-        Map1.MapMode = Simplovation.Web.Maps.VE.MapMode.Mode2D;
-    }
-
-    protected void lbMapMode3D_Click(object sender, EventArgs e)
-    {
-        Map1.MapMode = Simplovation.Web.Maps.VE.MapMode.Mode3D;
-    }
-
     protected void lbMapNavToggle_Click(object sender, EventArgs e)
     {
         Map1.ShowDashboard = !Map1.ShowDashboard;

@@ -186,7 +186,6 @@ namespace Simplovation.Web.Maps.VE
                 if (mapData.MapStyle.HasValue) this.MapStyle = (MapStyle)((int)mapData.MapStyle);
                 this._MapStyleDirty = false;
 
-                if (mapData.MapMode.HasValue) this.MapMode = (MapMode)((int)mapData.MapMode);
                 if (mapData.ShowDashboard.HasValue) this.ShowDashboard = bool.Parse(mapData.ShowDashboard.ToString());
 
                 if (mapData.DistanceUnit.HasValue) this._DistanceUnit = (DistanceUnit)((int)mapData.DistanceUnit);
@@ -307,12 +306,6 @@ namespace Simplovation.Web.Maps.VE
                             if (this.Error != null) this.Error(this, mapData.EventArgs);
                             break;
                         */
-                        case "oninitmode":
-                            if (this.InitMode != null) this.InitMode(this, mapData.EventArgs);
-                            break;
-                        case "onmodenotavailable":
-                            if (this.ModeNotAvailable != null) this.ModeNotAvailable(this, mapData.EventArgs);
-                            break;
                         /*
                         case "onobliquechange":
                             if (this.ObliqueChange != null) this.ObliqueChange(this, mapData.EventArgs);
@@ -396,29 +389,13 @@ namespace Simplovation.Web.Maps.VE
 
             if (this.Page.Request.IsSecureConnection)
             {
-                if (this.UseVirtualEarthStagingUrl)
-                {
-                    // Staging URL using SSL
-                    strPath = "https://staging.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3&s=1";
-                }
-                else
-                {
-                    // "Standard" URL using SSL
-                    strPath = "https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3&s=1"; // OLD --> "https://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2&s=1";
-                }
+                // "Standard" URL using SSL
+                strPath = "https://www.bing.com/api/maps/mapcontrol";
             }
             else
             {
-                if (this.UseVirtualEarthStagingUrl)
-                {
-                    // Staging URL
-                    strPath = "http://staging.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3";
-                }
-                else
-                {
-                    // "Standard URL"
-                    strPath = "http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3"; // OLD --> "http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2";
-                }
+                // "Standard URL"
+                strPath = "https://www.bing.com/api/maps/mapcontrol";
             }
 
             switch (this.Market)
@@ -499,8 +476,6 @@ namespace Simplovation.Web.Maps.VE
                         d.AddProperty("OnChangeView_Handled", this.ChangeView != null);
                         d.AddProperty("OnEndPan_Handled", this.EndPan != null);
                         d.AddProperty("OnEndZoom_Handled", this.EndZoom != null);
-                        d.AddProperty("OnInitMode_Handled", this.InitMode != null);
-                        d.AddProperty("OnModeNotAvailable_Handled", this.ModeNotAvailable != null);
                         d.AddProperty("OnObliqueEnter_Handled", this.ObliqueEnter != null);
                         d.AddProperty("OnObliqueLeave_Handled", this.ObliqueLeave != null);
                         d.AddProperty("OnClick_Handled", this.Click != null);
@@ -632,7 +607,6 @@ namespace Simplovation.Web.Maps.VE
             if (this._LatLongDirty) mapData.Latitude = this.Latitude;
             if (this._LatLongDirty) mapData.Longitude = this.Longitude;
             if (this._MapStyleDirty) mapData.MapStyle = this.MapStyle;
-            if (this._MapModeDirty) mapData.MapMode = this.MapMode;
             if (this._ShowDashboardDirty) mapData.ShowDashboard = this.ShowDashboard;
             mapData.ShowTraffic = this.ShowTraffic;
             mapData.ShowTrafficLegend = this.ShowTrafficLegend;
@@ -651,16 +625,6 @@ namespace Simplovation.Web.Maps.VE
                 mapData.ImportShapeLayerData_setBestView = this._importShapeLayerData_setBestView;
             }
 
-
-            if (this._MapMode == MapMode.Mode3D)
-            {
-                if (this._AltitudeDirty)
-                    mapData.Altitude = this.Altitude;
-                if (this._PitchDirty)
-                    mapData.Pitch = this.Pitch;
-                if (this._HeadingDirty)
-                    mapData.Heading = this.Heading;
-            }
 
             /* Allow removal of Layers and Shapes */
             if (this.Layers.WasCleared)
@@ -697,27 +661,6 @@ namespace Simplovation.Web.Maps.VE
         }
 
         #region Properties
-
-        private bool _UseVirtualEarthStagingUrl = false;
-        /// <summary>
-        /// A Boolean value that specifies whether to use the MS Bing Maps Staging Url for pulling in the Bing Maps JavaScript API. The default value is False.
-        /// </summary>
-        public bool UseVirtualEarthStagingUrl
-        {
-            get { return this._UseVirtualEarthStagingUrl; }
-            set
-            {
-                if (this.Page != null)
-                {
-                    ScriptManager sm = ScriptManager.GetCurrent(this.Page);
-                    if (sm.IsInAsyncPostBack)
-                    {
-                        if (this._UseVirtualEarthStagingUrl != value) throw new Exception("The UseVirtualEarthStagingUrl cannot be changed during an Asynchronous Postback.");
-                    }
-                } 
-                this._UseVirtualEarthStagingUrl = value;
-            }
-        }
 
         private bool _ShowPoweredBy = true;
         /// <summary>
@@ -981,18 +924,6 @@ namespace Simplovation.Web.Maps.VE
                 }
                 _Fixed = value;
             }
-        }
-
-        private MapMode _MapMode = MapMode.Mode2D;
-        private bool _MapModeDirty = false;
-        /// <summary>
-        /// A MapMode enumerator that specifies whether to load the map in 2D or 3D mode. Default is MapMode.Mode2D.
-        /// </summary>
-        [ScriptControlProperty, DefaultValue(MapMode.Mode2D)]
-        public MapMode MapMode
-        {
-            get { return _MapMode; }
-            set { _MapMode = value; _MapModeDirty = true; }
         }
 
         private bool _ShowDashboard = true;
@@ -1494,16 +1425,6 @@ namespace Simplovation.Web.Maps.VE
         /// Occurs when the map zoom ends
         /// </summary>
         public event AsyncMapEventHandler EndZoom;
-
-        /// <summary>
-        /// Occurs after the map mode changes and the map has reloaded
-        /// </summary>
-        public event AsyncMapEventHandler InitMode;
-
-        /// <summary>
-        /// Occurs when the map mode fails to change to 3D mode
-        /// </summary>
-        public event AsyncMapEventHandler ModeNotAvailable;
 
         /*
         public event AsyncMapEventHandler Error;

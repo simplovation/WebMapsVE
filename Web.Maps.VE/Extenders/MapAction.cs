@@ -46,14 +46,6 @@ namespace Simplovation.Web.Maps.VE
         /// </summary>
         SetMapStyleShaded = 16,
         /// <summary>
-        /// The action of setting the <see cref="MapMode">MapMode</see> to Mode2D.
-        /// </summary>
-        SetMapMode2D = 9,
-        /// <summary>
-        /// The action of setting the <see cref="MapMode">MapMode</see> to Mode3D.
-        /// </summary>
-        SetMapMode3D = 10,
-        /// <summary>
         /// The action of Clearing All Shapes currently being plotted on the Map.
         /// </summary>
         ClearAllShapes = 11,
