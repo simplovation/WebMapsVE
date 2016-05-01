@@ -22,12 +22,6 @@ Simplovation.Web.Maps.VE.Extenders.MapActionExtender.prototype={
             case Simplovation.Web.Maps.VE.MapAction.ZoomOut:
                 map.ZoomOut();
                 break;
-            case Simplovation.Web.Maps.VE.MapAction.ShowDashboard:
-                map.ShowDashboard();
-                break;
-            case Simplovation.Web.Maps.VE.MapAction.HideDashboard:
-                map.HideDashboard();
-                break;
             case Simplovation.Web.Maps.VE.MapAction.SetMapStyleRoad:
                 map.SetMapStyle(VEMapStyle.Road);
                 break;

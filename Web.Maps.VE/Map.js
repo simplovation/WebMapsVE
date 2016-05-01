@@ -13,7 +13,6 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._MapStyle = "r";
     this._Fixed = false;
     this._ShowPoweredBy = true;
-    this._ShowDashboard = true;
     this._Altitude = null;
     this._AltitudeSet = false;
     this._Pitch = null;
@@ -221,9 +220,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             if (this._TrafficLegendText) {
                 this._Map.SetTrafficLegendText(this._TrafficLegendText);
             }
-        }
-        if (this._ShowDashboard == false) {
-            this._Map.HideDashboard();
         }
 
         if (this._Layers) {
@@ -707,10 +703,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     HideControl: function(e) {
         this.get_Map().HideControl(e);
     },
-    HideDashboard: function() {
-        this._ShowDashboard = false;
-        this.get_Map().HideDashboard();
-    },
     HideFindControl: function() {
         this.get_Map().HideFindControl();
     },
@@ -841,10 +833,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     ShowControl: function(e) {
         this.get_Map().ShowControl();
     },
-    ShowDashboard: function() {
-        this._ShowDashboard = true;
-        this.get_Map().ShowDashboard();
-    },
     ShowDisambiguationDialog: function(v) {
         this.get_Map().ShowDisambiguationDialog(v);
     },
@@ -897,7 +885,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     get_Fixed: function() { return this._Fixed; }, set_Fixed: function(v) { this._Fixed = v; },
     get_CustomInfoBoxStylesEnabled: function() { return this._CustomInfoBoxStylesEnabled; }, set_CustomInfoBoxStylesEnabled: function(v) { this._CustomInfoBoxStylesEnabled = v; },
     get_DistanceUnit: function() { return this._DistanceUnit; }, set_DistanceUnit: function(v) { this._DistanceUnit = v; },
-    get_ShowDashboard: function() { return this._ShowDashboard; }, set_ShowDashboard: function(v) { this._ShowDashboard = v; },
     get_ShowSwitch: function() { return this._ShowSwitch; }, set_ShowSwitch: function(v) { this._ShowSwitch = v; },
     get_DashboardSize: function() { return this._DashboardSize; }, set_DashboardSize: function(v) { this._DashboardSize = v; },
     get_TileBuffer: function() { return this._TileBuffer; }, set_TileBuffer: function(v) { this._TileBuffer = v; },
@@ -958,7 +945,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         mapData.Latitude = map.GetCenter().Latitude; mapData.Longitude = map.GetCenter().Longitude;
         mapData.MapMode = this._getIntFromVEMapMode(map.GetMapMode());
         if (map.GetMapMode() == VEMapMode.Mode3D) { mapData.Pitch = map.GetPitch(); mapData.Altitude = map.GetAltitude(); mapData.Heading = map.GetHeading(); }
-        mapData.ShowDashboard = this._ShowDashboard;
         mapData.CustomInfoBoxStyles = this._CustomInfoBoxStyles;
         mapData.ShowTraffic = this._ShowTraffic;
         mapData.ShowTrafficLegend = this._ShowTrafficLegend;
@@ -1087,14 +1073,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         }
         if (mapData.MapMode != null) {
             this.SetMapMode(this._getVEMapMode(mapData.MapMode));
-        }
-        if (mapData.ShowDashboard != null && !this._Fixed) {
-            this._ShowDashboard = mapData.ShowDashboard;
-            if (mapData.ShowDashboard) {
-                map.ShowDashboard();
-            } else {
-                map.HideDashboard();
-            }
         }
         if (mapData.ShowTraffic != null) {
             if (mapData.ShowTraffic) {
@@ -1563,7 +1541,6 @@ Simplovation.Web.Maps.VE.Map.registerClass("Simplovation.Web.Maps.VE.Map", Simpl
 Simplovation.Web.Maps.VE.AsyncMapData = function() {
     this.EventName = null; this.EventArgs = null; this.Width = null; this.Height = null;
     this.ZoomLevel = null; this.Latitude = null; this.Longitude = null; this.MapStyle = null;
-    this.ShowDashboard = null; this.MapView = null; this.ClickedLatitude = null; this.ClickedLongitude = null;
     this.Direction_Locations = null; this.Direction_RouteOptions = null; this.MapLoadedEventArgs = null;
     this.CustomInfoBoxStylesEnabled = null; this.ShowTraffic = null; this.ShowTrafficLegend = null;
     this.TrafficLegendText = null; this.Pitch = null; this.Altitude = null; this.Heading = null;

@@ -9,6 +9,7 @@ version vNext - Coming Soon
         - Map.MapMode property
         - Map.OnInitMode event
         - Map.OnModeNotAvailable event
+        - Map.ShowDashboard property and associated ShowDashboard and HideDashboard Ajax methods
         - Map.UseVirtualEarthStagingUrl property
 
 

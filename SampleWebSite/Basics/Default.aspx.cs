@@ -43,11 +43,6 @@ public partial class Basics_Default : System.Web.UI.Page
         Map1.MapStyle = Simplovation.Web.Maps.VE.MapStyle.Shaded;
     }
 
-    protected void lbMapNavToggle_Click(object sender, EventArgs e)
-    {
-        Map1.ShowDashboard = !Map1.ShowDashboard;
-    }
-
     protected void lbShapesPushpin_Click(object sender, EventArgs e)
     {
         Simplovation.Web.Maps.VE.Shape s = new Simplovation.Web.Maps.VE.Shape(Map1.LatLong);

@@ -60,14 +60,6 @@ This example demonstrates using the MapActionExtender control to setup map manip
                 <MapExtenders:MapActionExtender runat="server" id="MapActionExtender16" TargetControlID="lbShadedStyle" EventName="click" MapControlID="Map1" MapAction="SetMapStyleShaded"></MapExtenders:MapActionExtender>
             </asp:Panel>
 
-            <asp:Panel runat="server" ID="pnlMapNav" GroupingText="Nav Control">
-                <asp:LinkButton runat="server" ID="btnShowDashboard" Text="Show Dashboard"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender9" TargetControlID="btnShowDashboard" EventName="click" MapControlID="Map1" MapAction="ShowDashboard"></MapExtenders:MapActionExtender>
-
-                <asp:LinkButton runat="server" ID="btnHideDashboard" Text="Hide Dashboard"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender10" TargetControlID="btnHideDashboard" EventName="click" MapControlID="Map1" MapAction="HideDashboard"></MapExtenders:MapActionExtender>
-            </asp:Panel>
-
             <asp:Panel runat="server" ID="pnlShapes" GroupingText="Shapes">
                 <asp:LinkButton runat="server" ID="lbShapesClearAll" Text="Clear All"></asp:LinkButton>
                 <MapExtenders:MapActionExtender runat="server" id="MapActionExtender11" TargetControlID="lbShapesClearAll" EventName="click" MapControlID="Map1" MapAction="ClearAllShapes"></MapExtenders:MapActionExtender>

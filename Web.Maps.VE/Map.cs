@@ -186,8 +186,6 @@ namespace Simplovation.Web.Maps.VE
                 if (mapData.MapStyle.HasValue) this.MapStyle = (MapStyle)((int)mapData.MapStyle);
                 this._MapStyleDirty = false;
 
-                if (mapData.ShowDashboard.HasValue) this.ShowDashboard = bool.Parse(mapData.ShowDashboard.ToString());
-
                 if (mapData.DistanceUnit.HasValue) this._DistanceUnit = (DistanceUnit)((int)mapData.DistanceUnit);
 
                 if (mapData.CustomInfoBoxStylesEnabled.HasValue) this._CustomInfoBoxStylesEnabled = bool.Parse(mapData.CustomInfoBoxStylesEnabled.ToString());
@@ -607,7 +605,6 @@ namespace Simplovation.Web.Maps.VE
             if (this._LatLongDirty) mapData.Latitude = this.Latitude;
             if (this._LatLongDirty) mapData.Longitude = this.Longitude;
             if (this._MapStyleDirty) mapData.MapStyle = this.MapStyle;
-            if (this._ShowDashboardDirty) mapData.ShowDashboard = this.ShowDashboard;
             mapData.ShowTraffic = this.ShowTraffic;
             mapData.ShowTrafficLegend = this.ShowTrafficLegend;
             if (!string.IsNullOrEmpty(this._TrafficLegendText)) mapData.TrafficLegendText = this._TrafficLegendText;
@@ -924,18 +921,6 @@ namespace Simplovation.Web.Maps.VE
                 }
                 _Fixed = value;
             }
-        }
-
-        private bool _ShowDashboard = true;
-        private bool _ShowDashboardDirty = false;
-        /// <summary>
-        /// Gets or sets a Boolean value that determines if the Map Dashboard is shown. Default is True.
-        /// </summary>
-        [ScriptControlProperty, DefaultValue(true)]
-        public bool ShowDashboard
-        {
-            get { return _ShowDashboard; }
-            set { _ShowDashboard = value; _ShowDashboardDirty = true; }
         }
 
         private bool _ShowSwitch = true;

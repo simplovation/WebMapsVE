@@ -66,25 +66,6 @@ This example demonstrates the basics of manipulating the map from within client-
                 </script>
             </asp:Panel>
 
-            <asp:Panel runat="server" ID="pnlMapNav" GroupingText="Nav Control">
-                <nobr>
-                <a href="javascript:void(0);" onclick="ShowDashboard();">Show Dashboard</a><br />
-                <a href="javascript:void(0);" onclick="HideDashboard();">Hide Dashboard</a><br />
-                </nobr>
-                <script type="text/javascript">
-                    function ShowDashboard()
-                    {
-                        var map = $find("<%=Map1.ClientID%>");
-                        map.ShowDashboard();
-                    }
-                    function HideDashboard()
-                    {
-                        var map = $find("<%=Map1.ClientID%>");
-                        map.HideDashboard();
-                    }
-                </script>
-            </asp:Panel>
-
             <asp:Panel runat="server" ID="pnlShapes" GroupingText="Shapes">
                 <a href="javascript:void(0);" onclick="ClearAllShapes();">Clear All</a>
                 <script type="text/javascript">

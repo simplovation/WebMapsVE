@@ -1393,11 +1393,6 @@
             A Boolean value that specifies whether the map view is displayed as a fixed map that the user cannot change. Default is false.
             </summary>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.ShowDashboard">
-            <summary>
-            Gets or sets a Boolean value that determines if the Map Dashboard is shown. Default is True.
-            </summary>
-        </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.ShowSwitch">
             <summary>
             Specifies whether to show the map mode switch on the dashboard control. Default is true.
