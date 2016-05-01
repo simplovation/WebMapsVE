@@ -101,13 +101,13 @@
                             <ul>
                                 <li><asp:HyperLink runat="server" ID="HyperLink25" Text="3D Mode" NavigateUrl="~/OtherProperties/3DMode.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink31" Text="BirdseyeOrientation" NavigateUrl="~/OtherProperties/BirdseyeOrientation.aspx"></asp:HyperLink></li>
-                                <li><asp:HyperLink runat="server" ID="HyperLink3" Text="DashboardSize" NavigateUrl="~/OtherProperties/DashboardSize.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink6" Text="DistanceUnit" NavigateUrl="~/OtherProperties/DistanceUnit.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink32" Text="EnableBirdseye" NavigateUrl="~/OtherProperties/EnableBirdseye.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink34" Text="EnableDashboardLabels" NavigateUrl="~/OtherProperties/EnableDashboardLabels.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink33" Text="LoadBaseTiles" NavigateUrl="~/OtherProperties/LoadBaseTiles.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink5" Text="Fixed" NavigateUrl="~/OtherProperties/Fixed.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink4" Text="Market" NavigateUrl="~/OtherProperties/Market.aspx"></asp:HyperLink></li>
+                                <li><asp:HyperLink runat="server" ID="HyperLink3" Text="NavigationBarMode" NavigateUrl="~/OtherProperties/NavigationBarMode.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink2" Text="ShowSwitch" NavigateUrl="~/OtherProperties/ShowSwitch.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink18" Text="ShowTraffic" NavigateUrl="~/OtherProperties/ShowTraffic.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink35" Text="UseVirtualEarthStagingUrl" NavigateUrl="~/OtherProperties/UseVirtualEarthStagingUrl.aspx"></asp:HyperLink></li>

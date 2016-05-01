@@ -163,24 +163,6 @@ namespace Simplovation.Web.Maps.VE
                 }
                 this._LatLongDirty = false;
 
-                if (mapData.Pitch != null)
-                {
-                    this.Pitch = (double)mapData.Pitch;
-                    this._PitchDirty = false;
-                }
-
-                if (mapData.Altitude != null)
-                {
-                    this.Altitude = (double)mapData.Altitude;
-                    this._AltitudeDirty = false;
-                }
-
-                if (mapData.Heading != null)
-                {
-                    this.Heading = (double)mapData.Heading;
-                    this._HeadingDirty = false;
-                }
-
                 if (mapData.MapView != null) this._MapView = mapData.MapView;
 
                 if (mapData.MapStyle.HasValue) this.MapStyle = (MapStyle)((int)mapData.MapStyle);
@@ -479,8 +461,6 @@ namespace Simplovation.Web.Maps.VE
                         d.AddProperty("OnClick_Handled", this.Click != null);
 
                         d.AddProperty("FindArgs", this._FindArguments);
-
-                        d.AddProperty("AltitudeSet", this._AltitudeDirty);
 
                         if (this._importShapeLayerData_shapeSource != null)
                         {
@@ -798,63 +778,6 @@ namespace Simplovation.Web.Maps.VE
             }
         }
 
-        private double _Pitch = -90;
-        private bool _PitchDirty = false;
-        /// <summary>
-        /// In 3D mode, represents the pitch of the current map view
-        /// </summary>
-        [ScriptControlProperty]
-        public double Pitch
-        {
-            get
-            {
-                return this._Pitch;
-            }
-            set
-            {
-                this._Pitch = value;
-                this._PitchDirty = true;
-            }
-        }
-
-        private double _Heading = 0;
-        private bool _HeadingDirty = false;
-        /// <summary>
-        /// In 3D mode, represents the compass heading of the current map view
-        /// </summary>
-        [ScriptControlProperty]
-        public double Heading
-        {
-            get
-            {
-                return this._Heading;
-            }
-            set
-            {
-                this._Heading = value;
-                this._HeadingDirty = true;
-            }
-        }
-
-        private double _Altitude;
-        private bool _AltitudeDirty = false;
-        /// <summary>
-        /// In 3D mode, represents the altitude (in meters) above the geoid
-        /// </summary>
-        [ScriptControlProperty]
-        public double Altitude
-        {
-            get
-            {
-                return this._Altitude;
-            }
-            set
-            {
-                this._Altitude = value;
-                this._AltitudeDirty = true;
-            }
-        }
-
         private int _Zoom = 4;
         private bool _ZoomDirty = false;
         /// <summary>
@@ -949,15 +872,15 @@ namespace Simplovation.Web.Maps.VE
             }
         }
 
-        private DashboardSize _DashboardSize = DashboardSize.Normal;
+        private NavigationBarMode _NavigationBarMode = NavigationBarMode.Normal;
         /// <summary>
         /// The maps dashboard size and type.
         /// This property cannot be changed during an Asynchronous Postback.
         /// </summary>
-        [ScriptControlProperty, DefaultValue(DashboardSize.Normal)]
-        public DashboardSize DashboardSize
+        [ScriptControlProperty, DefaultValue(NavigationBarMode.Normal)]
+        public NavigationBarMode NavigationBarMode
         {
-            get { return _DashboardSize; }
+            get { return _NavigationBarMode; }
             set
             {
                 if (!this.DesignMode)
@@ -967,11 +890,11 @@ namespace Simplovation.Web.Maps.VE
                         ScriptManager sm = ScriptManager.GetCurrent(this.Page);
                         if (sm.IsInAsyncPostBack)
                         {
-                            if (this._DashboardSize != value) throw new Exception("The DashboardSize cannot be changed during an Asynchronous Postback.");
+                            if (this._NavigationBarMode != value) throw new Exception("The NavigationBarMode cannot be changed during an Asynchronous Postback.");
                         }
                     }
                 }
-                _DashboardSize = value;
+                _NavigationBarMode = value;
             }
         }
 

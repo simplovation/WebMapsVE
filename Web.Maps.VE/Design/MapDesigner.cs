@@ -117,14 +117,14 @@ namespace Simplovation.Web.Maps.VE.Design
             set { GetPropertyByName("Fixed").SetValue(_map, value); }
         }
        
-        public DashboardSize DashboardSize
+        public NavigationBarMode NavigationBarMode
         {
-            get { return _map.DashboardSize; }
+            get { return _map.NavigationBarMode; }
             set
             {
                 try
                 {
-                    GetPropertyByName("DashboardSize").SetValue(_map, value);
+                    GetPropertyByName("NavigationBarMode").SetValue(_map, value);
                 }
                 catch (Exception ex)
                 {

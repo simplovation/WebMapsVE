@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DashboardSize.aspx.cs" Inherits="OtherProperties_DashboardSize" Title="Untitled Page" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="NavigationBarMode.aspx.cs" Inherits="OtherProperties_NavigationBarMode" Title="Untitled Page" %>
 <%@ Register Assembly="Simplovation.Web.Maps.VE" Namespace="Simplovation.Web.Maps.VE" TagPrefix="Simplovation" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder_PageTitle" Runat="Server">
 Map Properties - DashboardSize
@@ -15,8 +15,7 @@ Sets the map dashboard size (Normal, Small and Tiny). This property can only be 
             <td valign="top">
                 <nobr>
                 <asp:LinkButton runat="server" ID="lbNormal" Text="Normal" OnClick="lbNormal_Click"></asp:LinkButton><br />
-                <asp:LinkButton runat="server" ID="lbSmall" Text="Small" OnClick="lbSmall_Click"></asp:LinkButton><br />
-                <asp:LinkButton runat="server" ID="lbTiny" Text="Tiny" OnClick="lbTiny_Click"></asp:LinkButton>
+                <asp:LinkButton runat="server" ID="lbCompact" Text="Small" OnClick="lbCompact_Click"></asp:LinkButton><br />
                 </nobr>
             </td>
             <td>

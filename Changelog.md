@@ -5,7 +5,10 @@ version vNext - Coming Soon
 - Refactored to support Bing Maps v8 JavaScript Control
 - Requires .NET 4.5 or newer
 - Breaking Changes:
+    - Added
+        - Map.NavigationBarMode property
     - Removed
+        - 3D map support along with Pitch, Heading and Altitude properties, Bing Maps hasn't supported this in Years.
         - Map.MapMode property
         - Map.OnInitMode event
         - Map.OnModeNotAvailable event

@@ -312,24 +312,19 @@
             Specifies whether the text for the icon should be underlined
             </summary>
         </member>
-        <member name="T:Simplovation.Web.Maps.VE.DashboardSize">
+        <member name="T:Simplovation.Web.Maps.VE.NavigationBarMode">
             <summary>
             An enumeration that represents the size and type of dashboard to be displayed on the map.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.DashboardSize.Normal">
+        <member name="F:Simplovation.Web.Maps.VE.NavigationBarMode.Normal">
             <summary>
             The default dashboard.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.DashboardSize.Small">
+        <member name="F:Simplovation.Web.Maps.VE.NavigationBarMode.Compact">
             <summary>
             A smaller dashboard that the default: only containing Zoom In(+) and Out(-) buttons and Road, Aerial and Hybrid buttons for changing the map style.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.DashboardSize.Tiny">
-            <summary>
-            The smallest dashboard option: only containing Zoom In(+) and Out(-) buttons.
             </summary>
         </member>
         <member name="T:Simplovation.Web.Maps.VE.DataType">
@@ -1363,21 +1358,6 @@
             The Longitude of the Map.LatLong property.
             </summary>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.Pitch">
-            <summary>
-            In 3D mode, represents the pitch of the current map view
-            </summary>
-        </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.Heading">
-            <summary>
-            In 3D mode, represents the compass heading of the current map view
-            </summary>
-        </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.Altitude">
-            <summary>
-            In 3D mode, represents the altitude (in meters) above the geoid
-            </summary>
-        </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.Zoom">
             <summary>
             The zoom level to display. Valid values range from 1 through 19. Default is 4.
@@ -1399,7 +1379,7 @@
             This property cannot be changed during an Asynchronous Postback.
             </summary>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.DashboardSize">
+        <member name="P:Simplovation.Web.Maps.VE.Map.NavigationBarMode">
             <summary>
             The maps dashboard size and type.
             This property cannot be changed during an Asynchronous Postback.

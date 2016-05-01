@@ -100,7 +100,7 @@
     <Compile Include="Collections\DirtyStateList.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="CustomIconSpecification.cs" />
-    <Compile Include="DashboardSize.cs" />
+    <Compile Include="NavigationBarMode.cs" />
     <Compile Include="DataType.cs" />
     <Compile Include="DirectionsLoadedEventArgs.cs" />
     <Compile Include="DistanceUnit.cs" />
