@@ -19,7 +19,7 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._Pitch = null;
     this._Heading = null;
     this._ShowSwitch = true;
-    this._DashboardSize = VEDashboardSize.Normal; // <-- use Microsoft.Maps.NavigationBarMode here
+    this._DashboardSize = Microsoft.Maps.NavigationBarMode.normal; // <-- use Microsoft.Maps.NavigationBarMode.compact here
     this._TileBuffer = 0; this._Layers = null;
     this._ShowTraffic = false;
     this._ShowTrafficLegend = false;
@@ -55,8 +55,6 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._OnEndZoom_Handled = null;
     this._errorHandler = fcd(this, this._onError);
     this._OnError_Handled = null;
-    this._initModeHandler = fcd(this, this._onInitMode);
-    this._OnInitMode_Handled = null;
     this._obliqueChangeHandler = fcd(this, this._onObliqueChange);
     this._obliqueEnterHandler = fcd(this, this._onObliqueEnter);
     this._OnObliqueEnter_Handled = null;
@@ -110,21 +108,22 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         }
         if (!isNaN(this._DashboardSize)) {
             if (this._DashboardSize == 2) {
-                this._DashboardSize = VEDashboardSize.Small;
+                this._DashboardSize = Microsoft.Maps.NavigationBarMode.compact;
             } else if (this._DashboardSize == 3) {
-                this._DashboardSize = VEDashboardSize.Tiny;
+                this._DashboardSize = Microsoft.Maps.NavigationBarMode.compact;
             } else {
-                this._DashboardSize = VEDashboardSize.Normal;
+                this._DashboardSize = Microsoft.Maps.NavigationBarMode.normal;
             }
         }
         this._MainMapDiv = $get(this.get_id() + "_Map");
 
 
         var mapOptions = {
-            credentials: this._BingKey
+            credentials: this._BingKey,
+            navigationBarMode: this._DashboardSize
         };
 
-        this._Map = new Microsoft.Maps.Map(this.get_id() + "_Map", mapOptions);
+        this._Map = new Microsoft.Maps.Map(document.getElementById(this.get_id() + '_Map'), mapOptions);
 
         ///* Set Customer Identification */
         //if (this._ClientToken != null) {
