@@ -84,7 +84,7 @@ This example demonstrates using the MapActionExtender control to setup map manip
         </td>
         <td valign="top">
 
-            <Simplovation:Map runat="server" ID="Map1" Width="500px" Height="450px" CssClass="map" />
+            <Simplovation:Map runat="server" ID="Map1" Width="500px" Height="450px" CssClass="map" BingKey="test" />
             
         </td>
     </tr>

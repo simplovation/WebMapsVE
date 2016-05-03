@@ -14,7 +14,7 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._Fixed = false;
     this._ShowPoweredBy = true;
     this._ShowSwitch = true;
-    this._NavigationBarMode = Microsoft.Maps.NavigationBarMode.normal; // <-- use Microsoft.Maps.NavigationBarMode.compact here
+    this._NavigationBarMode = null; // Microsoft.Maps.NavigationBarMode.compact; // <-- use Microsoft.Maps.NavigationBarMode.compact here
     this._TileBuffer = 0; this._Layers = null;
     this._ShowTraffic = false;
     this._ShowTrafficLegend = false;
@@ -61,9 +61,6 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     //CustomerIdentificationEvents
     this._onTokenExpireHandler = fcd(this, this._onTokenExpire);
     this._onTokenErrorHandler = fcd(this, this._onTokenError);
-    //Bing Maps Key Events
-    this._onCredentialsErrorHandler = fcd(this, this._onCredentialsError);
-    this._onCredentialsValidHandler = fcd(this, this._onCredentialsValid);
     //MouseEvents
     this._clickHandler = fcd(this, this._onClick);
     this._OnClick_Handled = null;
@@ -101,21 +98,22 @@ Simplovation.Web.Maps.VE.Map.prototype = {
                 this._MapStyle = "r";
             }
         }
+
         if (!isNaN(this._NavigationBarMode)) {
             if (this._NavigationBarMode == 2) {
                 this._NavigationBarMode = Microsoft.Maps.NavigationBarMode.compact;
             } else {
-                this._NavigationBarMode = Microsoft.Maps.NavigationBarMode.normal;
+                this._NavigationBarMode = Microsoft.Maps.NavigationBarMode.compact; //.normal;
             }
         }
         this._MainMapDiv = $get(this.get_id() + "_Map");
 
 
-        var mapOptions = {};
+        var mapOptions = {
+            credentials: this._BingKey || 'not set',
+            zoom: this._Zoom
+        };
 
-        if (this._BingKey) {
-            mapOptions.credentials = this._BingKey;
-        }
 
         if (this._NavigationBarMode) {
             mapOptions.navigationBarMode = this._NavigationBarMode;
@@ -129,15 +127,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         //        this._Map.AttachEvent("ontokenexpire", this._onTokenExpireHandler);
         //        this._Map.AttachEvent("ontokenerror", this._onTokenErrorHandler);
         //        this._Map.SetClientToken(this._ClientToken);
-        //    }
-        //}
-
-        ///* Set Bing Maps Key */
-        //if (this._BingKey != null) {
-        //    if (this._Map.SetCredentials) {
-        //        this._Map.AttachEvent("oncredentialserror", this._onCredentialsErrorHandler);
-        //        this._Map.AttachEvent("oncredentialsvalid", this._onCredentialsValidHandler);
-        //        this._Map.SetCredentials(this._BingKey);
         //    }
         //}
 
@@ -1411,13 +1400,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     },
     _onTokenError: function(e) {
         this._raiseClientSideEvent("ontokenerror", e);
-    },
-    //Bing Maps Key Events
-    _onCredentialsError: function(e) {
-        this._raiseClientSideEvent("oncredentialserror", e);
-    },
-    _onCredentialsValid: function(e) {
-        this._raiseClientSideEvent("oncredentialsvalid", e);
     },
     //MouseEvents
     _onClick: function(e) {

@@ -14,6 +14,8 @@ version vNext - Coming Soon
         - Map.OnModeNotAvailable event
         - Map.ShowDashboard property and associated ShowDashboard and HideDashboard Ajax methods
         - Map.UseVirtualEarthStagingUrl property
+        - Map.oncredentialserror event
+        - Map.oncredentialsvalid event
 
 
 version 4.0 - Released Apr 25, 2014

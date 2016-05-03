@@ -16,8 +16,7 @@
     
         <script type="text/javascript">
             function Map1_Loaded(sender) {
-                sender.addHandler("oncredentialserror", function() { alert("invalid credentials"); });
-                sender.addHandler("oncredentialsvalid", function() { alert("credentials are valid"); });
+                alert('map loaded');
             }
         </script>
     </div>

@@ -26,9 +26,6 @@ Set the Map.BingKey property equal to your Bing Maps Key, and the control will u
 <br />
 &lt;script type="text/javascript"&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;function Map1_Loaded(sender) {<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//// Handle Client-Side Bing Maps API events for the credentials<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//sender.addHandler("oncredentialserror", function() { alert("invalid credentials"); });<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//sender.addHandler("oncredentialsvalid", function() { alert("credentials are valid"); });<br />
 &nbsp;&nbsp;&nbsp;&nbsp;}<br />
 &lt;/script&gt;
 </p>
@@ -43,9 +40,6 @@ Set the Map.BingKey property equal to your Bing Maps Key, and the control will u
 
 <script type="text/javascript">
     function Map1_Loaded(sender) {
-        // Handle Client-Side Bing Maps API events for the credentials
-        sender.addHandler("oncredentialserror", function() { alert("invalid credentials"); });
-        sender.addHandler("oncredentialsvalid", function() { alert("credentials are valid"); });
     }
 </script>
 --%>

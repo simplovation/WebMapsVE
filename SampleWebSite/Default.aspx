@@ -8,7 +8,7 @@
 
 <asp:ScriptManager runat="server" ID="ScriptManager1"></asp:ScriptManager>
 
-<Simplovation:Map runat="server" ID="Map1" Width="700px" Height="450px" CssClass="map" />
+<Simplovation:Map runat="server" ID="Map1" Width="700px" Height="450px" CssClass="map" BingKey="test" />
 
 </asp:Content>
 

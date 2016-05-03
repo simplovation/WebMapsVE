@@ -157,7 +157,7 @@ This example demonstrates the basics of manipulating the map from within client-
             
         </td>
         <td valign="top">
-            <Simplovation:Map runat="server" ID="Map1" Width="700px" Height="450px" CssClass="map">
+            <Simplovation:Map runat="server" ID="Map1" Width="700px" Height="450px" CssClass="map" BingKey="test">
                 <Layers>
                     <Simplovation:ShapeLayer>
                         <Shapes>

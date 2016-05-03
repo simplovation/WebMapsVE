@@ -79,11 +79,6 @@ This example demonstrates how to manipulate the map from server-side code. Absol
                     <asp:AsyncPostBackTrigger ControlID="lbMapViewBirdseye" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbMapViewShaded" EventName="Click" />
                     
-                    <asp:AsyncPostBackTrigger ControlID="lbMapMode2D" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbMapMode3D" EventName="Click" />
-                    
-                    <asp:AsyncPostBackTrigger ControlID="lbMapNavToggle" EventName="Click" />
-                    
                     <asp:AsyncPostBackTrigger ControlID="lbShapesPushpin" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbShapesPolyline" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbShapesPolygon" EventName="Click" />
@@ -104,7 +99,7 @@ This example demonstrates how to manipulate the map from server-side code. Absol
 
         </td>
         <td valign="top">
-            <Simplovation:Map runat="server" ID="Map1" Width="500px" Height="450px" CssClass="map" />
+            <Simplovation:Map runat="server" ID="Map1" Width="500px" Height="450px" CssClass="map" BingKey="test" />
         </td>
     </tr>
 </table>
