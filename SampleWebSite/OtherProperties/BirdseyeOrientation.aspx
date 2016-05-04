@@ -24,7 +24,7 @@ A Orientation Enumeration value indicating the orientation of the bird's eye map
 </asp:UpdatePanel>
 <br />
  
-<Simplovation:Map runat="server" ID="Map1" Width="700px" Height="450px" CssClass="map" MapStyle="Birdseye" Latitude="43.0548408795765" Longitude="-87.945556640625" Zoom="10" />
+<Simplovation:Map runat="server" ID="Map1" Width="700px" Height="450px" CssClass="map" MapType="Birdseye" Latitude="43.0548408795765" Longitude="-87.945556640625" Zoom="10" />
 
 </asp:Content>
 

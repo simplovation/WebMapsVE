@@ -10,7 +10,7 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._Map = null; this._MainMapDiv = null;
     this._LatLong = null;
     this._Zoom = "4";
-    this._MapStyle = "r";
+    this._MapType = Microsoft.Maps.MapTypeId.road;
     this._Fixed = false;
     this._ShowPoweredBy = true;
     this._ShowSwitch = true;
@@ -40,8 +40,8 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     }
     //MapEvents
     this._OnMapLoaded_Handled = false;
-    this._changeMapStyleHandler = fcd(this, this._onChangeMapStyle);
-    this._OnChangeMapStyle_Handled = null;
+    this._changeMapTypeHandler = fcd(this, this._onChangeMapType);
+    this._OnChangeMapType_Handled = null;
     this._changeViewHandler = fcd(this, this._onChangeView);
     this._OnChangeView_Handled = null;
     this._endPanHandler = fcd(this, this._onEndPan);
@@ -85,17 +85,17 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         var that = this;
 
         //All VEMap Stuff
-        if (!isNaN(this._MapStyle)) {
-            if (this._MapStyle == 2) {
-                this._MapStyle = "a";
-            } else if (this._MapStyle == 3) {
-                this._MapStyle = "h";
-            } else if (this._MapStyle == 4) {
-                this._MapStyle = "o";
-            } else if (this._MapStyle == 5) {
-                this._MapStyle = "s";
+        if (!isNaN(this._MapType)) {
+            if (this._MapType == 2) {
+                this._MapType = Microsoft.Maps.MapTypeId.aerial;
+            } else if (this._MapType == 3) {
+                this._MapType = "h";
+            } else if (this._MapType == 4) {
+                this._MapType = "o";
+            } else if (this._MapType == 5) {
+                this._MapType = "s";
             } else {
-                this._MapStyle = "r";
+                this._MapType = Microsoft.Maps.MapTypeId.road;
             }
         }
 
@@ -106,6 +106,8 @@ Simplovation.Web.Maps.VE.Map.prototype = {
                 this._NavigationBarMode = Microsoft.Maps.NavigationBarMode.compact; //.normal;
             }
         }
+
+
         this._MainMapDiv = $get(this.get_id() + "_Map");
 
 
@@ -115,7 +117,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         };
 
 
-        if (this._NavigationBarMode) {
+        if (this._NavigationBarMode !== null) {
             mapOptions.navigationBarMode = this._NavigationBarMode;
         }
 
@@ -149,7 +151,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         //this._Map.LoadMap(
         //    (this._LatLong.Latitude != 0 ? new VELatLong(this._LatLong.Latitude, this._LatLong.Longitude) : null),
         //    this._Zoom,
-        //    this._MapStyle,
+        //    this._MapType,
         //    this._Fixed,
         //    this._MapMode,
         //    this._ShowSwitch,
@@ -161,7 +163,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         //    that._Map.AttachEvent(n, h);
         //}
         ////Map
-        //av("onchangemapstyle", this._changeMapStyleHandler);
+        //av("maptypechanged", this._changeMapTypeHandler);
         //av("onchangeview", this._changeViewHandler);
         //av("onendpan", this._endPanHandler);
         //av("onendzoom", this._endZoomHandler);
@@ -612,8 +614,8 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     GetLeft: function() {
         return this.get_Map().GetLeft();
     },
-    GetMapStyle: function() {
-        return this.get_Map().GetMapStyle();
+    GetMapType: function() {
+        return this.get_Map().GetMapType();
     },
     GetMapView: function() {
         return this.get_Map().GetMapView();
@@ -728,10 +730,10 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     SetFailedShapeRequest: function(p) {
         this.get_Map().SetFailedShapeRequest(p);
     },
-    SetMapStyle: function(v) {
+    SetMapType: function(v) {
         if (!isNaN(v)) {
             if (v == 2) {
-                v = "a";
+                v = Microsoft.Maps.MapTypeId.aerial;
             } else if (v == 3) {
                 v = "h";
             } else if (v == 4) {
@@ -739,10 +741,10 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             } else if (v == 5) {
                 v = "s";
             } else {
-                v = "r";
+                v = Microsoft.Maps.MapTypeId.road;
             }
         }
-        this.get_Map().SetMapStyle(v);
+        this.get_Map().SetMapType(v);
     },
     SetMapView: function(v) {
         this.get_Map().SetMapView(v);
@@ -818,7 +820,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     get_Height: function() { return this.get_MainMapDiv().offsetHeight; }, set_Height: function(v) { var mapdiv = this.get_MainMapDiv(); if (mapdiv) { var cv = mapdiv.offsetHeight; if (cv != v) { this.Resize(mapdiv.offsetWidth, v); } } },
     get_LatLong: function() { return this._LatLong; }, set_LatLong: function(v) { this._LatLong = v; },
     get_Zoom: function() { return this._Zoom; }, set_Zoom: function(v) { this._Zoom = v; },
-    get_MapStyle: function() { return this._MapStyle; }, set_MapStyle: function(v) { this._MapStyle = v; },
+    get_MapType: function() { return this._MapType; }, set_MapType: function(v) { this._MapType = v; },
     get_AsyncPostbackPassShapes: function() { return this._AsyncPostbackPassShapes; }, set_AsyncPostbackPassShapes: function(v) { this._AsyncPostbackPassShapes = v; },
     get_Fixed: function() { return this._Fixed; }, set_Fixed: function(v) { this._Fixed = v; },
     get_CustomInfoBoxStylesEnabled: function() { return this._CustomInfoBoxStylesEnabled; }, set_CustomInfoBoxStylesEnabled: function(v) { this._CustomInfoBoxStylesEnabled = v; },
@@ -842,7 +844,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     //Map Events Handled
     get_OnMapLoaded_Handled: function() { return this._OnMapLoaded_Handled; }, set_OnMapLoaded_Handled: function(v) { this._OnMapLoaded_Handled = v; },
     get_OnClientMapLoaded: function() { return this._OnClientMapLoaded; }, set_OnClientMapLoaded: function(v) { this._OnClientMapLoaded = v; },
-    get_OnChangeMapStyle_Handled: function() { return this._OnChangeMapStyle_Handled; }, set_OnChangeMapStyle_Handled: function(v) { this._OnChangeMapStyle_Handled = v; },
+    get_OnChangeMapType_Handled: function() { return this._OnChangeMapType_Handled; }, set_OnChangeMapType_Handled: function(v) { this._OnChangeMapType_Handled = v; },
     get_OnChangeView_Handled: function() { return this._OnChangeView_Handled; }, set_OnChangeView_Handled: function(v) { this._OnChangeView_Handled = v; }, get_OnEndPan_Handled: function() { return this._OnEndPan_Handled; }, set_OnEndPan_Handled: function(v) { this._OnEndPan_Handled = v; }, get_OnEndZoom_Handled: function() { return this._OnEndZoom_Handled; }, set_OnEndZoom_Handled: function(v) { this._OnEndZoom_Handled = v; }, get_OnObliqueEnter_Handled: function() { return this._OnObliqueEnter_Handled; }, set_OnObliqueEnter_Handled: function(v) { this._OnObliqueEnter_Handled = v; }, get_OnObliqueLeave_Handled: function() { return this._OnObliqueLeave_Handled; }, set_OnObliqueLeave_Handled: function(v) { this._OnObliqueLeave_Handled = v; }, /* Mouse Events Handled */get_OnClick_Handled: function() { return this._OnClick_Handled; }, set_OnClick_Handled: function(v) { this._OnClick_Handled = v; },
     //Other Events
     get_FindArgs: function() {
@@ -877,9 +879,20 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         }
         mapData.BirdseyeOrientation = this._getIntFromVEOrientation(this._BirdseyeOrientation);
         mapData.ZoomLevel = map.GetZoomLevel();
-        var mapStyle = map.GetMapStyle();
-        if (mapStyle == "a") { mapData.MapStyle = 2; } else if (mapStyle == "h") { mapData.MapStyle = 3; } else if (mapStyle == "o") { mapData.MapStyle = 4; } else if (mapStyle == "s") { mapData.MapStyle = 5; } else { /*r*/mapData.MapStyle = 1; }
-        if (mapData.MapStyle != 4) { mapData.MapView = this._Map.GetMapView(); }
+        var mapType = map.GetMapType();
+
+        if (mapType == Microsoft.Maps.MapTypeId.aerial)
+        {
+            mapData.MapType = 2;
+        } else if (mapType == "h") {
+            mapData.MapType = 3;
+        } else if (mapType == "o") {
+            mapData.MapType = 4;
+        } else if (mapType == "s") {
+            mapData.MapType = 5;
+        } else { /*road*/mapData.MapType = 1; }
+
+        if (mapData.MapType != 4) { mapData.MapView = this._Map.GetMapView(); }
         mapData.Latitude = map.GetCenter().Latitude; mapData.Longitude = map.GetCenter().Longitude;
         mapData.CustomInfoBoxStyles = this._CustomInfoBoxStyles;
         mapData.ShowTraffic = this._ShowTraffic;
@@ -991,8 +1004,8 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             this.Resize(mapData.Width, mapData.Height);
         }
 
-        if (mapData.MapStyle != null) {
-            this.SetMapStyle(mapData.MapStyle);
+        if (mapData.MapType != null) {
+            this.SetMapType(mapData.MapType);
         }
         if (mapData.ShowTraffic != null) {
             if (mapData.ShowTraffic) {
@@ -1324,11 +1337,11 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         return myShape;
     },
     //MapEvents
-    _onChangeMapStyle: function(e) {
-        if (this.get_OnChangeMapStyle_Handled()) {
-            this._triggerAsyncPostback("onchangemapstyle", e);
+    _onChangeMapType: function(e) {
+        if (this.get_OnChangeMapType_Handled()) {
+            this._triggerAsyncPostback("maptypechanged", e);
         }
-        this._raiseClientSideEvent("onchangemapstyle", e);
+        this._raiseClientSideEvent("maptypechanged", e);
     },
     _onChangeView: function(e) {
         if (this.get_OnChangeView_Handled()) {
@@ -1444,7 +1457,7 @@ Simplovation.Web.Maps.VE.Map.registerClass("Simplovation.Web.Maps.VE.Map", Simpl
 
 Simplovation.Web.Maps.VE.AsyncMapData = function() {
     this.EventName = null; this.EventArgs = null; this.Width = null; this.Height = null;
-    this.ZoomLevel = null; this.Latitude = null; this.Longitude = null; this.MapStyle = null;
+    this.ZoomLevel = null; this.Latitude = null; this.Longitude = null; this.MapType = null;
     this.Direction_Locations = null; this.Direction_RouteOptions = null; this.MapLoadedEventArgs = null;
     this.CustomInfoBoxStylesEnabled = null; this.ShowTraffic = null; this.ShowTrafficLegend = null;
     this.TrafficLegendText = null;

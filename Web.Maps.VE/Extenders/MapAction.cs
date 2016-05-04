@@ -26,25 +26,25 @@ namespace Simplovation.Web.Maps.VE
         /// </summary>
         HideDashboard = 3,
         /// <summary>
-        /// The action of setting the <see cref="MapStyle">MapStyle</see> to Road.
+        /// The action of setting the <see cref="MapType">MapType</see> to Road.
         /// </summary>
-        SetMapStyleRoad = 4,
+        SetMapTypeRoad = 4,
         /// <summary>
-        /// The action of setting the <see cref="MapStyle">MapStyle</see> to Aerial.
+        /// The action of setting the <see cref="MapType">MapType</see> to Aerial.
         /// </summary>
-        SetMapStyleAerial = 5,
+        SetMapTypeAerial = 5,
         /// <summary>
-        /// The action of setting the <see cref="MapStyle">MapStyle</see> to Hybrid.
+        /// The action of setting the <see cref="MapType">MapType</see> to Hybrid.
         /// </summary>
-        SetMapStyleHybrid = 6,
+        SetMapTypeHybrid = 6,
         /// <summary>
-        /// The action of setting the <see cref="MapStyle">MapStyle</see> to Birdseye.
+        /// The action of setting the <see cref="MapType">MapType</see> to Birdseye.
         /// </summary>
-        SetMapStyleBirdseye = 7,
+        SetMapTypeBirdseye = 7,
         /// <summary>
-        /// The action of setting the <see cref="MapStyle">MapStyle</see> to Shaded.
+        /// The action of setting the <see cref="MapType">MapType</see> to Shaded.
         /// </summary>
-        SetMapStyleShaded = 16,
+        SetMapTypeShaded = 16,
         /// <summary>
         /// The action of Clearing All Shapes currently being plotted on the Map.
         /// </summary>

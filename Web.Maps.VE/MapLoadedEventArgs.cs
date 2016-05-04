@@ -37,15 +37,15 @@ namespace Simplovation.Web.Maps.VE
             set { _zoomLevel = value; }
         }
 
-        private MapStyle _mapStyle;
+        private MapType _mapType;
         /// <summary>
-        /// The current map style as a String. Valid String results are a, r, h and o.
+        /// The current map type.
         /// </summary>
         [DataMember]
-        public MapStyle mapStyle
+        public MapType mapType
         {
-            get { return _mapStyle; }
-            set { _mapStyle = value; }
+            get { return _mapType; }
+            set { _mapType = value; }
         }
 
         private LatLong _latlong = null;

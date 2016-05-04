@@ -20,27 +20,27 @@ public partial class Basics_Default : System.Web.UI.Page
 
     protected void lbMapViewRoad_Click(object sender, EventArgs e)
     {
-        Map1.MapStyle = Simplovation.Web.Maps.VE.MapStyle.Road;
+        Map1.MapType = Simplovation.Web.Maps.VE.MapType.Road;
     }
 
     protected void lbMapViewAerial_Click(object sender, EventArgs e)
     {
-        Map1.MapStyle = Simplovation.Web.Maps.VE.MapStyle.Aerial;
+        Map1.MapType = Simplovation.Web.Maps.VE.MapType.Aerial;
     }
 
     protected void lbMapViewHybrid_Click(object sender, EventArgs e)
     {
-        Map1.MapStyle = Simplovation.Web.Maps.VE.MapStyle.Hybrid;
+        Map1.MapType = Simplovation.Web.Maps.VE.MapType.Hybrid;
     }
 
     protected void lbMapViewBirdseye_Click(object sender, EventArgs e)
     {
-        Map1.MapStyle = Simplovation.Web.Maps.VE.MapStyle.Birdseye;
+        Map1.MapType = Simplovation.Web.Maps.VE.MapType.Birdseye;
     }
 
     protected void lbMapViewShaded_Click(object sender, EventArgs e)
     {
-        Map1.MapStyle = Simplovation.Web.Maps.VE.MapStyle.Shaded;
+        Map1.MapType = Simplovation.Web.Maps.VE.MapType.Shaded;
     }
 
     protected void lbShapesPushpin_Click(object sender, EventArgs e)

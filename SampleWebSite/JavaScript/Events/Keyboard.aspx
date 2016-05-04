@@ -61,12 +61,12 @@ Advanced JavaScript - Keyboard Event Handling
     }
 
     /*
-    // The js code below will attach the onchangemapstyle event handler
+    // The js code below will attach the maptypechanged event handler
     // as soon as the page finishes loading.
     Sys.Application.add_load(myAppLoaded);
     function myAppLoaded()
     {
-        attachevent("onchangemapstyle");
+        attachevent("maptypechanged");
     }
     */
 </script>

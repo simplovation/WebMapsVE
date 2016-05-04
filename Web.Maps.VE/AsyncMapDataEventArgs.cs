@@ -31,7 +31,7 @@ namespace Simplovation.Web.Maps.VE
         /// The current map style as a String. Valid String results are a, r, h and o.
         /// </summary>
         [DataMember]
-        public string mapStyle { get; set; }
+        public string mapType { get; set; }
 
         /// <summary>
         /// If the map style is set to bird's eye (oblique), the unique identifier of the current bird's eye scene.

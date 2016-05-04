@@ -22,19 +22,19 @@ Simplovation.Web.Maps.VE.Extenders.MapActionExtender.prototype={
             case Simplovation.Web.Maps.VE.MapAction.ZoomOut:
                 map.ZoomOut();
                 break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapStyleRoad:
+            case Simplovation.Web.Maps.VE.MapAction.SetMapTypeRoad:
                 map.SetMapStyle(VEMapStyle.Road);
                 break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapStyleAerial:
+            case Simplovation.Web.Maps.VE.MapAction.SetMapTypeAerial:
                 map.SetMapStyle(VEMapStyle.Aerial);
                 break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapStyleHybrid:
+            case Simplovation.Web.Maps.VE.MapAction.SetMapTypeHybrid:
                 map.SetMapStyle(VEMapStyle.Hybrid);
                 break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapStyleBirdseye:
+            case Simplovation.Web.Maps.VE.MapAction.SetMapTypeBirdseye:
                 map.SetMapStyle(VEMapStyle.Birdseye);
                 break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapStyleShaded:
+            case Simplovation.Web.Maps.VE.MapAction.SetMapTypeShaded:
                 map.SetMapStyle(VEMapStyle.Shaded);
                 break;
             case Simplovation.Web.Maps.VE.MapAction.SetMapMode2D:

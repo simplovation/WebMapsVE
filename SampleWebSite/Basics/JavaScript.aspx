@@ -52,16 +52,16 @@ This example demonstrates the basics of manipulating the map from within client-
             </asp:Panel>
 
             <asp:Panel runat="server" ID="pnlMapView" GroupingText="Map Style">
-                <a href="javascript:void(0);" onclick="SetMapStyle(VEMapStyle.Road);">Road</a><br />
-                <a href="javascript:void(0);" onclick="SetMapStyle(VEMapStyle.Aerial);">Aerial</a><br />
-                <a href="javascript:void(0);" onclick="SetMapStyle(VEMapStyle.Hybrid);">Hybrid</a><br />
-                <a href="javascript:void(0);" onclick="SetMapStyle(VEMapStyle.Birdseye);">Birdseye</a><br />
-                <a href="javascript:void(0);" onclick="SetMapStyle(VEMapStyle.Shaded);">Shaded</a><br />
+                <a href="javascript:void(0);" onclick="SetMapType(Microsoft.Maps.MapTypeId.road);">Road</a><br />
+                <a href="javascript:void(0);" onclick="SetMapType(Microsoft.Maps.MapTypeId.aerial);">Aerial</a><br />
+                <a href="javascript:void(0);" onclick="SetMapType(Microsoft.Maps.MapTypeId.hybrid);">Hybrid</a><br />
+                <a href="javascript:void(0);" onclick="SetMapType(Microsoft.Maps.MapTypeId.oblique);">Birdseye</a><br />
+                <a href="javascript:void(0);" onclick="SetMapType(Microsoft.Maps.MapTypeId.shaded);">Shaded</a><br />
                 <script type="text/javascript">
-                    function SetMapStyle(v)
+                    function SetMapType(v)
                     {
                         var map = $find("<%=Map1.ClientID%>");
-                        map.SetMapStyle(v);
+                        map.SetMapType(v);
                     }
                 </script>
             </asp:Panel>

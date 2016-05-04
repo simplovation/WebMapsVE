@@ -165,8 +165,8 @@ namespace Simplovation.Web.Maps.VE
 
                 if (mapData.MapView != null) this._MapView = mapData.MapView;
 
-                if (mapData.MapStyle.HasValue) this.MapStyle = (MapStyle)((int)mapData.MapStyle);
-                this._MapStyleDirty = false;
+                if (mapData.MapType.HasValue) this.MapType = (MapType)((int)mapData.MapType);
+                this._MapTypeDirty = false;
 
                 if (mapData.DistanceUnit.HasValue) this._DistanceUnit = (DistanceUnit)((int)mapData.DistanceUnit);
 
@@ -262,21 +262,21 @@ namespace Simplovation.Web.Maps.VE
                             if (this.MapLoaded != null)
                             {
                                 mapData.MapLoadedEventArgs.zoomLevel = this.Zoom;
-                                mapData.MapLoadedEventArgs.mapStyle = this.MapStyle;
+                                mapData.MapLoadedEventArgs.mapType = this.MapType;
                                 mapData.MapLoadedEventArgs.latlong = this.LatLong;
                                 this.MapLoaded(this, mapData.MapLoadedEventArgs);
                             }
                             break;
 
                         // Map Events
-                        case "onchangemapstyle":
-                            if (this.ChangeMapStyle != null) this.ChangeMapStyle(this, mapData.EventArgs);
+                        case "maptypechanged":
+                            if (this.ChangeMapType != null) this.ChangeMapType(this, mapData.EventArgs);
                             break;
                         case "onchangeview":
-                            if (this.ChangeView != null && this.MapStyle != MapStyle.Birdseye) this.ChangeView(this, mapData.EventArgs);
+                            if (this.ChangeView != null && this.MapType != MapType.Birdseye) this.ChangeView(this, mapData.EventArgs);
                             break;
                         case "onendpan":
-                            if (this.EndPan != null && this.MapStyle != MapStyle.Birdseye) this.EndPan(this, mapData.EventArgs);
+                            if (this.EndPan != null && this.MapType != MapType.Birdseye) this.EndPan(this, mapData.EventArgs);
                             break;
                         case "onendzoom":
                             if (this.EndZoom != null) this.EndZoom(this, mapData.EventArgs);
@@ -311,7 +311,7 @@ namespace Simplovation.Web.Maps.VE
 
                         // Mouse Events
                         case "onclick":
-                            if (this.Click != null && this.MapStyle != MapStyle.Birdseye) this.Click(this, mapData.EventArgs);
+                            if (this.Click != null && this.MapType != MapType.Birdseye) this.Click(this, mapData.EventArgs);
                             break;
                         /*
                         case "ondoubleclick":
@@ -452,7 +452,7 @@ namespace Simplovation.Web.Maps.VE
                         d.AddProperty("ShowPoweredBy", this.ShowPoweredBy);
 
                         d.AddProperty("OnMapLoaded_Handled", this.MapLoaded != null);
-                        d.AddProperty("OnChangeMapStyle_Handled", this.ChangeMapStyle != null);
+                        d.AddProperty("OnChangeMapType_Handled", this.ChangeMapType != null);
                         d.AddProperty("OnChangeView_Handled", this.ChangeView != null);
                         d.AddProperty("OnEndPan_Handled", this.EndPan != null);
                         d.AddProperty("OnEndZoom_Handled", this.EndZoom != null);
@@ -584,7 +584,7 @@ namespace Simplovation.Web.Maps.VE
             if (this._ZoomDirty) mapData.ZoomLevel = this.Zoom;
             if (this._LatLongDirty) mapData.Latitude = this.Latitude;
             if (this._LatLongDirty) mapData.Longitude = this.Longitude;
-            if (this._MapStyleDirty) mapData.MapStyle = this.MapStyle;
+            if (this._MapTypeDirty) mapData.MapType = this.MapType;
             mapData.ShowTraffic = this.ShowTraffic;
             mapData.ShowTrafficLegend = this.ShowTrafficLegend;
             if (!string.IsNullOrEmpty(this._TrafficLegendText)) mapData.TrafficLegendText = this._TrafficLegendText;
@@ -809,16 +809,16 @@ namespace Simplovation.Web.Maps.VE
         //    set { this._UseSSL = value; }
         //}
 
-        private MapStyle _MapStyle = MapStyle.Road;
-        private bool _MapStyleDirty = false;
+        private MapType _MapType = MapType.Road;
+        private bool _MapTypeDirty = false;
         /// <summary>
         /// The style of the map; Road, Aerial, Hybrid or Oblique (Bird's eye).
         /// </summary>
-        [ScriptControlProperty, DefaultValue(MapStyle.Road)]
-        public MapStyle MapStyle
+        [ScriptControlProperty, DefaultValue(MapType.Road)]
+        public MapType MapType
         {
-            get { return _MapStyle; }
-            set { _MapStyle = value; _MapStyleDirty = true; }
+            get { return _MapType; }
+            set { _MapType = value; _MapTypeDirty = true; }
         }
 
         private bool _Fixed;
@@ -1317,7 +1317,7 @@ namespace Simplovation.Web.Maps.VE
         /// <summary>
         /// Occurs when the map style chanages
         /// </summary>
-        public event AsyncMapEventHandler ChangeMapStyle;
+        public event AsyncMapEventHandler ChangeMapType;
 
         /// <summary>
         /// Occurs whenever the map view changes

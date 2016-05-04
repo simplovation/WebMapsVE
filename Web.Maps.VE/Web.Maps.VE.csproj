@@ -144,7 +144,7 @@
     <Compile Include="Map.cs" />
     <Compile Include="Design\MapDesigner.cs" />
     <Compile Include="MapMode.cs" />
-    <Compile Include="MapStyle.cs" />
+    <Compile Include="MapType.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="MiniMapSize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

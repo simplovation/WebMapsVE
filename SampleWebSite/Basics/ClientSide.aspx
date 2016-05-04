@@ -45,19 +45,19 @@ This example demonstrates using the MapActionExtender control to setup map manip
 
             <asp:Panel runat="server" ID="pnlMapView" GroupingText="Map Style">
                 <asp:LinkButton runat="server" ID="lbRoadStyle" Text="Road"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender3" TargetControlID="lbRoadStyle" EventName="click" MapControlID="Map1" MapAction="SetMapStyleRoad"></MapExtenders:MapActionExtender>
+                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender3" TargetControlID="lbRoadStyle" EventName="click" MapControlID="Map1" MapAction="SetMapTypeRoad"></MapExtenders:MapActionExtender>
                 <br />
                 <asp:LinkButton runat="server" ID="lbAerialStyle" Text="Aerial"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender4" TargetControlID="lbAerialStyle" EventName="click" MapControlID="Map1" MapAction="SetMapStyleAerial"></MapExtenders:MapActionExtender>
+                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender4" TargetControlID="lbAerialStyle" EventName="click" MapControlID="Map1" MapAction="SetMapTypeAerial"></MapExtenders:MapActionExtender>
                 <br />
                 <asp:LinkButton runat="server" ID="lbHybridStyle" Text="Hybrid"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender5" TargetControlID="lbHybridStyle" EventName="click" MapControlID="Map1" MapAction="SetMapStyleHybrid"></MapExtenders:MapActionExtender>
+                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender5" TargetControlID="lbHybridStyle" EventName="click" MapControlID="Map1" MapAction="SetMapTypeHybrid"></MapExtenders:MapActionExtender>
                 <br />
                 <asp:LinkButton runat="server" ID="lbBirdseyeStyle" Text="Birdseye"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender6" TargetControlID="lbBirdseyeStyle" EventName="click" MapControlID="Map1" MapAction="SetMapStyleBirdseye"></MapExtenders:MapActionExtender>
+                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender6" TargetControlID="lbBirdseyeStyle" EventName="click" MapControlID="Map1" MapAction="SetMapTypeBirdseye"></MapExtenders:MapActionExtender>
                 <br />
                 <asp:LinkButton runat="server" ID="lbShadedStyle" Text="Shaded"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender16" TargetControlID="lbShadedStyle" EventName="click" MapControlID="Map1" MapAction="SetMapStyleShaded"></MapExtenders:MapActionExtender>
+                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender16" TargetControlID="lbShadedStyle" EventName="click" MapControlID="Map1" MapAction="SetMapTypeShaded"></MapExtenders:MapActionExtender>
             </asp:Panel>
 
             <asp:Panel runat="server" ID="pnlShapes" GroupingText="Shapes">

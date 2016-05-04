@@ -26,9 +26,9 @@ Advanced JavaScript - Map Event Handling
         <th>Detach</th>
     </tr>
     <tr>
-        <td>onchangemapstyle</td>
-        <td><a href="#" onclick='attachevent("onchangemapstyle");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onchangemapstyle");'>Detach</a></td>
+        <td>maptypechanged</td>
+        <td><a href="#" onclick='attachevent("maptypechanged");'>Attach</a></td>
+        <td><a href="#" onclick='detachevent("maptypechanged");'>Detach</a></td>
     </tr>
     <tr>
         <td>onchangeview</td>
@@ -106,12 +106,12 @@ Advanced JavaScript - Map Event Handling
     }
 
     /*
-    // The js code below will attach the onchangemapstyle event handler
+    // The js code below will attach the maptypechanged event handler
     // as soon as the page finishes loading.
     Sys.Application.add_load(myAppLoaded);
     function myAppLoaded()
     {
-        attachevent("onchangemapstyle");
+        attachevent("maptypechanged");
     }
     */
 </script>

@@ -65,7 +65,7 @@ namespace Simplovation.Web.Maps.VE
         public double? Heading { get; set; }
         
         [DataMember]
-        public MapStyle? MapStyle { get; set; }
+        public MapType? MapType { get; set; }
 
         [DataMember]
         public MapMode? MapMode { get; set; }

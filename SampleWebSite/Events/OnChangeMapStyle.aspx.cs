@@ -8,25 +8,25 @@ public partial class Events_OnChangeMapStyle : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            DisplayMapStyle();
+            DisplayMapType();
         }
     }
 
-    protected void Map1_ChangeMapStyle(object sender, AsyncMapEventArgs e)
+    protected void Map1_ChangeMapType(object sender, AsyncMapEventArgs e)
     {
-        DisplayMapStyle();
+        DisplayMapType();
     }
 
-    private void DisplayMapStyle()
+    private void DisplayMapType()
     {
-        Literal litMapStyle = UpdatePanel_MapStyleDisplay.ContentTemplateContainer.FindControl("litMapStyle") as Literal;
+        Literal litMapStyle = UpdatePanel_MapTypeDisplay.ContentTemplateContainer.FindControl("litMapType") as Literal;
         if (litMapStyle != null)
         {
-            if (Map1.MapStyle == Simplovation.Web.Maps.VE.MapStyle.Aerial)
+            if (Map1.MapType == Simplovation.Web.Maps.VE.MapType.Aerial)
                 litMapStyle.Text = "Aerial";
-            else if (Map1.MapStyle == Simplovation.Web.Maps.VE.MapStyle.Hybrid)
+            else if (Map1.MapType == Simplovation.Web.Maps.VE.MapType.Hybrid)
                 litMapStyle.Text = "Hybrid";
-            else if (Map1.MapStyle == Simplovation.Web.Maps.VE.MapStyle.Birdseye)
+            else if (Map1.MapType == Simplovation.Web.Maps.VE.MapType.Birdseye)
                 litMapStyle.Text = "Birdseye";
             else
                 litMapStyle.Text = "Road";

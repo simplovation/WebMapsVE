@@ -49,7 +49,7 @@
             The current map zoom level.
             </summary>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.mapStyle">
+        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.mapType">
             <summary>
             The current map style as a String. Valid String results are a, r, h and o.
             </summary>
@@ -560,29 +560,29 @@
             The action of hiding the Map Dashboard from being visible to the user.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleRoad">
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapTypeRoad">
             <summary>
-            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Road.
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapType">MapType</see> to Road.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleAerial">
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapTypeAerial">
             <summary>
-            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Aerial.
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapType">MapType</see> to Aerial.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleHybrid">
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapTypeHybrid">
             <summary>
-            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Hybrid.
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapType">MapType</see> to Hybrid.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleBirdseye">
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapTypeBirdseye">
             <summary>
-            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Birdseye.
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapType">MapType</see> to Birdseye.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapStyleShaded">
+        <member name="F:Simplovation.Web.Maps.VE.MapAction.SetMapTypeShaded">
             <summary>
-            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapStyle">MapStyle</see> to Shaded.
+            The action of setting the <see cref="T:Simplovation.Web.Maps.VE.MapType">MapType</see> to Shaded.
             </summary>
         </member>
         <member name="F:Simplovation.Web.Maps.VE.MapAction.ClearAllShapes">
@@ -830,9 +830,9 @@
             The current map zoom level.
             </summary>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.MapLoadedEventArgs.mapStyle">
+        <member name="P:Simplovation.Web.Maps.VE.MapLoadedEventArgs.mapType">
             <summary>
-            The current map style as a String. Valid String results are a, r, h and o.
+            The current map type.
             </summary>
         </member>
         <member name="P:Simplovation.Web.Maps.VE.MapLoadedEventArgs.latlong">
@@ -1363,7 +1363,7 @@
             The zoom level to display. Valid values range from 1 through 19. Default is 4.
             </summary>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.MapStyle">
+        <member name="P:Simplovation.Web.Maps.VE.Map.MapType">
             <summary>
             The style of the map; Road, Aerial, Hybrid or Oblique (Bird's eye).
             </summary>
@@ -1576,7 +1576,7 @@
             This event is fired when the Map is first loaded on the client.
             </summary>
         </member>
-        <member name="E:Simplovation.Web.Maps.VE.Map.ChangeMapStyle">
+        <member name="E:Simplovation.Web.Maps.VE.Map.ChangeMapType">
             <summary>
             Occurs when the map style chanages
             </summary>
@@ -1626,32 +1626,32 @@
             Loads the Virtual Earth 3D control, displays the map in three dimensions, and displays the 3D navigation control.
             </summary>
         </member>
-        <member name="T:Simplovation.Web.Maps.VE.MapStyle">
+        <member name="T:Simplovation.Web.Maps.VE.MapType">
             <summary>
             An enumeration of map styles.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Road">
+        <member name="F:Simplovation.Web.Maps.VE.MapType.Road">
             <summary>
             The road map style
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Aerial">
+        <member name="F:Simplovation.Web.Maps.VE.MapType.Aerial">
             <summary>
             The aerial map style
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Hybrid">
+        <member name="F:Simplovation.Web.Maps.VE.MapType.Hybrid">
             <summary>
             The hybrid map style, which is an aerial map with a label overlay
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Birdseye">
+        <member name="F:Simplovation.Web.Maps.VE.MapType.Birdseye">
             <summary>
             The bird's eye (oblique-angle) imagery map style
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapStyle.Shaded">
+        <member name="F:Simplovation.Web.Maps.VE.MapType.Shaded">
             <summary>
             The shaded map style; a road map with shaded contours.
             </summary>

@@ -7,6 +7,7 @@ version vNext - Coming Soon
 - Breaking Changes:
     - Added
         - Map.NavigationBarMode property
+        - Map.MapType property and related events, properties, etc
     - Removed
         - 3D map support along with Pitch, Heading and Altitude properties, Bing Maps hasn't supported this in Years.
         - Map.MapMode property
@@ -16,6 +17,7 @@ version vNext - Coming Soon
         - Map.UseVirtualEarthStagingUrl property
         - Map.oncredentialserror event
         - Map.oncredentialsvalid event
+        - Map.MapStyle property and related events, properties, etc
 
 
 version 4.0 - Released Apr 25, 2014
