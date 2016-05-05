@@ -137,8 +137,5 @@ namespace Simplovation.Web.Maps.VE
 
         [DataMember]
         public bool ImportShapeLayerData_setBestView { get; set; }
-
-        [DataMember]
-        public Orientation? BirdseyeOrientation { get; set; }
     }
 }

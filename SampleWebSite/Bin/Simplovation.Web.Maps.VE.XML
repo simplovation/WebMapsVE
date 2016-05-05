@@ -59,11 +59,6 @@
             If the map style is set to bird's eye (oblique), the unique identifier of the current bird's eye scene.
             </summary>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.birdseyeSceneOrientation">
-            <summary>
-            If the map style is set to bird's eye (oblique), the orientation of the current bird's eye scene.
-            </summary>
-        </member>
         <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.leftMouseButton">
             <summary>
             A boolean representing whether the left mouse button has been clicked.
@@ -871,31 +866,6 @@
             The match was found, but to a modified place
             </summary>
         </member>
-        <member name="T:Simplovation.Web.Maps.VE.Orientation">
-            <summary>
-            An enumeration of available directional views for a bird's eye image.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.Orientation.North">
-            <summary>
-            The image was taken looking toward the north.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.Orientation.South">
-            <summary>
-            The image was taken looking toward the south.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.Orientation.East">
-            <summary>
-            The image was taken looking toward the east.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.Orientation.West">
-            <summary>
-            The image was taken looking toward the west.
-            </summary>
-        </member>
         <member name="T:Simplovation.Web.Maps.VE.Pixel">
             <summary>
             Contains the information about a Map pixel.
@@ -1404,11 +1374,6 @@
         <member name="P:Simplovation.Web.Maps.VE.Map.LoadBaseTiles">
             <summary>
             A Boolean value indicating whether or not to load the base map tiles. The default value is true.
-            </summary>
-        </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.BirdseyeOrientation">
-            <summary>
-            A Orientation Enumeration value indicating the orientation of the bird's eye map. The default value is Orientation.North.
             </summary>
         </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.CustomInfoBoxStylesEnabled">

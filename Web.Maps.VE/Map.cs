@@ -151,11 +151,7 @@ namespace Simplovation.Web.Maps.VE
                 }
 
                 // Set Map properties to match AsyncMapData
-                if (mapData.BirdseyeOrientation.HasValue)
-                {
-                    this.BirdseyeOrientation = (Orientation)((int)mapData.BirdseyeOrientation);
-                    this._BirdseyeOrientationDirty = false;
-                }
+                
                 if (mapData.ZoomLevel != null) this.Zoom = int.Parse(mapData.ZoomLevel.ToString());
                 if (mapData.Latitude != null && mapData.Longitude != null)
                 {
@@ -579,8 +575,7 @@ namespace Simplovation.Web.Maps.VE
 
             mapData.Width = this.Width.Value;
             mapData.Height = this.Height.Value;
-
-            if (this._BirdseyeOrientationDirty) mapData.BirdseyeOrientation = this.BirdseyeOrientation;
+            
             if (this._ZoomDirty) mapData.ZoomLevel = this.Zoom;
             if (this._LatLongDirty) mapData.Latitude = this.Latitude;
             if (this._LatLongDirty) mapData.Longitude = this.Longitude;
@@ -989,18 +984,6 @@ namespace Simplovation.Web.Maps.VE
                 }
                 this._LoadBaseTiles = value;
             }
-        }
-
-        private Orientation _BirdseyeOrientation = Orientation.North;
-        private bool _BirdseyeOrientationDirty = false;
-        /// <summary>
-        /// A Orientation Enumeration value indicating the orientation of the bird's eye map. The default value is Orientation.North.
-        /// </summary>
-        [ScriptControlProperty(), DefaultValue(Orientation.North)]
-        public Orientation BirdseyeOrientation
-        {
-            get { return this._BirdseyeOrientation; }
-            set { this._BirdseyeOrientation = value; this._BirdseyeOrientationDirty = true; }
         }
 
         /* Removed in v2.00.02 - can be deleted

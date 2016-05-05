@@ -18,6 +18,7 @@ version vNext - Coming Soon
         - Map.oncredentialserror event
         - Map.oncredentialsvalid event
         - Map.MapStyle property and related events, properties, etc
+        - Removed BirdseyeOrientation property
 
 
 version 4.0 - Released Apr 25, 2014

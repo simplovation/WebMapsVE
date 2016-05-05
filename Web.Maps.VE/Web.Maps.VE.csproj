@@ -128,7 +128,6 @@
     <Compile Include="MapLoadedEventArgs.cs" />
     <Compile Include="MatchCode.cs" />
     <Compile Include="MatchConfidence.cs" />
-    <Compile Include="Orientation.cs" />
     <Compile Include="Pixel.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="RouteMode.cs" />
