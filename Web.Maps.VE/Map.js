@@ -688,8 +688,10 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     SetTileBuffer: function(v) {
         this.get_Map().SetTileBuffer(v);
     },
-    SetZoomLevel: function(v) {
-        this.get_Map().setOptions({zoom: v});
+    SetZoomLevel: function (v) {
+        var mapOptions = this.get_Map().getOptions();
+        mapOptions.zoom = v;
+        this.get_Map().setOptions(mapOptions);
     },
     Show3DNavigationControl: function() {
         this.get_Map().Show3DNavigationControl();
@@ -722,10 +724,10 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         this.get_Map().StartContinuousPan(x, y);
     },
     ZoomIn: function () {
-        this.get_Map().ZoomIn();
+        this.SetZoomLevel(this.GetZoomLevel() + 1);
     },
-    ZoomOut: function() {
-        this.get_Map().ZoomOut();
+    ZoomOut: function () {
+        this.SetZoomLevel(this.GetZoomLevel() - 1);
     },
     //Property Accessors
     get_Map: function() {
