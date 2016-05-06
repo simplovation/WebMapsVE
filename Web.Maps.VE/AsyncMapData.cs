@@ -118,15 +118,6 @@ namespace Simplovation.Web.Maps.VE
         }
 
         [DataMember]
-        public bool? ShowTraffic { get; set; }
-
-        [DataMember]
-        public bool? ShowTrafficLegend { get; set; }
-
-        [DataMember]
-        public string TrafficLegendText { get; set; }
-
-        [DataMember]
         public FindArguments FindArgs { get; set; }
 
         [DataMember]

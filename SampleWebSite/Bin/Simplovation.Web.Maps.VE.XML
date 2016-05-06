@@ -585,26 +585,6 @@
             The action of Clearing All Shapes currently being plotted on the Map.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.ShowTraffic">
-            <summary>
-            The action of Showing the Traffic Data overlay.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.ClearTraffic">
-            <summary>
-            The action of Hiding the Traffic Data overlay.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.ShowTrafficLegend">
-            <summary>
-            The action of Showing the Traffic Data Legend.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.HideTrafficLegend">
-            <summary>
-            The action of Hiding the Traffic Data Legend.
-            </summary>
-        </member>
         <member name="F:Simplovation.Web.Maps.VE.MapAction.PanUp">
             <summary>
             The action of Panning Up on the Map.
@@ -1384,21 +1364,6 @@
         <member name="P:Simplovation.Web.Maps.VE.Map.OnClientMapLoaded">
             <summary>
             The JavaScript Method that is called on the client-side when the Map has finished loading.
-            </summary>
-        </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.ShowTraffic">
-            <summary>
-            When set to True, displays Traffic data layer on top of map.
-            </summary>
-        </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.ShowTrafficLegend">
-            <summary>
-            When set to True, displays the Traffic legend.
-            </summary>
-        </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.TrafficLegendText">
-            <summary>
-            Specifies test that is shown with the Traffic Legend when ShowTrafficLegend is set to True.
             </summary>
         </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.ClientToken">

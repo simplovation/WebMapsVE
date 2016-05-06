@@ -19,6 +19,10 @@ version vNext - Coming Soon
         - Map.oncredentialsvalid event
         - Map.MapStyle property and related events, properties, etc
         - Removed BirdseyeOrientation property
+    - Disalbed / Work in Progress
+        - GetMapView method in JavaScript
+        - DistanceUnit in JavaScript
+        - Get ShapeLayers and Shapes to postback
 
 
 version 4.0 - Released Apr 25, 2014

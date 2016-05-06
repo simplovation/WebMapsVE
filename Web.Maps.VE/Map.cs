@@ -168,10 +168,6 @@ namespace Simplovation.Web.Maps.VE
 
                 if (mapData.CustomInfoBoxStylesEnabled.HasValue) this._CustomInfoBoxStylesEnabled = bool.Parse(mapData.CustomInfoBoxStylesEnabled.ToString());
 
-                if (mapData.ShowTraffic.HasValue) this._ShowTraffic = bool.Parse(mapData.ShowTraffic.ToString());
-                if (mapData.ShowTrafficLegend.HasValue) this._ShowTrafficLegend = bool.Parse(mapData.ShowTrafficLegend.ToString());
-                if (!string.IsNullOrEmpty(mapData.TrafficLegendText)) this._TrafficLegendText = mapData.TrafficLegendText.ToString();
-
                 if (mapData.EventArgs != null)
                 {
                     // Make sure the EventArgs.latlong property always has a value.
@@ -306,26 +302,23 @@ namespace Simplovation.Web.Maps.VE
                         */
 
                         // Mouse Events
-                        case "onclick":
+                        case "click":
                             if (this.Click != null && this.MapType != MapType.Birdseye) this.Click(this, mapData.EventArgs);
                             break;
                         /*
-                        case "ondoubleclick":
+                        case "dblclick":
                             if (this.DoubleClick != null) this.DoubleClick(this, mapData.EventArgs);
                             break;
-                        case "onmousemove":
+                        case "mousemove":
                             if (this.MouseMove != null) this.MouseMove(this, mapData.EventArgs);
                             break;
-                        case "onmousedown":
+                        case "mousedown":
                             if (this.MouseDown != null) this.MouseDown(this, mapData.EventArgs);
                             break;
-                        case "onmouseup":
+                        case "mouseup":
                             if (this.MouseUp != null) this.MouseUp(this, mapData.EventArgs);
                             break;
-                        case "onmouseover":
-                            if (this.MouseOver != null) this.MouseOver(this, mapData.EventArgs);
-                            break;
-                        case "onmouseout":
+                        case "mouseout":
                             if (this.MouseOut != null) this.MouseOut(this, mapData.EventArgs);
                             break;
                         case "onmousewheel":
@@ -580,9 +573,6 @@ namespace Simplovation.Web.Maps.VE
             if (this._LatLongDirty) mapData.Latitude = this.Latitude;
             if (this._LatLongDirty) mapData.Longitude = this.Longitude;
             if (this._MapTypeDirty) mapData.MapType = this.MapType;
-            mapData.ShowTraffic = this.ShowTraffic;
-            mapData.ShowTrafficLegend = this.ShowTrafficLegend;
-            if (!string.IsNullOrEmpty(this._TrafficLegendText)) mapData.TrafficLegendText = this._TrafficLegendText;
 
             mapData.CustomInfoBoxStylesEnabled = this.CustomInfoBoxStylesEnabled;
 
@@ -1022,39 +1012,6 @@ namespace Simplovation.Web.Maps.VE
             set { _OnClientMapLoaded = value; }
         }
 
-        private bool _ShowTraffic = false;
-        /// <summary>
-        /// When set to True, displays Traffic data layer on top of map.
-        /// </summary>
-        [ScriptControlProperty]
-        public bool ShowTraffic
-        {
-            get { return _ShowTraffic; }
-            set { _ShowTraffic = value; }
-        }
-
-        private bool _ShowTrafficLegend = false;
-        /// <summary>
-        /// When set to True, displays the Traffic legend.
-        /// </summary>
-        [ScriptControlProperty]
-        public bool ShowTrafficLegend
-        {
-            get { return _ShowTrafficLegend; }
-            set { _ShowTrafficLegend = value; }
-        }
-
-        private string _TrafficLegendText;
-        /// <summary>
-        /// Specifies test that is shown with the Traffic Legend when ShowTrafficLegend is set to True.
-        /// </summary>
-        [ScriptControlProperty]
-        public string TrafficLegendText
-        {
-            get { return _TrafficLegendText; }
-            set { _TrafficLegendText = value; }
-        }
-
         private string _ClientToken = null;
         /// <summary>
         /// The MS Bing Maps Platform Service Client Token that was retrieved from the MS Bing Maps Platform Service.
@@ -1402,13 +1359,6 @@ namespace Simplovation.Web.Maps.VE
         public bool OnMouseUp_Handled
         {
             get { return (this.MouseUp != null); }
-        }
-
-        public event AsyncMapEventHandler MouseOver;
-        [ScriptControlProperty]
-        public bool OnMouseOver_Handled
-        {
-            get { return (this.MouseOver != null); }
         }
 
         public event AsyncMapEventHandler MouseOut;

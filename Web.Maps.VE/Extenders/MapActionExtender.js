@@ -46,18 +46,6 @@ Simplovation.Web.Maps.VE.Extenders.MapActionExtender.prototype={
             case Simplovation.Web.Maps.VE.MapAction.ClearAllShapes:
                 map.DeleteAllShapes();
                 break;
-            case Simplovation.Web.Maps.VE.MapAction.ShowTraffic:
-                map.LoadTraffic(true);
-                break;
-            case Simplovation.Web.Maps.VE.MapAction.ClearTraffic:
-                map.ClearTraffic();
-                break;
-            case Simplovation.Web.Maps.VE.MapAction.ShowTrafficLegend:
-                map.ShowTrafficLegend();
-                break;
-            case Simplovation.Web.Maps.VE.MapAction.HideTrafficLegend:
-                map.HideTrafficLegend();
-                break;
             case Simplovation.Web.Maps.VE.MapAction.PanLeft:
                 var x=0-this.ParseInt(this.get_Value(),50);
                 map.Pan(x,0);
@@ -82,6 +70,6 @@ Simplovation.Web.Maps.VE.Extenders.MapActionExtender.prototype={
 };
 Simplovation.Web.Maps.VE.Extenders.MapActionExtender.registerClass("Simplovation.Web.Maps.VE.Extenders.MapActionExtender",Sys.UI.Behavior);
 Simplovation.Web.Maps.VE.MapAction=function(){throw Error.invalidOperation();};
-Simplovation.Web.Maps.VE.MapAction.prototype={ZoomIn:0,ZoomOut:1,ShowDashboard:2,HideDashboard:3,SetMapStyleRoad:4,SetMapStyleAerial:5,SetMapStyleHybrid:6,SetMapStyleBirdseye:7,SetMapMode2D:9,SetMapMode3D: 10,ClearAllShapes:11,ShowTraffic:12,ClearTraffic:13,ShowTrafficLegend:14,HideTrafficLegend:15,SetMapStyleShaded:16,PanUp:17,PanDown:18,PanLeft:19,PanRight:20};
+Simplovation.Web.Maps.VE.MapAction.prototype={ZoomIn:0,ZoomOut:1,ShowDashboard:2,HideDashboard:3,SetMapTypeRoad:4,SetMapTypeAerial:5,SetMapTypeHybrid:6,SetMapStyleBirdseye:7,SetMapMode2D:9,SetMapMode3D:10,ClearAllShapes:11,SetMapTypeShaded:16,PanUp:17,PanDown:18,PanLeft:19,PanRight:20};
 Simplovation.Web.Maps.VE.MapAction.registerEnum("Simplovation.Web.Maps.VE.MapAction");
 Sys.Application.notifyScriptLoaded();

@@ -26,39 +26,34 @@ Advanced JavaScript - Mouse Event Handling
         <th>Detach</th>
     </tr>
     <tr>
-        <td>onclick</td>
-        <td><a href="#" onclick='attachevent("onclick");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onclick");'>Detach</a></td>
+        <td>click</td>
+        <td><a href="#" onclick='attachevent("click");'>Attach</a></td>
+        <td><a href="#" onclick='detachevent("click");'>Detach</a></td>
     </tr>
     <tr>
-        <td>ondoubleclick</td>
-        <td><a href="#" onclick='attachevent("ondoubleclick");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("ondoubleclick");'>Detach</a></td>
+        <td>double click (dblclick)</td>
+        <td><a href="#" onclick='attachevent("dblclick");'>Attach</a></td>
+        <td><a href="#" onclick='detachevent("dblclick");'>Detach</a></td>
     </tr>
     <tr>
-        <td>onmousedown</td>
-        <td><a href="#" onclick='attachevent("onmousedown");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onmousedown");'>Detach</a></td>
+        <td>mousedown</td>
+        <td><a href="#" onclick='attachevent("mousedown");'>Attach</a></td>
+        <td><a href="#" onclick='detachevent("mousedown");'>Detach</a></td>
     </tr>
     <tr>
-        <td>onmousemove</td>
-        <td><a href="#" onclick='attachevent("onmousemove");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onmousemove");'>Detach</a></td>
+        <td>mousemove</td>
+        <td><a href="#" onclick='attachevent("mousemove");'>Attach</a></td>
+        <td><a href="#" onclick='detachevent("mousemove");'>Detach</a></td>
     </tr>
     <tr>
-        <td>onmouseout</td>
-        <td><a href="#" onclick='attachevent("onmouseout");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onmouseout");'>Detach</a></td>
+        <td>mouseout</td>
+        <td><a href="#" onclick='attachevent("mouseout");'>Attach</a></td>
+        <td><a href="#" onclick='detachevent("mouseout");'>Detach</a></td>
     </tr>
      <tr>
-        <td>onmouseover</td>
-        <td><a href="#" onclick='attachevent("onmouseover");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onmouseover");'>Detach</a></td>
-    </tr>
-     <tr>
-        <td>onmouseup</td>
-        <td><a href="#" onclick='attachevent("onmouseup");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onmouseup");'>Detach</a></td>
+        <td>mouseup</td>
+        <td><a href="#" onclick='attachevent("mouseup");'>Attach</a></td>
+        <td><a href="#" onclick='detachevent("mouseup");'>Detach</a></td>
     </tr>
      <tr>
         <td>onmousewheel</td>

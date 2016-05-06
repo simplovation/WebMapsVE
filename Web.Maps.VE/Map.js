@@ -7,7 +7,8 @@ Type.registerNamespace("Simplovation.Web.Maps.VE");
 Simplovation.Web.Maps.VE.Map = function(element) {
     Simplovation.Web.Maps.VE.Map.initializeBase(this, [element]);
 
-    this._Map = null; this._MainMapDiv = null;
+    this._Map = null;
+    this._MainMapDiv = null;
     this._LatLong = null;
     this._Zoom = "4";
     this._MapType = Microsoft.Maps.MapTypeId.road;
@@ -16,9 +17,6 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._ShowSwitch = true;
     this._NavigationBarMode = null; // Microsoft.Maps.NavigationBarMode.compact; // <-- use Microsoft.Maps.NavigationBarMode.compact here
     this._TileBuffer = 0; this._Layers = null;
-    this._ShowTraffic = false;
-    this._ShowTrafficLegend = false;
-    this._TrafficLegendText = null;
     this._AsyncPostbackPassShapes = true;
     this._AppPathRoot = null;
     this._AppPathDomain = null;
@@ -169,7 +167,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         //av("onstartpan", this._startPanHandler);
         //av("onstartzoom", this._startZoomHandler);
         ////Mouse
-        //av("onclick", this._clickHandler);
+        //av("click", this._clickHandler);
         //av("ondoubleclick", this._onDoubleClickHandler);
         //av("onmousedown", this._onMouseDownHandler);
         //av("onmousemove", this._onMouseMoveHandler);
@@ -194,13 +192,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             if (this._DistanceUnit == 1) { this._DistanceUnit = VEDistanceUnit.Kilometers; } else { this._DistanceUnit = VEDistanceUnit.Miles; } this._Map.SetScaleBarDistanceUnit(this._DistanceUnit);
         }
         if (this._CustomInfoBoxStylesEnabled) { this._Map.ClearInfoBoxStyles(); }
-        if (this._ShowTraffic) { this._Map.LoadTraffic(true); }
-        if (this._ShowTrafficLegend) {
-            this._Map.ShowTrafficLegend();
-            if (this._TrafficLegendText) {
-                this._Map.SetTrafficLegendText(this._TrafficLegendText);
-            }
-        }
 
         if (this._Layers) {
             if (this._Layers.length > 0) {
@@ -525,9 +516,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     ClearInfoBoxStyles: function() {
         this.get_Map().ClearInfoBoxStyles();
     },
-    ClearTraffic: function() {
-        this.set_ShowTraffic(false); this.get_Map().ClearTraffic();
-    },
     DeleteAllShapeLayers: function() {
         this.get_Map().DeleteAllShapeLayers();
     },
@@ -586,7 +574,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         return this.get_Map().getMapTypeId();
     },
     GetMapView: function() {
-        return this.get_Map().GetMapView();
+        return null; //return this.get_Map().GetMapView();
     },
     GetShapeByID: function(id) {
         return this.get_Map().GetShapeByID(id);
@@ -639,10 +627,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     HideTileLayer: function(l) {
         this.get_Map().HideTileLayer(l);
     },
-    HideTrafficLegend: function() {
-        this._ShowTrafficLegend = false;
-        this.get_Map().HideTrafficLegend();
-    },
     ImportShapeLayerData: function(s, c, v) {
         this.get_Map().ImportShapeLayerData(s, c, v);
     },
@@ -654,10 +638,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     },
     LatLongToPixel: function(l) {
         return this.get_Map().LatLongToPixel(l);
-    },
-    LoadTraffic: function(v) {
-        this.set_ShowTraffic(true);
-        this.get_Map().LoadTraffic(v);
     },
     Pan: function(x, y) {
         this.get_Map().Pan(x, y);
@@ -700,16 +680,16 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             if (v == 2) {
                 v = Microsoft.Maps.MapTypeId.aerial;
             } else if (v == 3) {
-                v = "h";
+                v = Microsoft.Maps.MapTypeId.hybrid;
             } else if (v == 4) {
-                v = "o";
+                v = Microsoft.Maps.MapTypeId.oblique;
             } else if (v == 5) {
-                v = "s";
+                v = Microsoft.Maps.MapTypeId.shaded;
             } else {
                 v = Microsoft.Maps.MapTypeId.road;
             }
         }
-        this.get_Map().SetMapType(v);
+        this.get_Map().setMapType(v);
     },
     SetMapView: function(v) {
         this.get_Map().SetMapView(v);
@@ -725,10 +705,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     },
     SetTileBuffer: function(v) {
         this.get_Map().SetTileBuffer(v);
-    },
-    SetTrafficLegendText: function(v) {
-        this._TrafficLegendText = v;
-        this.get_Map().SetTrafficLegendText(v);
     },
     SetZoomLevel: function(v) {
         this.get_Map().SetZoomLevel(v);
@@ -759,10 +735,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     },
     ShowTileLayer: function(id) {
         this.get_Map().ShowTileLayer(id);
-    },
-    ShowTrafficLegend: function(x, y) {
-        this._ShowTrafficLegend = true;
-        this.get_Map().ShowTrafficLegend(x, y);
     },
     StartContinuousPan: function(x, y) {
         this.get_Map().StartContinuousPan(x, y);
@@ -797,9 +769,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     get_EnableDashboardLabels: function() { return this._EnableDashboardLabels; }, set_EnableDashboardLabels: function(v) { this._EnableDashboardLabels = v; },
     get_LoadBaseTiles: function() { return this._LoadBaseTiles; }, set_LoadBaseTiles: function(v) { this._LoadBaseTiles = v; },
     get_Layers: function() { return this_Layers; }, set_Layers: function(v) { this._Layers = v; },
-    get_ShowTraffic: function() { return this._ShowTraffic; }, set_ShowTraffic: function(v) { this._ShowTraffic = v; },
-    get_ShowTrafficLegend: function() { return this._ShowTrafficLegend; }, set_ShowTrafficLegend: function(v) { this._ShowTrafficLegend = v; },
-    get_TrafficLegendText: function() { return this._TrafficLegendText; }, set_TrafficLegendText: function(v) { this._TrafficLegendText = v; },
     get_AppPathRoot: function() { return this._AppPathRoot; }, set_AppPathRoot: function(v) { this._AppPathRoot = v; },
     get_ClientToken: function() { return this._ClientToken; }, set_ClientToken: function(v) { this._ClientToken = v; },
     get_BingKey: function() { return this._BingKey; }, set_BingKey: function(v) { this._BingKey = v; },
@@ -809,7 +778,9 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     get_OnMapLoaded_Handled: function() { return this._OnMapLoaded_Handled; }, set_OnMapLoaded_Handled: function(v) { this._OnMapLoaded_Handled = v; },
     get_OnClientMapLoaded: function() { return this._OnClientMapLoaded; }, set_OnClientMapLoaded: function(v) { this._OnClientMapLoaded = v; },
     get_OnChangeMapType_Handled: function() { return this._OnChangeMapType_Handled; }, set_OnChangeMapType_Handled: function(v) { this._OnChangeMapType_Handled = v; },
-    get_OnChangeView_Handled: function() { return this._OnChangeView_Handled; }, set_OnChangeView_Handled: function(v) { this._OnChangeView_Handled = v; }, get_OnEndPan_Handled: function() { return this._OnEndPan_Handled; }, set_OnEndPan_Handled: function(v) { this._OnEndPan_Handled = v; }, get_OnEndZoom_Handled: function() { return this._OnEndZoom_Handled; }, set_OnEndZoom_Handled: function(v) { this._OnEndZoom_Handled = v; }, get_OnObliqueEnter_Handled: function() { return this._OnObliqueEnter_Handled; }, set_OnObliqueEnter_Handled: function(v) { this._OnObliqueEnter_Handled = v; }, get_OnObliqueLeave_Handled: function() { return this._OnObliqueLeave_Handled; }, set_OnObliqueLeave_Handled: function(v) { this._OnObliqueLeave_Handled = v; }, /* Mouse Events Handled */get_OnClick_Handled: function() { return this._OnClick_Handled; }, set_OnClick_Handled: function(v) { this._OnClick_Handled = v; },
+    get_OnChangeView_Handled: function () { return this._OnChangeView_Handled; }, set_OnChangeView_Handled: function (v) { this._OnChangeView_Handled = v; }, get_OnEndPan_Handled: function () { return this._OnEndPan_Handled; }, set_OnEndPan_Handled: function (v) { this._OnEndPan_Handled = v; }, get_OnEndZoom_Handled: function () { return this._OnEndZoom_Handled; }, set_OnEndZoom_Handled: function (v) { this._OnEndZoom_Handled = v; }, get_OnObliqueEnter_Handled: function () { return this._OnObliqueEnter_Handled; }, set_OnObliqueEnter_Handled: function (v) { this._OnObliqueEnter_Handled = v; }, get_OnObliqueLeave_Handled: function () { return this._OnObliqueLeave_Handled; }, set_OnObliqueLeave_Handled: function (v) { this._OnObliqueLeave_Handled = v; },
+    /* Mouse Events Handled */
+    get_OnClick_Handled: function () { return this._OnClick_Handled; }, set_OnClick_Handled: function (v) { this._OnClick_Handled = v; },
     //Other Events
     get_FindArgs: function() {
         return this._FindArgs;
@@ -855,18 +826,31 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             mapData.MapType = 5;
         } else { /*road*/mapData.MapType = 1; }
 
-        if (mapData.MapType != 4) { mapData.MapView = this._Map.GetMapView(); }
-        mapData.Latitude = map.GetCenter().Latitude; mapData.Longitude = map.GetCenter().Longitude;
+        //if (mapData.MapType != 4) { mapData.MapView = this._Map.GetMapView(); }
+
+        (function () {
+            var center = map.getCenter();
+            mapData.Latitude = center.latitude;
+            mapData.Longitude = center.longitude;
+        })();
+
         mapData.CustomInfoBoxStyles = this._CustomInfoBoxStyles;
-        mapData.ShowTraffic = this._ShowTraffic;
-        mapData.ShowTrafficLegend = this._ShowTrafficLegend;
         if (mapData.EventName == "maploaded") {
             mapData.MapLoadedEventArgs = {};
-            mapData.MapLoadedEventArgs.MapView = map.GetMapView();
+            //mapData.MapLoadedEventArgs.MapView = map.GetMapView();
         }
-        if (this._DistanceUnit == VEDistanceUnit.Miles) { mapData.DistanceUnit = 0; } else if (this._DistanceUnit == VEDistanceUnit.Kilometers) { mapData.DistanceUnit = 1; } else { mapData.DistanceUnit = this._DistanceUnit; }
-        if (mapData.EventName == "onclick") {
-            //2D Mode
+
+        /*
+        if (this._DistanceUnit == VEDistanceUnit.Miles) {
+            mapData.DistanceUnit = 0;
+        } else if (this._DistanceUnit == VEDistanceUnit.Kilometers) {
+            mapData.DistanceUnit = 1;
+        } else {
+            mapData.DistanceUnit = this._DistanceUnit;
+        }
+        */
+
+        if (mapData.EventName == "click") {
             var clickedLatLong = map.PixelToLatLong(new VEPixel(mapData.EventArgs.mapX, mapData.EventArgs.mapY));
             if (clickedLatLong.Latitude != null) {
                 mapData.ClickedLatitude = clickedLatLong.Latitude;
@@ -877,6 +861,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             }
         }
         //Get ShapeLayers and Shapes to postback
+        /*
         var myShapeLayers = [];
         var sl = null;
         if (this._AsyncPostbackPassShapes) {
@@ -906,6 +891,8 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             }
         }
         mapData.Layers = myShapeLayers;
+        */
+
         return Sys.Serialization.JavaScriptSerializer.serialize(mapData);
     },
     _triggerDirectionsLoadedAsyncPostback: function(route) {
@@ -970,24 +957,8 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         if (mapData.MapType != null) {
             this.SetMapType(mapData.MapType);
         }
-        if (mapData.ShowTraffic != null) {
-            if (mapData.ShowTraffic) {
-                this.LoadTraffic(true);
-            } else {
-                this.ClearTraffic();
-            }
-        }
-        if (mapData.ShowTrafficLegend != null) {
-            if (mapData.ShowTrafficLegend) {
-                this.ShowTrafficLegend();
-            } else {
-                this.HideTrafficLegend();
-            }
-        }
 
-        if (mapData.TrafficLegendText) {
-            this.SetTrafficLegendText(mapData.TrafficLegendText);
-        }
+
         if (mapData.DeleteLayersFirst != null) {
             if (mapData.DeleteLayersFirst) {
                 this.DeleteAllShapeLayers();
@@ -1376,9 +1347,9 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     //MouseEvents
     _onClick: function(e) {
         if (this.get_OnClick_Handled()) {
-            this._triggerAsyncPostback("onclick", e);
+            this._triggerAsyncPostback("click", e);
         }
-        this._raiseClientSideEvent("onclick", e);
+        this._raiseClientSideEvent("click", e);
     },
     _onDoubleClick: function(e) {
         this._raiseClientSideEvent("ondoubleclick", e);
@@ -1418,8 +1389,7 @@ Simplovation.Web.Maps.VE.AsyncMapData = function() {
     this.EventName = null; this.EventArgs = null; this.Width = null; this.Height = null;
     this.ZoomLevel = null; this.Latitude = null; this.Longitude = null; this.MapType = null;
     this.Direction_Locations = null; this.Direction_RouteOptions = null; this.MapLoadedEventArgs = null;
-    this.CustomInfoBoxStylesEnabled = null; this.ShowTraffic = null; this.ShowTrafficLegend = null;
-    this.TrafficLegendText = null;
+    this.CustomInfoBoxStylesEnabled = null;
     this.ImportShapeLayerData_shapeSource = null; this.ImportShapeLayerData_setBestView = false;
 };
 Simplovation.Web.Maps.VE.FindCallbackArgs = function() {

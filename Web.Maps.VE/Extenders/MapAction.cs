@@ -50,22 +50,6 @@ namespace Simplovation.Web.Maps.VE
         /// </summary>
         ClearAllShapes = 11,
         /// <summary>
-        /// The action of Showing the Traffic Data overlay.
-        /// </summary>
-        ShowTraffic = 12,
-        /// <summary>
-        /// The action of Hiding the Traffic Data overlay.
-        /// </summary>
-        ClearTraffic = 13,
-        /// <summary>
-        /// The action of Showing the Traffic Data Legend.
-        /// </summary>
-        ShowTrafficLegend = 14,
-        /// <summary>
-        /// The action of Hiding the Traffic Data Legend.
-        /// </summary>
-        HideTrafficLegend = 15,
-        /// <summary>
         /// The action of Panning Up on the Map.
         /// </summary>
         PanUp = 17,

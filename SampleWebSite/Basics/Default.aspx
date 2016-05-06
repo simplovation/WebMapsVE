@@ -49,17 +49,6 @@ This example demonstrates how to manipulate the map from server-side code. Absol
                                     <asp:LinkButton ID="lbMapSizeDecreaseWidth" runat="server" Text="Decrease Width" OnClick="lbMapSizeDecreaseWidth_Click"></asp:LinkButton><br />
                                     <asp:LinkButton ID="lbMapSizeDecreaseHeight" runat="server" Text="Decrease Height" OnClick="lbMapSizeDecreaseHeight_Click"></asp:LinkButton><br />
                                 </asp:Panel>
-                                
-                                <asp:Panel runat="server" ID="pnlTraffic" GroupingText="Traffic">
-                                    <asp:LinkButton id="lbTrafficShow" runat="server" Text="Show Traffic" OnClick="lbTrafficShow_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton id="lbTrafficClear" runat="server" Text="Clear Traffic" OnClick="lbTrafficClear_Click"></asp:LinkButton><br />
-                                    <small>
-                                    If you don't see<br />traffic data, try<br />zooming in closer to<br />a major city, such as 'Chicago'.
-                                    </small>
-                                    <hr />
-                                    <asp:LinkButton id="lbTrafficShowLegend" runat="server" Text="Show Legend" OnClick="lbTrafficShowLegend_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton id="lbTrafficHideLegend" runat="server" Text="Hide Legend" OnClick="lbTrafficHideLegend_Click"></asp:LinkButton><br />
-                                </asp:Panel>
                             </nobr>
                         </td>
                     </tr>
