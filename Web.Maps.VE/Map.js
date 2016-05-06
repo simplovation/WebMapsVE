@@ -583,7 +583,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         return this.get_Map().GetLeft();
     },
     GetMapType: function() {
-        return this.get_Map().GetMapType();
+        return this.get_Map().getMapTypeId();
     },
     GetMapView: function() {
         return this.get_Map().GetMapView();
@@ -616,7 +616,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         return this.get_Width();
     },
     GetZoomLevel: function() {
-        return this.get_Map().GetZoomLevel();
+        return this.get_Map().getZoom();
     },
     Hide3DNavigationControl: function() {
         this.get_Map().Hide3DNavigationControl();
@@ -841,8 +841,8 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             mapData.EventArgs.clientX = pInt(mapData.EventArgs.clientX);
             mapData.EventArgs.clientY = pInt(mapData.EventArgs.clientY);
         }
-        mapData.ZoomLevel = map.GetZoomLevel();
-        var mapType = map.GetMapType();
+        mapData.ZoomLevel = map.getZoom();
+        var mapType = map.getMapTypeId();
 
         if (mapType == Microsoft.Maps.MapTypeId.aerial)
         {
