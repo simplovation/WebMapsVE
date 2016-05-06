@@ -4,13 +4,13 @@
 // http://webmapsve.codeplex.com
 
 
-v7.00.00
+v8.00.00
 -------------------------
 - The Web.Maps.VE open source project was moved to GitHub
 
 - This version is not fully backwards compatible with the older versions of the control
 
-- Upgraded to use Bing Maps v7 Javascript control
+- Upgraded to use Bing Maps v8 Javascript control
 
 
 v4.00.00

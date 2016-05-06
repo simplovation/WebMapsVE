@@ -109,14 +109,6 @@ namespace Simplovation.Web.Maps.VE
         [DataMember]
         public bool? Directions_Clear { get; set; }
 
-        private bool? _CustomInfoBoxStylesEnabled = false;
-        [DataMember]
-        public bool? CustomInfoBoxStylesEnabled
-        {
-            get { return _CustomInfoBoxStylesEnabled; }
-            set { _CustomInfoBoxStylesEnabled = value; }
-        }
-
         [DataMember]
         public FindArguments FindArgs { get; set; }
 

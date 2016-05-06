@@ -20,6 +20,8 @@ version vNext - Coming Soon
         - Map.MapStyle property and related events, properties, etc
         - Removed BirdseyeOrientation property
         - All Traffic functionality
+        - SetDefaultInfoBoxStyles, CustomInfoBoxStylesEnabled, and ClearInfoBoxStyles
+        - OnTokenExpire, OnTokenError
     - Disalbed / Work in Progress
         - GetMapView method in JavaScript
         - DistanceUnit in JavaScript

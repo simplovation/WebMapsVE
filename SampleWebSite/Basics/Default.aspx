@@ -78,11 +78,6 @@ This example demonstrates how to manipulate the map from server-side code. Absol
                     <asp:AsyncPostBackTrigger ControlID="lbMapSizeIncreaseHeight" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbMapSizeDecreaseWidth" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbMapSizeDecreaseHeight" EventName="Click" />
-                    
-                    <asp:AsyncPostBackTrigger ControlID="lbTrafficShow" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbTrafficClear" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbTrafficShowLegend" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbTrafficHideLegend" EventName="Click" />
                 </Triggers>
             </asp:UpdatePanel>
 

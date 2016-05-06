@@ -1356,20 +1356,9 @@
             A Boolean value indicating whether or not to load the base map tiles. The default value is true.
             </summary>
         </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.CustomInfoBoxStylesEnabled">
-            <summary>
-            When set to True, allows custom CSS to be used to style the InfoBox popup. Default is False, uses the Default InfoBox styles.
-            </summary>
-        </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.OnClientMapLoaded">
             <summary>
             The JavaScript Method that is called on the client-side when the Map has finished loading.
-            </summary>
-        </member>
-        <member name="P:Simplovation.Web.Maps.VE.Map.ClientToken">
-            <summary>
-            The MS Bing Maps Platform Service Client Token that was retrieved from the MS Bing Maps Platform Service.
-            This property allows the integration of Bing Maps Platform Customer Identification into a commercial application.
             </summary>
         </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.BingKey">

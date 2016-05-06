@@ -166,8 +166,6 @@ namespace Simplovation.Web.Maps.VE
 
                 if (mapData.DistanceUnit.HasValue) this._DistanceUnit = (DistanceUnit)((int)mapData.DistanceUnit);
 
-                if (mapData.CustomInfoBoxStylesEnabled.HasValue) this._CustomInfoBoxStylesEnabled = bool.Parse(mapData.CustomInfoBoxStylesEnabled.ToString());
-
                 if (mapData.EventArgs != null)
                 {
                     // Make sure the EventArgs.latlong property always has a value.
@@ -574,8 +572,6 @@ namespace Simplovation.Web.Maps.VE
             if (this._LatLongDirty) mapData.Longitude = this.Longitude;
             if (this._MapTypeDirty) mapData.MapType = this.MapType;
 
-            mapData.CustomInfoBoxStylesEnabled = this.CustomInfoBoxStylesEnabled;
-
             if (this._direction_locations != null) mapData.Direction_Locations = this._direction_locations;
             if (this._direction_routeoptions != null) mapData.Direction_RouteOptions = this._direction_routeoptions;
             if (this._directions_clear == true) mapData.Directions_Clear = true;
@@ -976,31 +972,6 @@ namespace Simplovation.Web.Maps.VE
             }
         }
 
-        /* Removed in v2.00.02 - can be deleted
-        [ScriptControlProperty]
-        public string AppPathRoot
-        {
-            get
-            {
-                if (this.DesignMode)
-                    return "";
-                else
-                    return VirtualPathUtility.ToAbsolute("~/");
-            }
-        }
-        */
-
-        private bool _CustomInfoBoxStylesEnabled = false;
-        /// <summary>
-        /// When set to True, allows custom CSS to be used to style the InfoBox popup. Default is False, uses the Default InfoBox styles.
-        /// </summary>
-        [ScriptControlProperty, DefaultValue(false)]
-        public bool CustomInfoBoxStylesEnabled
-        {
-            get { return _CustomInfoBoxStylesEnabled; }
-            set { _CustomInfoBoxStylesEnabled = value; }
-        }
-
         private string _OnClientMapLoaded = null;
         /// <summary>
         /// The JavaScript Method that is called on the client-side when the Map has finished loading.
@@ -1010,18 +981,6 @@ namespace Simplovation.Web.Maps.VE
         {
             get { return _OnClientMapLoaded; }
             set { _OnClientMapLoaded = value; }
-        }
-
-        private string _ClientToken = null;
-        /// <summary>
-        /// The MS Bing Maps Platform Service Client Token that was retrieved from the MS Bing Maps Platform Service.
-        /// This property allows the integration of Bing Maps Platform Customer Identification into a commercial application.
-        /// </summary>
-        [ScriptControlProperty]
-        public string ClientToken
-        {
-            get { return _ClientToken; }
-            set { _ClientToken = value; }
         }
 
         private string _BingKey = null;

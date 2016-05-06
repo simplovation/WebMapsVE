@@ -63,24 +63,7 @@ This example demonstrates using the MapActionExtender control to setup map manip
             <asp:Panel runat="server" ID="pnlShapes" GroupingText="Shapes">
                 <asp:LinkButton runat="server" ID="lbShapesClearAll" Text="Clear All"></asp:LinkButton>
                 <MapExtenders:MapActionExtender runat="server" id="MapActionExtender11" TargetControlID="lbShapesClearAll" EventName="click" MapControlID="Map1" MapAction="ClearAllShapes"></MapExtenders:MapActionExtender>
-            </asp:Panel>
-            
-            <asp:Panel runat="server" ID="pnlTraffic" GroupingText="Traffic">
-                <asp:LinkButton id="lbTrafficShow" runat="server" Text="Show Traffic"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender12" TargetControlID="lbTrafficShow" EventName="click" MapControlID="Map1" MapAction="ShowTraffic"></MapExtenders:MapActionExtender>
-                <br />
-                <asp:LinkButton id="lbTrafficClear" runat="server" Text="Clear Traffic"></asp:LinkButton>
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender13" TargetControlID="lbTrafficClear" EventName="click" MapControlID="Map1" MapAction="ClearTraffic"></MapExtenders:MapActionExtender>
-                <br />
-                <small>
-                If you don't see<br />traffic data, try<br />zooming in closer to<br />a major city, such as 'Chicago'.
-                </small>
-                <hr />
-                <asp:LinkButton id="lbTrafficShowLegend" runat="server" Text="Show Legend"></asp:LinkButton><br />
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender14" TargetControlID="lbTrafficShowLegend" EventName="click" MapControlID="Map1" MapAction="ShowTrafficLegend"></MapExtenders:MapActionExtender>
-                <asp:LinkButton id="lbTrafficHideLegend" runat="server" Text="Hide Legend"></asp:LinkButton><br />
-                <MapExtenders:MapActionExtender runat="server" id="MapActionExtender15" TargetControlID="lbTrafficHideLegend" EventName="click" MapControlID="Map1" MapAction="HideTrafficLegend"></MapExtenders:MapActionExtender>
-            </asp:Panel>
+            </asp:Panel>           
         </td>
         <td valign="top">
 

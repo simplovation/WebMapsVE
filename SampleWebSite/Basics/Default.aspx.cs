@@ -116,26 +116,6 @@ public partial class Basics_Default : System.Web.UI.Page
         Map1.Layers.Clear();
     }
 
-    protected void lbTrafficShow_Click(object sender, EventArgs e)
-    {
-        Map1.ShowTraffic = true;
-    }
-
-    protected void lbTrafficClear_Click(object sender, EventArgs e)
-    {
-        Map1.ShowTraffic = false;
-    }
-
-    protected void lbTrafficShowLegend_Click(object sender, EventArgs e)
-    {
-        Map1.ShowTrafficLegend = true;
-    }
-
-    protected void lbTrafficHideLegend_Click(object sender, EventArgs e)
-    {
-        Map1.ShowTrafficLegend = false;
-    }
-
     protected void lbMapSizeIncreaseWidth_Click(object sender, EventArgs e)
     {
         Map1.Width = new System.Web.UI.WebControls.Unit(Map1.Width.Value + 100);

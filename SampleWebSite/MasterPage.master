@@ -39,7 +39,7 @@
     <form id="form1" runat="server">
     <div>
         <div class="header">
-            <span class="header_title">Simplovation.Web.Maps.VE v7.00.00 Sample Web Site</span>
+            <span class="header_title">Simplovation.Web.Maps.VE v8 Sample Web Site</span>
         </div>
         <table cellpadding="0" cellspacing="0">
             <tr>
@@ -83,7 +83,6 @@
                                 <li><asp:HyperLink runat="server" ID="hlDynamicSearch" Text="Dynamic Search" NavigateUrl="~/DynamicSearch/Default.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink8" Text="Multiple Maps" NavigateUrl="~/Additional/MultiMaps.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="HyperLink9" Text="Full Page Map" NavigateUrl="~/Additional/FullPage.aspx"></asp:HyperLink></li>
-                                <li><asp:HyperLink runat="server" ID="HyperLink10" Text="Custom InfoBox" NavigateUrl="~/Additional/CustomInfoBoxStyles.aspx"></asp:HyperLink></li>
                             </ul>
                         </li>
                         <li>Map Events
