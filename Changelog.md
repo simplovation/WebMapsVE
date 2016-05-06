@@ -19,6 +19,7 @@ version vNext - Coming Soon
         - Map.oncredentialsvalid event
         - Map.MapStyle property and related events, properties, etc
         - Removed BirdseyeOrientation property
+        - All Traffic functionality
     - Disalbed / Work in Progress
         - GetMapView method in JavaScript
         - DistanceUnit in JavaScript
