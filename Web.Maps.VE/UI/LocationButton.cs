@@ -101,12 +101,12 @@ namespace Simplovation.Web.Maps.VE
                 {
                     if (this.ZoomLevel > -1)
                     {
-                        return String.Format("$find('{0}').SetCenterAndZoom(new VELatLong({1},{2}),{3});",
+                        return String.Format("$find('{0}').SetCenterAndZoom(new Microsoft.Maps.Location({1},{2}),{3});",
                             map.ClientID, this.Latitude.ToString(), this.Longitude.ToString(), this.ZoomLevel.ToString());
                     }
                     else
                     {
-                        return String.Format("$find('{0}').SetCenter(new VELatLong({1},{2}));",
+                        return String.Format("$find('{0}').SetCenter(new Microsoft.Maps.Location({1},{2}));",
                             map.ClientID, this.Latitude.ToString(), this.Longitude.ToString());
                     }
                 }

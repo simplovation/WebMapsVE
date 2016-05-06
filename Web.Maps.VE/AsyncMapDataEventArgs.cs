@@ -105,7 +105,7 @@ namespace Simplovation.Web.Maps.VE
         public int mapY { get; set; }
 
         /// <summary>
-        /// The latlong coordinates of the center of the map. During the OnClick event, this contains the coordinates of the clicked location.
+        /// The latlong coordinates of the center of the map. During the Click event, this contains the coordinates of the clicked location.
         /// </summary>
         [DataMember]
         public LatLong latlong { get; set; }

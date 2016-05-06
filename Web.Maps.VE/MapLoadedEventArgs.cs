@@ -50,7 +50,7 @@ namespace Simplovation.Web.Maps.VE
 
         private LatLong _latlong = null;
         /// <summary>
-        /// The latlong coordinates of the center of the map. During the OnClick event, this contains the coordinates of the clicked location.
+        /// The latlong coordinates of the center of the map. During the Click event, this contains the coordinates of the clicked location.
         /// </summary>
         [DataMember]
         public LatLong latlong

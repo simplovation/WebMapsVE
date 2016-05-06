@@ -4,10 +4,28 @@
 /* ----------------------------------------------------------------------------------- */
 /*MapActionExtender.js - Simplovation.Web.Maps.VE.Extenders*/
 Type.registerNamespace("Simplovation.Web.Maps.VE.Extenders");
-Simplovation.Web.Maps.VE.Extenders.MapActionExtender=function(element){Simplovation.Web.Maps.VE.Extenders.MapActionExtender.initializeBase(this,[element]);this._MapControl=null;this._MapAction=Simplovation.Web.Maps.VE.MapAction.ZoomIn;this._EventName="click";this._Value=null;this._actionHandler=null;this._GenerateAsyncPostback=false;};
+Simplovation.Web.Maps.VE.Extenders.MapActionExtender = function (element) {
+    Simplovation.Web.Maps.VE.Extenders.MapActionExtender.initializeBase(this, [element]);
+    this._MapControl = null;
+    this._MapAction = Simplovation.Web.Maps.VE.MapAction.ZoomIn;
+    this._EventName = "click";
+    this._Value = null;
+    this._actionHandler = null;
+    this._GenerateAsyncPostback = false;
+};
 Simplovation.Web.Maps.VE.Extenders.MapActionExtender.prototype={
-    initialize:function(){Simplovation.Web.Maps.VE.Extenders.MapActionExtender.callBaseMethod(this,'initialize');if(this._MapControl){this._actionHandler=Function.createDelegate(this,this._onEvent);$addHandler(this.get_element(),this._EventName,this._actionHandler);this.get_element().href="javascript:return void(0);";}},
-    dispose:function(){$removeHandler(this.get_element(),this._EventName,this._actionHandler);Simplovation.Web.Maps.VE.Extenders.MapActionExtender.callBaseMethod(this,'dispose');},
+    initialize: function () {
+        Simplovation.Web.Maps.VE.Extenders.MapActionExtender.callBaseMethod(this, 'initialize');
+        if (this._MapControl) {
+            this._actionHandler = Function.createDelegate(this, this._onEvent);
+            $addHandler(this.get_element(), this._EventName, this._actionHandler);
+            this.get_element().href = "javascript:return void(0);";
+        }
+    },
+    dispose: function () {
+        $removeHandler(this.get_element(), this._EventName, this._actionHandler);
+        Simplovation.Web.Maps.VE.Extenders.MapActionExtender.callBaseMethod(this, 'dispose');
+    },
     get_MapControl:function(){return this._MapControl;},set_MapControl:function(v){this._MapControl=v;},
     get_MapAction:function(){return this._MapAction;},set_MapAction:function(v){this._MapAction=v;},
     get_EventName:function(){return this._EventName;},set_EventName:function(v){this._EventName=v;},
@@ -70,6 +88,6 @@ Simplovation.Web.Maps.VE.Extenders.MapActionExtender.prototype={
 };
 Simplovation.Web.Maps.VE.Extenders.MapActionExtender.registerClass("Simplovation.Web.Maps.VE.Extenders.MapActionExtender",Sys.UI.Behavior);
 Simplovation.Web.Maps.VE.MapAction=function(){throw Error.invalidOperation();};
-Simplovation.Web.Maps.VE.MapAction.prototype={ZoomIn:0,ZoomOut:1,ShowDashboard:2,HideDashboard:3,SetMapTypeRoad:4,SetMapTypeAerial:5,SetMapTypeHybrid:6,SetMapStyleBirdseye:7,SetMapMode2D:9,SetMapMode3D:10,ClearAllShapes:11,SetMapTypeShaded:16,PanUp:17,PanDown:18,PanLeft:19,PanRight:20};
+Simplovation.Web.Maps.VE.MapAction.prototype={ZoomIn:0,ZoomOut:1,ShowDashboard:2,HideDashboard:3,SetMapTypeRoad:4,SetMapTypeAerial:5,SetMapTypeHybrid:6,SetMapStyleBirdseye:7,ClearAllShapes:11,SetMapTypeShaded:16,PanUp:17,PanDown:18,PanLeft:19,PanRight:20};
 Simplovation.Web.Maps.VE.MapAction.registerEnum("Simplovation.Web.Maps.VE.MapAction");
 Sys.Application.notifyScriptLoaded();

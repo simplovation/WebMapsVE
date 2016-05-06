@@ -119,42 +119,7 @@ This example demonstrates the basics of manipulating the map from within client-
                         map.Resize(width, height);
                     }
                 </script>
-            </asp:Panel>
-
-            <asp:Panel runat="server" ID="pnlTraffic" GroupingText="Traffic">
-                <a href="javascript:void(0);" onclick="LoadTraffic();">Show Traffic</a><br />
-                <a href="javascript:void(0);" onclick="ClearTraffic();">Clear Traffic</a><br />
-                <small>
-                If you don't see<br />traffic data, try<br />zooming in closer to<br />a major city, such as 'Chicago'.
-                </small>
-                <hr />
-                <a href="javascript:void(0);" onclick="ShowTrafficLegend();">Show Legend</a><br />
-                <a href="javascript:void(0);" onclick="HideTrafficLegend();">Hide Legend</a>
-                <script type="text/javascript">
-                    function LoadTraffic()
-                    {
-                        var map = $find("<%=Map1.ClientID%>");
-                        map.LoadTraffic(true);
-                    }
-
-                    function ClearTraffic()
-                    {
-                        var map = $find("<%=Map1.ClientID%>");
-                        map.ClearTraffic();
-                    }
-                    function ShowTrafficLegend()
-                    {
-                        var map = $find("<%=Map1.ClientID%>");
-                        map.ShowTrafficLegend();
-                    }
-                    function HideTrafficLegend()
-                    {
-                        var map = $find("<%=Map1.ClientID%>");
-                        map.HideTrafficLegend();
-                    }
-                </script>
-            </asp:Panel>
-            
+            </asp:Panel>          
         </td>
         <td valign="top">
             <Simplovation:Map runat="server" ID="Map1" Width="700px" Height="450px" CssClass="map" BingKey="test">

@@ -116,7 +116,7 @@
         </member>
         <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.latlong">
             <summary>
-            The latlong coordinates of the center of the map. During the OnClick event, this contains the coordinates of the clicked location.
+            The latlong coordinates of the center of the map. During the Click event, this contains the coordinates of the clicked location.
             </summary>
         </member>
         <member name="P:Simplovation.Web.Maps.VE.AsyncMapEventArgs.keyCode">
@@ -812,7 +812,7 @@
         </member>
         <member name="P:Simplovation.Web.Maps.VE.MapLoadedEventArgs.latlong">
             <summary>
-            The latlong coordinates of the center of the map. During the OnClick event, this contains the coordinates of the clicked location.
+            The latlong coordinates of the center of the map. During the Click event, this contains the coordinates of the clicked location.
             </summary>
         </member>
         <member name="T:Simplovation.Web.Maps.VE.MatchCode">

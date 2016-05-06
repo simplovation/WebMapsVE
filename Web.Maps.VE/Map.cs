@@ -445,7 +445,7 @@ namespace Simplovation.Web.Maps.VE
                         d.AddProperty("OnEndZoom_Handled", this.EndZoom != null);
                         d.AddProperty("OnObliqueEnter_Handled", this.ObliqueEnter != null);
                         d.AddProperty("OnObliqueLeave_Handled", this.ObliqueLeave != null);
-                        d.AddProperty("OnClick_Handled", this.Click != null);
+                        d.AddProperty("Click_Handled", this.Click != null);
 
                         d.AddProperty("FindArgs", this._FindArguments);
 
