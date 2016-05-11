@@ -689,9 +689,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         this.get_Map().SetTileBuffer(v);
     },
     SetZoomLevel: function (v) {
-        var mapOptions = this.get_Map().getOptions();
-        mapOptions.zoom = v;
-        this.get_Map().setOptions(mapOptions);
+        this.get_Map().setView({ zoom: v });
     },
     Show3DNavigationControl: function() {
         this.get_Map().Show3DNavigationControl();
@@ -969,7 +967,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             map.SetCenterAndZoom(new Microsoft.Maps.Location(mapData.Latitude, mapData.Longitude), mapData.ZoomLevel);
         } else {
             if (mapData.ZoomLevel) {
-                map.setOptions({ zoom: mapData.ZoomLevel });
+                map.setView({ zoom: mapData.ZoomLevel });
             }
             if (mapData.Latitude && mapData.Longitude) {
                 map.SetCenter(new Microsoft.Maps.Location(mapData.Latitude, mapData.Longitude));
