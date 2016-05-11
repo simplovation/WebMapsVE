@@ -14,7 +14,7 @@ This example demonstrates using the MapActionExtender control to setup map manip
 <table>
     <tr>
         <td valign="top" style="width: 150px;">
-        
+        <%--
             <asp:Panel runat="server" ID="pnlPan" GroupingText="Pan">
                 <!--
                 The MapActionExtender uses the Value property when implementing the Pan map Actions.
@@ -34,7 +34,7 @@ This example demonstrates using the MapActionExtender control to setup map manip
                 <asp:LinkButton runat="server" ID="btnPanRight" Text="Right"></asp:LinkButton>
                 <MapExtenders:MapActionExtender runat="server" id="MapActionExtender20" TargetControlID="btnPanRight" EventName="click" MapControlID="Map1" MapAction="PanRight" Value="50"></MapExtenders:MapActionExtender>
             </asp:Panel>
-            
+            --%>
             <asp:Panel runat="server" ID="pnlZoom" GroupingText="Zoom">
                 <asp:LinkButton runat="server" ID="btnZoomIn" Text="Zoom In"></asp:LinkButton>
                 <MapExtenders:MapActionExtender runat="server" id="MapActionExtender1" TargetControlID="btnZoomIn" EventName="click" MapControlID="Map1" MapAction="ZoomIn"></MapExtenders:MapActionExtender>

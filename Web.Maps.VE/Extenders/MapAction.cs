@@ -49,6 +49,7 @@ namespace Simplovation.Web.Maps.VE
         /// The action of Clearing All Shapes currently being plotted on the Map.
         /// </summary>
         ClearAllShapes = 11,
+        /*
         /// <summary>
         /// The action of Panning Up on the Map.
         /// </summary>
@@ -65,5 +66,6 @@ namespace Simplovation.Web.Maps.VE
         /// The action of Panning Right on the Map.
         /// </summary>
         PanRight = 20
+        */
     }
 }

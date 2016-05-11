@@ -265,9 +265,6 @@ namespace Simplovation.Web.Maps.VE
                         case "onchangeview":
                             if (this.ChangeView != null && this.MapType != MapType.Birdseye) this.ChangeView(this, mapData.EventArgs);
                             break;
-                        case "onendpan":
-                            if (this.EndPan != null && this.MapType != MapType.Birdseye) this.EndPan(this, mapData.EventArgs);
-                            break;
                         case "onendzoom":
                             if (this.EndZoom != null) this.EndZoom(this, mapData.EventArgs);
                             break;
@@ -290,9 +287,6 @@ namespace Simplovation.Web.Maps.VE
                         /*
                         case "onresize":
                             if (this.Resize != null) this.Resize(this, mapData.EventArgs);
-                            break;
-                        case "onstartpan":
-                            if (this.StartPan != null) this.StartPan(this, mapData.EventArgs);
                             break;
                         case "onstartzoom":
                             if (this.StartZoom != null) this.StartZoom(this, mapData.EventArgs);
@@ -441,7 +435,6 @@ namespace Simplovation.Web.Maps.VE
                         d.AddProperty("OnMapLoaded_Handled", this.MapLoaded != null);
                         d.AddProperty("OnChangeMapType_Handled", this.ChangeMapType != null);
                         d.AddProperty("OnChangeView_Handled", this.ChangeView != null);
-                        d.AddProperty("OnEndPan_Handled", this.EndPan != null);
                         d.AddProperty("OnEndZoom_Handled", this.EndZoom != null);
                         d.AddProperty("OnObliqueEnter_Handled", this.ObliqueEnter != null);
                         d.AddProperty("OnObliqueLeave_Handled", this.ObliqueLeave != null);
@@ -1221,12 +1214,7 @@ namespace Simplovation.Web.Maps.VE
         /// <summary>
         /// Occurs whenever the map view changes
         /// </summary>
-        public event AsyncMapEventHandler ChangeView;
-
-        /// <summary>
-        /// Occurs when a pan of the map ends
-        /// </summary>
-        public event AsyncMapEventHandler EndPan;
+        public event AsyncMapEventHandler ChangeView; 
 
         /// <summary>
         /// Occurs when the map zoom ends
@@ -1265,13 +1253,6 @@ namespace Simplovation.Web.Maps.VE
         public bool OnResize_Handled
         {
             get { return (this.Resize != null); }
-        }
-
-        public event AsyncMapEventHandler StartPan;
-        [ScriptControlProperty]
-        public bool OnStartPan_Handled
-        {
-            get { return (this.StartPan != null); }
         }
 
         public event AsyncMapEventHandler StartZoom;

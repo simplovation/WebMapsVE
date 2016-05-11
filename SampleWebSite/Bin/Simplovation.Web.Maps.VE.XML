@@ -585,26 +585,6 @@
             The action of Clearing All Shapes currently being plotted on the Map.
             </summary>
         </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.PanUp">
-            <summary>
-            The action of Panning Up on the Map.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.PanDown">
-            <summary>
-            The action of Panning Down on the Map.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.PanLeft">
-            <summary>
-            The action of Panning Left on the Map.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapAction.PanRight">
-            <summary>
-            The action of Panning Right on the Map.
-            </summary>
-        </member>
         <member name="T:Simplovation.Web.Maps.VE.MiniMapHorizontalAlignment">
             <summary>
             The Horizontal Alignment to assign the Mini Map when displayed using the <see cref="T:Simplovation.Web.Maps.VE.Extenders.MiniMapExtender">MiniMapExtender</see>.
@@ -1503,11 +1483,6 @@
         <member name="E:Simplovation.Web.Maps.VE.Map.ChangeView">
             <summary>
             Occurs whenever the map view changes
-            </summary>
-        </member>
-        <member name="E:Simplovation.Web.Maps.VE.Map.EndPan">
-            <summary>
-            Occurs when a pan of the map ends
             </summary>
         </member>
         <member name="E:Simplovation.Web.Maps.VE.Map.EndZoom">

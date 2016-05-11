@@ -9,6 +9,7 @@ version vNext - Coming Soon
         - Map.NavigationBarMode property
         - Map.MapType property and related events, properties, etc
     - Removed
+        - Pan methods and events
         - 3D map support along with Pitch, Heading and Altitude properties, Bing Maps hasn't supported this in Years.
         - Map.MapMode property
         - Map.OnInitMode event

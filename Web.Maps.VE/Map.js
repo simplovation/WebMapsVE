@@ -39,8 +39,6 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._OnChangeMapType_Handled = null;
     this._changeViewHandler = fcd(this, this._onChangeView);
     this._OnChangeView_Handled = null;
-    this._endPanHandler = fcd(this, this._onEndPan);
-    this._OnEndPan_Handled = null;
     this._endZoomHandler = fcd(this, this._onEndZoom);
     this._OnEndZoom_Handled = null;
     this._errorHandler = fcd(this, this._onError);
@@ -51,7 +49,6 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._obliqueLeaveHandler = fcd(this, this._onObliqueLeave);
     this._OnObliqueLeave_Handled = null;
     this._resizeHandler = fcd(this, this._onResize);
-    this._startPanHandler = fcd(this, this._onStartPan);
     this._startZoomHandler = fcd(this, this._onStartZoom);
     //MouseEvents
     this._clickHandler = fcd(this, this._click);
@@ -147,14 +144,12 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         ////Map
         //av("maptypechanged", this._changeMapTypeHandler);
         //av("onchangeview", this._changeViewHandler);
-        //av("onendpan", this._endPanHandler);
         //av("onendzoom", this._endZoomHandler);
         //av("onerror", this._errorHandler);
         //av("onobliquechange", this._obliqueChangeHandler);
         //av("onobliqueenter", this._obliqueEnterHandler);
         //av("onobliqueleave", this._obliqueLeaveHandler);
         //av("onresize", this._resizeHandler);
-        //av("onstartpan", this._startPanHandler);
         //av("onstartzoom", this._startZoomHandler);
         ////Mouse
         //av("click", this._clickHandler);
@@ -248,9 +243,11 @@ Simplovation.Web.Maps.VE.Map.prototype = {
             for (var shapeIndex = 0; shapeIndex < shapelen; shapeIndex++) {
                 var s = col[layerIndex].Shapes[shapeIndex];
                 if (s.ClientID == null) { //NewShape
+                    console.error('adding NewShapes not supported yet');
                     s = this._getVEShape(s);
                     sl.AddShape(s);
                 } else { //ExistingShape
+                    console.error('update ExistingShape not supported yet');
                     this._updateVEShape(s);
                 }
             }
@@ -523,9 +520,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     EnableShapeDisplayThreshold: function(v) {
         this.get_Map().EnableShapeDisplayThreshold(v);
     },
-    EndContinuousPan: function() {
-        this.get_Map().EndContinuousPan();
-    },
     Find: function(what, where, findType, shapeLayer, startIndex, numberOfResults, showResults, createResults, useDefaultDisambiguation, setBestMapView, callback) {
         this.get_Map().Find(what, where, findType, shapeLayer, startIndex, numberOfResults, showResults, createResults, useDefaultDisambiguation, setBestMapView, callback);
     },
@@ -618,12 +612,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     },
     LatLongToPixel: function(l) {
         return this.get_Map().LatLongToPixel(l);
-    },
-    Pan: function(x, y) {
-        this.get_Map().Pan(x, y);
-    },
-    PanToLatLong: function(l) {
-        this.get_Map().PanToLatLong(l);
     },
     PixelToLatLong: function(p) {
         return this.get_Map().PixelToLatLong(p);
@@ -718,9 +706,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     ShowTileLayer: function(id) {
         this.get_Map().ShowTileLayer(id);
     },
-    StartContinuousPan: function(x, y) {
-        this.get_Map().StartContinuousPan(x, y);
-    },
     ZoomIn: function () {
         this.SetZoomLevel(this.GetZoomLevel() + 1);
     },
@@ -758,7 +743,8 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     get_OnMapLoaded_Handled: function() { return this._OnMapLoaded_Handled; }, set_OnMapLoaded_Handled: function(v) { this._OnMapLoaded_Handled = v; },
     get_OnClientMapLoaded: function() { return this._OnClientMapLoaded; }, set_OnClientMapLoaded: function(v) { this._OnClientMapLoaded = v; },
     get_OnChangeMapType_Handled: function() { return this._OnChangeMapType_Handled; }, set_OnChangeMapType_Handled: function(v) { this._OnChangeMapType_Handled = v; },
-    get_OnChangeView_Handled: function () { return this._OnChangeView_Handled; }, set_OnChangeView_Handled: function (v) { this._OnChangeView_Handled = v; }, get_OnEndPan_Handled: function () { return this._OnEndPan_Handled; }, set_OnEndPan_Handled: function (v) { this._OnEndPan_Handled = v; }, get_OnEndZoom_Handled: function () { return this._OnEndZoom_Handled; }, set_OnEndZoom_Handled: function (v) { this._OnEndZoom_Handled = v; }, get_OnObliqueEnter_Handled: function () { return this._OnObliqueEnter_Handled; }, set_OnObliqueEnter_Handled: function (v) { this._OnObliqueEnter_Handled = v; }, get_OnObliqueLeave_Handled: function () { return this._OnObliqueLeave_Handled; }, set_OnObliqueLeave_Handled: function (v) { this._OnObliqueLeave_Handled = v; },
+    get_OnChangeView_Handled: function () { return this._OnChangeView_Handled; }, set_OnChangeView_Handled: function (v) { this._OnChangeView_Handled = v; },
+    get_OnEndZoom_Handled: function () { return this._OnEndZoom_Handled; }, set_OnEndZoom_Handled: function (v) { this._OnEndZoom_Handled = v; }, get_OnObliqueEnter_Handled: function () { return this._OnObliqueEnter_Handled; }, set_OnObliqueEnter_Handled: function (v) { this._OnObliqueEnter_Handled = v; }, get_OnObliqueLeave_Handled: function () { return this._OnObliqueLeave_Handled; }, set_OnObliqueLeave_Handled: function (v) { this._OnObliqueLeave_Handled = v; },
     /* Mouse Events Handled */
     get_Click_Handled: function () { return this._click_Handled; }, set_Click_Handled: function (v) { this._click_Handled = v; },
     //Other Events
@@ -798,11 +784,11 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         if (mapType == Microsoft.Maps.MapTypeId.aerial)
         {
             mapData.MapType = 2;
-        } else if (mapType == "h") {
+        } else if (mapType == Microsoft.Maps.MapTypeId.hybrid) {
             mapData.MapType = 3;
-        } else if (mapType == "o") {
+        } else if (mapType == Microsoft.Maps.MapTypeId.oblique) {
             mapData.MapType = 4;
-        } else if (mapType == "s") {
+        } else if (mapType == Microsoft.Maps.MapTypeId.shaded) {
             mapData.MapType = 5;
         } else { /*road*/mapData.MapType = 1; }
 
@@ -1249,12 +1235,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         }
         this._raiseClientSideEvent("onchangeview", e);
     },
-    _onEndPan: function(e) {
-        if (this.get_OnEndPan_Handled()) {
-            this._triggerAsyncPostback("onendpan", e);
-        }
-        this._raiseClientSideEvent("onendpan", e);
-    },
     _onEndZoom: function(e) {
         if (this.get_OnEndZoom_Handled()) {
             this._triggerAsyncPostback("onendzoom", e);
@@ -1300,9 +1280,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         }
 
         this._raiseClientSideEvent("onresize", e);
-    },
-    _onStartPan: function(e) {
-        this._raiseClientSideEvent("onstartpan", e);
     },
     _onStartZoom: function(e) {
         this._raiseClientSideEvent("onstartzoom", e);
