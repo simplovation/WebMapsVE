@@ -285,9 +285,6 @@ namespace Simplovation.Web.Maps.VE
                             if (this.ObliqueLeave != null) this.ObliqueLeave(this, mapData.EventArgs);
                             break;
                         /*
-                        case "onresize":
-                            if (this.Resize != null) this.Resize(this, mapData.EventArgs);
-                            break;
                         case "onstartzoom":
                             if (this.StartZoom != null) this.StartZoom(this, mapData.EventArgs);
                             break;
@@ -1248,12 +1245,6 @@ namespace Simplovation.Web.Maps.VE
         public event AsyncMapEventHandler ObliqueLeave;
 
         /*
-        public event AsyncMapEventHandler Resize;
-        [ScriptControlProperty]
-        public bool OnResize_Handled
-        {
-            get { return (this.Resize != null); }
-        }
 
         public event AsyncMapEventHandler StartZoom;
         [ScriptControlProperty]

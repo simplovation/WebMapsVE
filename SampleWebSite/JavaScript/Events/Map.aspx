@@ -36,11 +36,6 @@ Advanced JavaScript - Map Event Handling
         <td><a href="#" onclick='detachevent("onchangeview");'>Detach</a></td>
     </tr>
     <tr>
-        <td>onendpan</td>
-        <td><a href="#" onclick='attachevent("onendpan");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onendpan");'>Detach</a></td>
-    </tr>
-    <tr>
         <td>onendzoom</td>
         <td><a href="#" onclick='attachevent("onendzoom");'>Attach</a></td>
         <td><a href="#" onclick='detachevent("onendzoom");'>Detach</a></td>
@@ -69,16 +64,6 @@ Advanced JavaScript - Map Event Handling
         <td>onobliqueleave</td>
         <td><a href="#" onclick='attachevent("onobliqueleave");'>Attach</a></td>
         <td><a href="#" onclick='detachevent("onobliqueleave");'>Detach</a></td>
-    </tr>
-     <tr>
-        <td>onresize</td>
-        <td><a href="#" onclick='attachevent("onresize");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onresize");'>Detach</a></td>
-    </tr>
-    <tr>
-        <td>onstartpan</td>
-        <td><a href="#" onclick='attachevent("onstartpan");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onstartpan");'>Detach</a></td>
     </tr>
     <tr>
         <td>onstartzoom</td>

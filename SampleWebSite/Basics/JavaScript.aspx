@@ -76,50 +76,7 @@ This example demonstrates the basics of manipulating the map from within client-
                     }
                 </script>
             </asp:Panel>
-            
-            <asp:Panel runat="server" ID="pnlMapSize" GroupingText="Map Size">
-                <a href="javascript:void(0);" onclick="IncreaseWidth();">Increase Width</a><br />
-                <a href="javascript:void(0);" onclick="IncreaseHeight();">Increase Height</a><br />
-                <a href="javascript:void(0);" onclick="DecreaseWidth();">Decrease Width</a><br />
-                <a href="javascript:void(0);" onclick="DecreaseHeight();">Decrease Height</a><br />
-                <script type="text/javascript">
-                    function IncreaseWidth() {
-                        var map = $find("<%=Map1.ClientID %>");
-                        
-                        var width = map.GetWidth() + 100;
-                        var height = map.GetHeight();
-                        
-                        map.Resize(width, height);
-                    }
-
-                    function IncreaseHeight() {
-                        var map = $find("<%=Map1.ClientID %>");
-
-                        var width = map.GetWidth();
-                        var height = map.GetHeight() + 100;
-
-                        map.Resize(width, height);
-                    }
-
-                    function DecreaseWidth() {
-                        var map = $find("<%=Map1.ClientID %>");
-
-                        var width = map.GetWidth() - 100;
-                        var height = map.GetHeight();
-
-                        map.Resize(width, height);
-                    }
-
-                    function DecreaseHeight() {
-                        var map = $find("<%=Map1.ClientID %>");
-
-                        var width = map.GetWidth();
-                        var height = map.GetHeight() - 100;
-
-                        map.Resize(width, height);
-                    }
-                </script>
-            </asp:Panel>          
+                      
         </td>
         <td valign="top">
             <Simplovation:Map runat="server" ID="Map1" Width="700px" Height="450px" CssClass="map" BingKey="test">

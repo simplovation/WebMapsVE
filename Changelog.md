@@ -1,6 +1,6 @@
 # Web.Maps.VE Changelog
 
-version vNext - Coming Soon
+version vNext - Coming Soon / Work in Progress
 
 - Refactored to support Bing Maps v8 JavaScript Control
 - Requires .NET 4.5 or newer
@@ -23,7 +23,8 @@ version vNext - Coming Soon
         - All Traffic functionality
         - SetDefaultInfoBoxStyles, CustomInfoBoxStylesEnabled, and ClearInfoBoxStyles
         - OnTokenExpire, OnTokenError
-    - Disalbed / Work in Progress
+        - Map.Resize
+    - Disabled / Work in Progress
         - GetMapView method in JavaScript
         - DistanceUnit in JavaScript
         - Get ShapeLayers and Shapes to postback

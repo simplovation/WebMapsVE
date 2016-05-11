@@ -43,12 +43,6 @@ This example demonstrates how to manipulate the map from server-side code. Absol
                                     <asp:LinkButton id="lbShapesClearAll" runat="server" Text="Clear All" OnClick="lbShapesClearAll_Click"></asp:LinkButton>
                                 </asp:Panel>
                                 
-                                <asp:Panel runat="server" ID="pnlMapSize" GroupingText="Map Size">
-                                    <asp:LinkButton ID="lbMapSizeIncreaseWidth" runat="server" Text="Increase Width" OnClick="lbMapSizeIncreaseWidth_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton ID="lbMapSizeIncreaseHeight" runat="server" Text="Increase Height" OnClick="lbMapSizeIncreaseHeight_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton ID="lbMapSizeDecreaseWidth" runat="server" Text="Decrease Width" OnClick="lbMapSizeDecreaseWidth_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton ID="lbMapSizeDecreaseHeight" runat="server" Text="Decrease Height" OnClick="lbMapSizeDecreaseHeight_Click"></asp:LinkButton><br />
-                                </asp:Panel>
                             </nobr>
                         </td>
                     </tr>
@@ -73,11 +67,7 @@ This example demonstrates how to manipulate the map from server-side code. Absol
                     <asp:AsyncPostBackTrigger ControlID="lbShapesPolygon" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbShapesCustomPushpin" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbShapesClearAll" EventName="Click" />
-                    
-                    <asp:AsyncPostBackTrigger ControlID="lbMapSizeIncreaseWidth" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbMapSizeIncreaseHeight" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbMapSizeDecreaseWidth" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbMapSizeDecreaseHeight" EventName="Click" />
+                   
                 </Triggers>
             </asp:UpdatePanel>
 

@@ -48,7 +48,6 @@ Simplovation.Web.Maps.VE.Map = function(element) {
     this._OnObliqueEnter_Handled = null;
     this._obliqueLeaveHandler = fcd(this, this._onObliqueLeave);
     this._OnObliqueLeave_Handled = null;
-    this._resizeHandler = fcd(this, this._onResize);
     this._startZoomHandler = fcd(this, this._onStartZoom);
     //MouseEvents
     this._clickHandler = fcd(this, this._click);
@@ -149,7 +148,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         //av("onobliquechange", this._obliqueChangeHandler);
         //av("onobliqueenter", this._obliqueEnterHandler);
         //av("onobliqueleave", this._obliqueLeaveHandler);
-        //av("onresize", this._resizeHandler);
         //av("onstartzoom", this._startZoomHandler);
         ////Mouse
         //av("click", this._clickHandler);
@@ -619,9 +617,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     RemoveCustomLayer: function(a) {
         this.get_Map().RemoveCustomLayer(a);
     },
-    Resize: function(w, h) {
-        this.get_Map().Resize(w, h);
-    },
     Search: function(query, callback, opts){
         this.get_Map().Search(query, callback, opts);
     },
@@ -720,8 +715,8 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         return this._MainMapDiv;
     },
     get_ShowPoweredBy: function () { return this._ShowPoweredBy; }, set_ShowPoweredBy: function (v) { this._ShowPoweredBy = v; },
-    get_Width: function() { return this.get_MainMapDiv().offsetWidth; }, set_Width: function(v) { var mapdiv = this.get_MainMapDiv(); if (mapdiv) { var cv = mapdiv.offsetWidth; if (cv != v) { this.Resize(v, mapdiv.offsetHeight); } } },
-    get_Height: function() { return this.get_MainMapDiv().offsetHeight; }, set_Height: function(v) { var mapdiv = this.get_MainMapDiv(); if (mapdiv) { var cv = mapdiv.offsetHeight; if (cv != v) { this.Resize(mapdiv.offsetWidth, v); } } },
+    get_Width: function () { return this.get_Map().getWidth(); },
+    get_Height: function () { return this.get_Map().getHeight(); },
     get_LatLong: function() { return this._LatLong; }, set_LatLong: function(v) { this._LatLong = v; },
     get_Zoom: function() { return this._Zoom; }, set_Zoom: function(v) { this._Zoom = v; },
     get_MapType: function() { return this._MapType; }, set_MapType: function(v) { this._MapType = v; },
@@ -914,10 +909,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         var m = this;
         var map = this.get_Map();
         var mapData = Sys.Serialization.JavaScriptSerializer.deserialize(data);
-
-        if (mapData.Width != this.get_Width() || mapData.Height != this.get_Height()) {
-            this.Resize(mapData.Width, mapData.Height);
-        }
 
         if (mapData.MapType != null) {
             this.SetMapType(mapData.MapType);
@@ -1259,27 +1250,6 @@ Simplovation.Web.Maps.VE.Map.prototype = {
     },
     _onObliqueChange: function(e) {
         this._raiseClientSideEvent("onobliquechange", e);
-    },
-    _onResize: function(e) {
-        var mapdiv = this.get_MainMapDiv();
-        if (mapdiv) {
-            // Adjust the Main Control DIV to be same size as the VEMap
-            var oldWidth = mapdiv.offsetWidth;
-            var oldHeight = mapdiv.offsetHeight;
-
-            if (oldHeight && oldWidth) {
-                var newHeight = oldHeight;
-                var newWidth = oldWidth;
-                var elem = this.get_element();
-                if (elem) {
-                    elem.style.height = newHeight + "px";
-                    elem.style.width = newWidth + "px";
-                }
-            }
-            this._realignLogo();
-        }
-
-        this._raiseClientSideEvent("onresize", e);
     },
     _onStartZoom: function(e) {
         this._raiseClientSideEvent("onstartzoom", e);

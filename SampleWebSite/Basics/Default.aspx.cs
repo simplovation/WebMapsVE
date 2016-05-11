@@ -115,24 +115,5 @@ public partial class Basics_Default : System.Web.UI.Page
     {
         Map1.Layers.Clear();
     }
-
-    protected void lbMapSizeIncreaseWidth_Click(object sender, EventArgs e)
-    {
-        Map1.Width = new System.Web.UI.WebControls.Unit(Map1.Width.Value + 100);
-    }
-
-    protected void lbMapSizeIncreaseHeight_Click(object sender, EventArgs e)
-    {
-        Map1.Height = new System.Web.UI.WebControls.Unit(Map1.Height.Value + 100);
-    }
-
-    protected void lbMapSizeDecreaseWidth_Click(object sender, EventArgs e)
-    {
-        Map1.Width = new System.Web.UI.WebControls.Unit(Map1.Width.Value - 100);
-    }
-
-    protected void lbMapSizeDecreaseHeight_Click(object sender, EventArgs e)
-    {
-        Map1.Height = new System.Web.UI.WebControls.Unit(Map1.Height.Value - 100);
-    }
+    
 }
