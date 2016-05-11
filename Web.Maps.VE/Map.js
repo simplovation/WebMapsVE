@@ -641,12 +641,12 @@ Simplovation.Web.Maps.VE.Map.prototype = {
         this.get_Map().SetBirdseyeScene(a, b, c, d);
     },
     SetCenter: function(l) {
-        this.get_Map().setOptions({
+        this.get_Map().setView({
             center: l
         });
     },
     SetCenterAndZoom: function(l, z) {
-        this.get_Map().setOptions({
+        this.get_Map().setView({
             center: l,
             zoom: z
         });
@@ -970,7 +970,7 @@ Simplovation.Web.Maps.VE.Map.prototype = {
                 map.setView({ zoom: mapData.ZoomLevel });
             }
             if (mapData.Latitude && mapData.Longitude) {
-                map.SetCenter(new Microsoft.Maps.Location(mapData.Latitude, mapData.Longitude));
+                map.setView({ center: new Microsoft.Maps.Location(mapData.Latitude, mapData.Longitude) });
             }
         }
 
