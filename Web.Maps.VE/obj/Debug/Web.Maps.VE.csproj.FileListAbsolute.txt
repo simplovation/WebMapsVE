@@ -1,0 +1,8 @@
+C:\Users\Chris\Source\Repos\WebMapsVE\Web.Maps.VE\bin\Debug\Simplovation.Web.Maps.VE.XML
+C:\Users\Chris\Source\Repos\WebMapsVE\Web.Maps.VE\bin\Debug\Simplovation.Web.Maps.VE.dll
+C:\Users\Chris\Source\Repos\WebMapsVE\Web.Maps.VE\bin\Debug\Simplovation.Web.Maps.VE.pdb
+C:\Users\Chris\Source\Repos\WebMapsVE\Web.Maps.VE\obj\Debug\Simplovation.Web.Maps.VE.Properties.Resources.resources
+C:\Users\Chris\Source\Repos\WebMapsVE\Web.Maps.VE\obj\Debug\Web.Maps.VE.csproj.GenerateResource.Cache
+C:\Users\Chris\Source\Repos\WebMapsVE\Web.Maps.VE\obj\Debug\Simplovation.Web.Maps.VE.dll
+C:\Users\Chris\Source\Repos\WebMapsVE\Web.Maps.VE\obj\Debug\Simplovation.Web.Maps.VE.pdb
+C:\Users\Chris\Source\Repos\WebMapsVE\Web.Maps.VE\obj\Debug\Web.Maps.VE.csprojResolveAssemblyReference.cache

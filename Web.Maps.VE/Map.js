@@ -101,7 +101,9 @@ Simplovation.Web.Maps.VE.Map.prototype = {
 
         var mapOptions = {
             credentials: this._BingKey || 'not set',
-            zoom: this._Zoom
+            zoom: this._Zoom,
+            disablePanning: this._Fixed,
+            disableZooming: this._Fixed
         };
 
 
