@@ -24,6 +24,9 @@ version vNext - Coming Soon / Work in Progress
         - SetDefaultInfoBoxStyles, CustomInfoBoxStylesEnabled, and ClearInfoBoxStyles
         - OnTokenExpire, OnTokenError
         - Map.Resize
+        - Removed Map Types: Hybrid, Oblique, Shaded
+        - Oblique map events and properties
+        - Birdseye map events and properties
     - Disabled / Work in Progress
         - GetMapView method in JavaScript
         - DistanceUnit in JavaScript

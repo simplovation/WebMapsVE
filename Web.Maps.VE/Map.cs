@@ -260,30 +260,19 @@ namespace Simplovation.Web.Maps.VE
 
                         // Map Events
                         case "maptypechanged":
-                            if (this.ChangeMapType != null) this.ChangeMapType(this, mapData.EventArgs);
+                            this.ChangeMapType?.Invoke(this, mapData.EventArgs);
                             break;
                         case "onchangeview":
-                            if (this.ChangeView != null && this.MapType != MapType.Birdseye) this.ChangeView(this, mapData.EventArgs);
+                            this.ChangeView?.Invoke(this, mapData.EventArgs);
                             break;
                         case "onendzoom":
-                            if (this.EndZoom != null) this.EndZoom(this, mapData.EventArgs);
+                            this.EndZoom?.Invoke(this, mapData.EventArgs);
                             break;
                         /*
                         case "onerror":
                             if (this.Error != null) this.Error(this, mapData.EventArgs);
                             break;
                         */
-                        /*
-                        case "onobliquechange":
-                            if (this.ObliqueChange != null) this.ObliqueChange(this, mapData.EventArgs);
-                            break;
-                        */
-                        case "onobliqueenter":
-                            if (this.ObliqueEnter != null) this.ObliqueEnter(this, mapData.EventArgs);
-                            break;
-                        case "onobliqueleave":
-                            if (this.ObliqueLeave != null) this.ObliqueLeave(this, mapData.EventArgs);
-                            break;
                         /*
                         case "onstartzoom":
                             if (this.StartZoom != null) this.StartZoom(this, mapData.EventArgs);
@@ -292,7 +281,7 @@ namespace Simplovation.Web.Maps.VE
 
                         // Mouse Events
                         case "click":
-                            if (this.Click != null && this.MapType != MapType.Birdseye) this.Click(this, mapData.EventArgs);
+                            if (this.Click != null) this.Click(this, mapData.EventArgs);
                             break;
                         /*
                         case "dblclick":
@@ -433,8 +422,6 @@ namespace Simplovation.Web.Maps.VE
                         d.AddProperty("OnChangeMapType_Handled", this.ChangeMapType != null);
                         d.AddProperty("OnChangeView_Handled", this.ChangeView != null);
                         d.AddProperty("OnEndZoom_Handled", this.EndZoom != null);
-                        d.AddProperty("OnObliqueEnter_Handled", this.ObliqueEnter != null);
-                        d.AddProperty("OnObliqueLeave_Handled", this.ObliqueLeave != null);
                         d.AddProperty("Click_Handled", this.Click != null);
 
                         d.AddProperty("FindArgs", this._FindArguments);
@@ -783,7 +770,7 @@ namespace Simplovation.Web.Maps.VE
         private MapType _MapType = MapType.Road;
         private bool _MapTypeDirty = false;
         /// <summary>
-        /// The style of the map; Road, Aerial, Hybrid or Oblique (Bird's eye).
+        /// The Map Type (ex: Road, Aerial, etc.)
         /// </summary>
         [ScriptControlProperty, DefaultValue(MapType.Road)]
         public MapType MapType
@@ -884,31 +871,6 @@ namespace Simplovation.Web.Maps.VE
                 if (v < 0) { v = 0; }
                 if (v > 3) { v = 3; }
                 _TileBuffer = v;
-            }
-        }
-
-        private bool _EnableBirdseye = true;
-        /// <summary>
-        /// A Boolean value that specifies whether or not to enable the Birdseye map style in the map control. The default value is True.
-        /// </summary>
-        [ScriptControlProperty(), DefaultValue(true)]
-        public bool EnableBirdseye
-        {
-            get { return this._EnableBirdseye; }
-            set
-            {
-                if (!this.DesignMode)
-                {
-                    if (this.Page != null)
-                    {
-                        ScriptManager sm = ScriptManager.GetCurrent(this.Page);
-                        if (sm.IsInAsyncPostBack)
-                        {
-                            if (this._EnableBirdseye != value) throw new Exception("The EnableBirdseye cannot be changed during an Asynchronous Postback.");
-                        }
-                    }
-                }
-                this._EnableBirdseye = value;
             }
         }
 
@@ -1226,26 +1188,6 @@ namespace Simplovation.Web.Maps.VE
             get { return (this.Error != null); }
         }
         
-        public event AsyncMapEventHandler ObliqueChange;
-        [ScriptControlProperty]
-        public bool OnObliqueChange_Handled
-        {
-            get { return (this.ObliqueChange != null); }
-        }
-        */
-
-        /// <summary>
-        /// Occurs when birdseye images are available at the center of the current map
-        /// </summary>
-        public event AsyncMapEventHandler ObliqueEnter;
-
-        /// <summary>
-        /// Occurs when birdseye images are no longer available at the center of the current map
-        /// </summary>
-        public event AsyncMapEventHandler ObliqueLeave;
-
-        /*
-
         public event AsyncMapEventHandler StartZoom;
         [ScriptControlProperty]
         public bool OnStartZoom_Handled
