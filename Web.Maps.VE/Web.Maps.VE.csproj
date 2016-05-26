@@ -142,7 +142,6 @@
     <Compile Include="LatLongRectangle.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Design\MapDesigner.cs" />
-    <Compile Include="MapMode.cs" />
     <Compile Include="MapType.cs" />
     <Compile Include="Market.cs" />
     <Compile Include="MiniMapSize.cs" />

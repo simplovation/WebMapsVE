@@ -34,18 +34,6 @@ namespace Simplovation.Web.Maps.VE
         /// </summary>
         SetMapTypeAerial = 5,
         /// <summary>
-        /// The action of setting the <see cref="MapType">MapType</see> to Hybrid.
-        /// </summary>
-        SetMapTypeHybrid = 6,
-        /// <summary>
-        /// The action of setting the <see cref="MapType">MapType</see> to Birdseye.
-        /// </summary>
-        SetMapTypeBirdseye = 7,
-        /// <summary>
-        /// The action of setting the <see cref="MapType">MapType</see> to Shaded.
-        /// </summary>
-        SetMapTypeShaded = 16,
-        /// <summary>
         /// The action of Clearing All Shapes currently being plotted on the Map.
         /// </summary>
         ClearAllShapes = 11,

@@ -34,12 +34,6 @@ namespace Simplovation.Web.Maps.VE
         public string mapType { get; set; }
 
         /// <summary>
-        /// If the map style is set to bird's eye (oblique), the unique identifier of the current bird's eye scene.
-        /// </summary>
-        [DataMember]
-        public string birdseyeSceneID { get; set; }
-
-        /// <summary>
         /// A boolean representing whether the left mouse button has been clicked.
         /// </summary>
         [DataMember]

@@ -68,9 +68,6 @@ namespace Simplovation.Web.Maps.VE
         public MapType? MapType { get; set; }
 
         [DataMember]
-        public MapMode? MapMode { get; set; }
-
-        [DataMember]
         public bool? ShowDashboard { get; set; }
 
         [DataMember]

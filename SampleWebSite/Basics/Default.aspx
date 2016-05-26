@@ -28,9 +28,6 @@ This example demonstrates how to manipulate the map from server-side code. Absol
                                 <asp:Panel runat="server" ID="pnlMapView" GroupingText="Map Style">
                                     <asp:LinkButton ID="lbMapViewRoad" runat="server" Text="Road" OnClick="lbMapViewRoad_Click"></asp:LinkButton><br />
                                     <asp:LinkButton ID="lbMapViewAerial" runat="server" Text="Aerial" OnClick="lbMapViewAerial_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton ID="lbMapViewHybrid" runat="server" Text="Hybrid" OnClick="lbMapViewHybrid_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton ID="lbMapViewBirdseye" runat="server" Text="Birdseye" OnClick="lbMapViewBirdseye_Click"></asp:LinkButton><br />
-                                    <asp:LinkButton ID="lbMapViewShaded" runat="server" Text="Shaded" OnClick="lbMapViewShaded_Click"></asp:LinkButton>
                                 </asp:Panel>
                                                               
                                 <asp:Panel runat="server" ID="pnlShapes" GroupingText="Shapes">

@@ -55,16 +55,6 @@ Advanced JavaScript - Map Event Handling
         <td><a href="#" onclick='attachevent("onmodenotavailable");'>Attach</a></td>
         <td><a href="#" onclick='detachevent("onmodenotavailable");'>Detach</a></td>
     </tr>
-     <tr>
-        <td>onobliqueenter</td>
-        <td><a href="#" onclick='attachevent("onobliqueenter");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onobliqueenter");'>Detach</a></td>
-    </tr>
-     <tr>
-        <td>onobliqueleave</td>
-        <td><a href="#" onclick='attachevent("onobliqueleave");'>Attach</a></td>
-        <td><a href="#" onclick='detachevent("onobliqueleave");'>Detach</a></td>
-    </tr>
     <tr>
         <td>onstartzoom</td>
         <td><a href="#" onclick='attachevent("onstartzoom");'>Attach</a></td>

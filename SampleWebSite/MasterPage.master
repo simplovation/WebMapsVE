@@ -92,7 +92,6 @@
                                 <li><asp:HyperLink runat="server" ID="hlOnChangeView" Text="OnChangeView" NavigateUrl="~/Events/OnChangeView.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="hlOnEndPan" Text="OnEndPan" NavigateUrl="~/Events/OnEndPan.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="hlOnEndZoom" Text="OnEndZoom" NavigateUrl="~/Events/OnEndZoom.aspx"></asp:HyperLink></li>
-                                <li><asp:HyperLink runat="server" ID="hlOnObliqueEnterLeave" Text="OnObliqueEnter and OnObliqueLeave" NavigateUrl="~/Events/OnObliqueEnterLeave.aspx"></asp:HyperLink></li>
                                 <li><asp:HyperLink runat="server" ID="hlOnMapLoaded" Text="OnMapLoaded" NavigateUrl="~/Events/OnMapLoaded.aspx"></asp:HyperLink></li>
                             </ul>
                         </li>

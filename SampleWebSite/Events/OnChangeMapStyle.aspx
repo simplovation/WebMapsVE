@@ -4,7 +4,7 @@
 Map Events - OnChangeMapType
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_PageDescription" Runat="Server">
-This event is raised when ever the Type (Road, Aerial or Hybrid) is changed.
+This event is raised when ever the Type (Road, Aerial, etc) is changed.
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder_Main" Runat="Server">
 

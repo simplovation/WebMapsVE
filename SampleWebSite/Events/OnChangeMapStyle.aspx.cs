@@ -24,10 +24,10 @@ public partial class Events_OnChangeMapStyle : System.Web.UI.Page
         {
             if (Map1.MapType == Simplovation.Web.Maps.VE.MapType.Aerial)
                 litMapStyle.Text = "Aerial";
-            else if (Map1.MapType == Simplovation.Web.Maps.VE.MapType.Hybrid)
-                litMapStyle.Text = "Hybrid";
-            else if (Map1.MapType == Simplovation.Web.Maps.VE.MapType.Birdseye)
-                litMapStyle.Text = "Birdseye";
+            else if (Map1.MapType == Simplovation.Web.Maps.VE.MapType.OrdnanceSurvey)
+                litMapStyle.Text = "Ordnance Survey";
+            else if (Map1.MapType == Simplovation.Web.Maps.VE.MapType.Streetside)
+                litMapStyle.Text = "Streetside";
             else
                 litMapStyle.Text = "Road";
         }

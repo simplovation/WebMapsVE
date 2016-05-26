@@ -46,21 +46,6 @@ Simplovation.Web.Maps.VE.Extenders.MapActionExtender.prototype={
             case Simplovation.Web.Maps.VE.MapAction.SetMapTypeAerial:
                 map.SetMapStyle(VEMapStyle.Aerial);
                 break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapTypeHybrid:
-                map.SetMapStyle(VEMapStyle.Hybrid);
-                break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapTypeBirdseye:
-                map.SetMapStyle(VEMapStyle.Birdseye);
-                break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapTypeShaded:
-                map.SetMapStyle(VEMapStyle.Shaded);
-                break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapMode2D:
-                map.SetMapMode(VEMapMode.Mode2D);
-                break;
-            case Simplovation.Web.Maps.VE.MapAction.SetMapMode3D:
-                map.SetMapMode(VEMapMode.Mode3D);
-                break;
             case Simplovation.Web.Maps.VE.MapAction.ClearAllShapes:
                 map.DeleteAllShapes();
                 break;
@@ -92,7 +77,7 @@ Simplovation.Web.Maps.VE.Extenders.MapActionExtender.registerClass("Simplovation
 Simplovation.Web.Maps.VE.MapAction=function(){throw Error.invalidOperation();};
 Simplovation.Web.Maps.VE.MapAction.prototype = {
     ZoomIn: 0, ZoomOut: 1, ShowDashboard: 2, HideDashboard: 3, SetMapTypeRoad: 4,
-    SetMapTypeAerial: 5, SetMapTypeHybrid: 6, SetMapStyleBirdseye: 7,
+    SetMapTypeAerial: 5,
     ClearAllShapes: 11, SetMapTypeShaded: 16/*,
     PanUp: 17, PanDown: 18, PanLeft: 19, PanRight: 20*/
 };
