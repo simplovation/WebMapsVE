@@ -15,7 +15,7 @@ namespace Simplovation.Web.Maps.VE
         /// </summary>
         Normal = 1,
         /// <summary>
-        /// A smaller dashboard that the default: only containing Zoom In(+) and Out(-) buttons and Road, Aerial and Hybrid buttons for changing the map style.
+        /// A smaller dashboard that the default: only containing Zoom In(+) and Out(-) buttons and Road, and Aerial buttons for changing the map style.
         /// </summary>
         Compact = 2,
         /// <summary>

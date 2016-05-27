@@ -55,9 +55,6 @@ This example demonstrates how to manipulate the map from server-side code. Absol
                     
                     <asp:AsyncPostBackTrigger ControlID="lbMapViewRoad" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbMapViewAerial" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbMapViewHybrid" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbMapViewBirdseye" EventName="Click" />
-                    <asp:AsyncPostBackTrigger ControlID="lbMapViewShaded" EventName="Click" />
                     
                     <asp:AsyncPostBackTrigger ControlID="lbShapesPushpin" EventName="Click" />
                     <asp:AsyncPostBackTrigger ControlID="lbShapesPolyline" EventName="Click" />

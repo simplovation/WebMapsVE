@@ -314,7 +314,7 @@
         </member>
         <member name="F:Simplovation.Web.Maps.VE.NavigationBarMode.Compact">
             <summary>
-            A smaller dashboard that the default: only containing Zoom In(+) and Out(-) buttons and Road, Aerial and Hybrid buttons for changing the map style.
+            A smaller dashboard that the default: only containing Zoom In(+) and Out(-) buttons and Road, and Aerial buttons for changing the map style.
             </summary>
         </member>
         <member name="T:Simplovation.Web.Maps.VE.DataType">
@@ -1468,21 +1468,6 @@
         <member name="E:Simplovation.Web.Maps.VE.Map.Click">
             <summary>
             The Click event is fired when the user clicks on the Map within the Web Browser (on the client-side) and is raised on the Server-Side via an Asynchronous Postback to the server.
-            </summary>
-        </member>
-        <member name="T:Simplovation.Web.Maps.VE.MapMode">
-            <summary>
-            An enumeration of Map Modes.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapMode.Mode2D">
-            <summary>
-            Displays the Map in the traditional two dimensions.
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.MapMode.Mode3D">
-            <summary>
-            Loads the Virtual Earth 3D control, displays the map in three dimensions, and displays the 3D navigation control.
             </summary>
         </member>
         <member name="T:Simplovation.Web.Maps.VE.MapType">
