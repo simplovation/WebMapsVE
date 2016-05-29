@@ -30,8 +30,6 @@ namespace Simplovation.Web.Maps.VE
     Description("ASP.NET AJAX Bing Map Server Control")]
     public class Map : Simplovation.Web.Maps.VE.Base.AsyncScriptControl
     {
-        internal object _licenseLock = new object();
-
         private DirectionsLoadedEventArgs _directionsLoadedEventArgs;
         private FindEventArgs _findLoadedEventArgs;
         private FindLocationsEventArgs _findLocationsEventArgs;
@@ -119,6 +117,10 @@ namespace Simplovation.Web.Maps.VE
             base.OnLoad(e);
         }
 
+        /// <summary>
+        /// LoadAsyncData
+        /// </summary>
+        /// <param name="asyncData"></param>
         protected override void LoadAsyncData(string asyncData)
         {
             if (asyncData.Length != 0)
@@ -332,25 +334,12 @@ namespace Simplovation.Web.Maps.VE
 
         private string GetVEMapScript()
         {
-            string strPath;
-
-            if (this.Page.Request.IsSecureConnection)
-            {
-                // "Standard" URL using SSL
-                strPath = "https://www.bing.com/api/maps/mapcontrol";
-            }
-            else
-            {
-                // "Standard URL"
-                strPath = "https://www.bing.com/api/maps/mapcontrol";
-            }
+            // Bing Maps v8 URL
+            var strPath = "https://www.bing.com/api/maps/mapcontrol";
 
             switch (this.Market)
             {
                 case Market.English:
-                    break;
-                case Market.Japanese:
-                    strPath += "&mkt=ja-jp";
                     break;
                 case Market.ja_jp:
                     strPath += "&mkt=ja-jp";
@@ -439,6 +428,10 @@ namespace Simplovation.Web.Maps.VE
             return descriptors;
         }
 
+        /// <summary>
+        /// GetScriptReferences
+        /// </summary>
+        /// <returns></returns>
         protected override IEnumerable<ScriptReference> GetScriptReferences()
         {
             List<ScriptReference> scripts = (List<ScriptReference>)base.GetScriptReferences();
@@ -528,15 +521,13 @@ namespace Simplovation.Web.Maps.VE
                 
                 LiteralControl ve = new LiteralControl("<script type='text/javascript' src='" + strUrl + "'></script>");
                 this.Page.Header.Controls.Add(ve);
-
-                //if (this.License.IsTrial) //if (_license.IsTrial)
-                //{
-                //    LiteralControl trialmessage = new LiteralControl("<script type='text/javascript'>alert('Your Simplovation.Web.Maps.VE v2.0 Trial License Expires " + _license.ExpirationDate.ToShortDateString() + "\\nTo purchase a Full Development License go to http://simplovation.com');</script>");
-                //    this.Page.Header.Controls.Add(trialmessage);
-                //}
             }
         }
 
+        /// <summary>
+        /// GetAsyncData
+        /// </summary>
+        /// <returns></returns>
         protected override string GetAsyncData()
         {
             AsyncMapData mapData = new AsyncMapData();
@@ -974,15 +965,15 @@ namespace Simplovation.Web.Maps.VE
         /// Deletes a <see cref="Shape">Shape</see> object from any Shape Layer on the Map.
         /// </summary>
         /// <param name="shape">The Shape to Deleve from the Map.</param>
-        public void DeleteShape(Shape s)
+        public void DeleteShape(Shape shape)
         {
             if (this.Layers != null)
             {
                 foreach(ShapeLayer sl in this.Layers)
                 {
-                    if (sl.Shapes.Contains(s))
+                    if (sl.Shapes.Contains(shape))
                     {
-                        sl.Shapes.Remove(s);
+                        sl.Shapes.Remove(shape);
                         break;
                     }
                 }
