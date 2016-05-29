@@ -385,6 +385,11 @@ namespace Simplovation.Web.Maps.VE
                     break;
             }
 
+            if (this.Branch != MapBranch.Release)
+            {
+                strPath += "&branch=" + this.Branch.ToString().ToLower();
+            }
+
             return strPath;
         }
 
@@ -619,11 +624,9 @@ namespace Simplovation.Web.Maps.VE
             {
                 if (this.Page != null)
                 {
-                    ScriptManager sm = ScriptManager.GetCurrent(this.Page);
+                    var sm = ScriptManager.GetCurrent(this.Page);
                     if (sm.IsInAsyncPostBack)
-                    {
                         if (this._DistanceUnit != value) throw new Exception("The DistanceUnit cannot be changed during an Asynchronous Postback.");
-                    }
                 }
                 _DistanceUnit = value;
             }
@@ -655,10 +658,11 @@ namespace Simplovation.Web.Maps.VE
                 {
                     if (this.Page != null)
                     {
-                        ScriptManager sm = ScriptManager.GetCurrent(this.Page);
+                        var sm = ScriptManager.GetCurrent(this.Page);
                         if (sm.IsInAsyncPostBack)
                         {
-                            if (this._AsyncPostbackPassShapes != value) throw new Exception("The AsyncPostbackPassShapes property cannot be changed during an Asynchronous Postback.");
+                            if (this._AsyncPostbackPassShapes != value)
+                                throw new NotSupportedException("The AsyncPostbackPassShapes property cannot be changed during an Asynchronous Postback.");
                         }
                     }
                 }
@@ -677,13 +681,36 @@ namespace Simplovation.Web.Maps.VE
             {
                 if (this.Page != null)
                 {
-                    ScriptManager sm = ScriptManager.GetCurrent(this.Page);
+                    var sm = ScriptManager.GetCurrent(this.Page);
                     if (sm.IsInAsyncPostBack)
                     {
-                        if (this._Market != value) throw new Exception("The Map Market cannot be changed during an Asynchronous Postback.");
+                        if (this._Market != value)
+                            throw new NotSupportedException("The Map Market cannot be changed during an Asynchronous Postback.");
                     }
                 }
                 this._Market = value;
+            }
+        }
+
+        private MapBranch _Branch = MapBranch.Release;
+        /// <summary>
+        /// Specifies the Bing Maps control Branch to load. Default is Release.
+        /// </summary>
+        public MapBranch Branch
+        {
+            get { return this._Branch; }
+            set
+            {
+                if (this.Page != null)
+                {
+                    var sm = ScriptManager.GetCurrent(this.Page);
+                    if (sm.IsInAsyncPostBack)
+                    {
+                        if (this._Branch != value)
+                            throw new NotSupportedException("The Map Branch cannot be changed during an Asynchronous Postback.");
+                    }
+                }
+                this._Branch = value;
             }
         }
 
@@ -748,16 +775,6 @@ namespace Simplovation.Web.Maps.VE
             }
         }
 
-        //private bool _UseSSL = true;
-        ///// <summary>
-        ///// Determines whether the Bing Maps JavaScript file is included within the page using SSL or not. The Default is True.
-        ///// </summary>
-        //public bool UseSSL
-        //{
-        //    get { return this._UseSSL; }
-        //    set { this._UseSSL = value; }
-        //}
-
         private MapType _MapType = MapType.Road;
         private bool _MapTypeDirty = false;
         /// <summary>
@@ -784,10 +801,11 @@ namespace Simplovation.Web.Maps.VE
                 {
                     if (this.Page != null)
                     {
-                        ScriptManager sm = ScriptManager.GetCurrent(this.Page);
+                        var sm = ScriptManager.GetCurrent(this.Page);
                         if (sm.IsInAsyncPostBack)
                         {
-                            if (this._Fixed != value) throw new Exception("The Fixed cannot be changed during an Asynchronous Postback.");
+                            if (this._Fixed != value)
+                                throw new NotSupportedException("The Fixed cannot be changed during an Asynchronous Postback.");
                         }
                     }
                 }
@@ -810,10 +828,11 @@ namespace Simplovation.Web.Maps.VE
                 {
                     if (this.Page != null)
                     {
-                        ScriptManager sm = ScriptManager.GetCurrent(this.Page);
+                        var sm = ScriptManager.GetCurrent(this.Page);
                         if (sm.IsInAsyncPostBack)
                         {
-                            if (this._ShowSwitch != value) throw new Exception("The ShowSwitch cannot be changed during an Asynchronous Postback.");
+                            if (this._ShowSwitch != value)
+                                throw new NotSupportedException("The ShowSwitch cannot be changed during an Asynchronous Postback.");
                         }
                     }
                 }
@@ -836,10 +855,11 @@ namespace Simplovation.Web.Maps.VE
                 {
                     if (this.Page != null)
                     {
-                        ScriptManager sm = ScriptManager.GetCurrent(this.Page);
+                        var sm = ScriptManager.GetCurrent(this.Page);
                         if (sm.IsInAsyncPostBack)
                         {
-                            if (this._NavigationBarMode != value) throw new Exception("The NavigationBarMode cannot be changed during an Asynchronous Postback.");
+                            if (this._NavigationBarMode != value)
+                                throw new NotSupportedException("The NavigationBarMode cannot be changed during an Asynchronous Postback.");
                         }
                     }
                 }
@@ -879,10 +899,11 @@ namespace Simplovation.Web.Maps.VE
                 {
                     if (this.Page != null)
                     {
-                        ScriptManager sm = ScriptManager.GetCurrent(this.Page);
+                        var sm = ScriptManager.GetCurrent(this.Page);
                         if (sm.IsInAsyncPostBack)
                         {
-                            if (this._EnableDashboardLabels != value) throw new Exception("The EnableDashboardLabels cannot be changed during an Asynchronous Postback.");
+                            if (this._EnableDashboardLabels != value)
+                                throw new NotSupportedException("The EnableDashboardLabels cannot be changed during an Asynchronous Postback.");
                         }
                     }
                 }
@@ -904,10 +925,11 @@ namespace Simplovation.Web.Maps.VE
                 {
                     if (this.Page != null)
                     {
-                        ScriptManager sm = ScriptManager.GetCurrent(this.Page);
+                        var sm = ScriptManager.GetCurrent(this.Page);
                         if (sm.IsInAsyncPostBack)
                         {
-                            if (this._LoadBaseTiles != value) throw new Exception("The LoadBaseTiles cannot be changed during an Asynchronous Postback.");
+                            if (this._LoadBaseTiles != value)
+                                throw new NotSupportedException("The LoadBaseTiles cannot be changed during an Asynchronous Postback.");
                         }
                     }
                 }

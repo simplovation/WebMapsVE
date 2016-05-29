@@ -6,6 +6,7 @@ version vNext - Coming Soon / Work in Progress
 - Requires .NET 4.5 or newer
 - Breaking Changes:
     - Added
+        - Map.Branch property - adds support for Release, Experimental and Frozen branches
         - Map.NavigationBarMode property
         - Map.MapType property and related events, properties, etc
     - Removed

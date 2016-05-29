@@ -302,6 +302,26 @@
             Specifies whether the text for the icon should be underlined
             </summary>
         </member>
+        <member name="T:Simplovation.Web.Maps.VE.MapBranch">
+            <summary>
+            Enumeration of the supported branches of the Bing Maps Control
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapBranch.Release">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapBranch.Experimental">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Simplovation.Web.Maps.VE.MapBranch.Frozen">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Simplovation.Web.Maps.VE.NavigationBarMode">
             <summary>
             An enumeration that represents the size and type of dashboard to be displayed on the map.
@@ -1201,6 +1221,12 @@
             </summary>
             <param name="e">EventArgs</param>
         </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.LoadAsyncData(System.String)">
+            <summary>
+            LoadAsyncData
+            </summary>
+            <param name="asyncData"></param>
+        </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.TagKey">
             <summary>
             TagKey
@@ -1209,6 +1235,12 @@
         <member name="M:Simplovation.Web.Maps.VE.Map.GetScriptDescriptors">
             <summary>
             
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.GetScriptReferences">
+            <summary>
+            GetScriptReferences
             </summary>
             <returns></returns>
         </member>
@@ -1222,6 +1254,12 @@
             OnPreRender
             </summary>
             <param name="e">EventArgs</param>
+        </member>
+        <member name="M:Simplovation.Web.Maps.VE.Map.GetAsyncData">
+            <summary>
+            GetAsyncData
+            </summary>
+            <returns></returns>
         </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.ShowPoweredBy">
             <summary>
@@ -1251,6 +1289,11 @@
         <member name="P:Simplovation.Web.Maps.VE.Map.Market">
             <summary>
             The Bing Maps API supported international market to use. Default is English.
+            </summary>
+        </member>
+        <member name="P:Simplovation.Web.Maps.VE.Map.Branch">
+            <summary>
+            Specifies the Bing Maps control Branch to load. Default is Release.
             </summary>
         </member>
         <member name="P:Simplovation.Web.Maps.VE.Map.LatLong">
@@ -1503,11 +1546,6 @@
         <member name="F:Simplovation.Web.Maps.VE.Market.English">
             <summary>
             English - United States (en-us)
-            </summary>
-        </member>
-        <member name="F:Simplovation.Web.Maps.VE.Market.Japanese">
-            <summary>
-            Japanese - Japan (ja-jp)
             </summary>
         </member>
         <member name="F:Simplovation.Web.Maps.VE.Market.en_ca">
