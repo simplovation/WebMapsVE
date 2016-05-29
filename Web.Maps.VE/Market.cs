@@ -26,11 +26,6 @@ namespace Simplovation.Web.Maps.VE
         /// </summary>
         English = 1,
         /// <summary>
-        /// Japanese - Japan (ja-jp)
-        /// </summary>
-        [Obsolete("Use the ja_jp enumeration value instead.")]
-        Japanese = 2,
-        /// <summary>
         /// English - Canada (en-ca) - MS Virtual Earth may not support this localization option yet.
         /// </summary>
         en_ca = 3,
