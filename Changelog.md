@@ -3,7 +3,7 @@
 version vNext - Coming Soon / Work in Progress
 
 - Refactored to support Bing Maps v8 JavaScript Control
-- Requires .NET 4.5 or newer
+- Requires ASP.NET 4.5 or newer
 - Breaking Changes:
     - Added
         - Map.Branch property - adds support for Release, Experimental and Frozen branches
