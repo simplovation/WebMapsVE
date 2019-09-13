@@ -2,6 +2,8 @@
 
 The only ASP.NET Ajax Bing Maps Server Control
 
+> This project was archived as there isn't much interest in a Bing Maps ASP.NET Ajax server control anymore. Also, this control would need to be majorly refactored / rewritten to move it forward to the new Azure Maps JavaScript control. Unfortunately, the web has moved on from ASP.NET AJAX largely, and there's really no need to continue this forward.
+
 **[Download via Nuget](https://www.nuget.org/packages/Web.Maps.VE/)**
 
 Web.Maps.VE is the only ASP.NET Ajax Bing Maps Server Control. Allowing you to integrate Bing Maps mapping functionality into your ASP.NET Web Forms applications without requring you to write any JavaScript. Even though you are not required to write JavaScript, there is still a FULL JavaScript API exposed that allows you to customize the map any way you want.
